@@ -1,5 +1,7 @@
 package core;
 
+import priority.ModulePrioritization;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,10 +12,13 @@ public class PageProcessor implements Runnable {
 
 	private Page page;
 	private Controller controller;
+    private ModulePrioritization prioritization;
 
-	public PageProcessor(WebURL url, Controller controller) {
+
+    public PageProcessor(WebURL url, Controller controller, ModulePrioritization prioritization) {
 		this.page = new Page(url);
 		this.controller = controller;
+        this.prioritization = prioritization;
 	}
 
 	private boolean load() {
@@ -48,8 +53,8 @@ public class PageProcessor implements Runnable {
 			return;
 		}
 		PageParser.parse(page);
+        prioritization.setPriorities(page);
 		controller.addAll(page.getOutLinks());
 		controller.setCrawledURL(page.getUrl());
 	}
-
 }

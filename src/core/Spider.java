@@ -1,12 +1,16 @@
 package core;
-import java.util.Queue;
+import priority.EmptyPrioritization;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
 public class Spider implements Runnable {
-	
+
+    private PrintWriter pw;
 	private Controller controller = new Controller();
 	private ExecutorService pool;
 	private final int POOL_SIZE = 10;
@@ -18,18 +22,25 @@ public class Spider implements Runnable {
 
 	@Override
 	public void run() {
-		Queue<WebURL> queue = controller.getToCrawl();
-		while (true) {
-			if (queue.isEmpty()) {
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			} else {
-				pool.execute(new PageProcessor(queue.poll(), controller));
-			}
-		}
+        try {
+            pw = new PrintWriter("output2.txt");
+            while (true) {
+                if (!controller.hasNext()) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    WebURL url = controller.nextURL();
+                    pool.execute(new PageProcessor(url, controller, new EmptyPrioritization()));
+                    pw.println(url.getUri().toString());
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } finally {
+            pw.close();
+        }
 	}
-
 }

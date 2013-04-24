@@ -4,18 +4,28 @@ import java.net.URI;
 
 
 
-public class WebURL {
+public class WebURL implements Comparable<WebURL> {
 	private URI uri;
-	private String fragment;
+
+    public String getFragment() {
+        return fragment;
+    }
+
+    public void setFragment(String fragment) {
+        this.fragment = fragment;
+    }
+
+    private String fragment;
 	private HostController hostController;
-	
-	@Override
-	public boolean equals(Object o) {
-		if (!o.getClass().equals(this.getClass())) {
-			return false;
-		}
-		return uri.equals(((WebURL) o).getUri());
-	}
+    private double rank;
+
+    public double getRank() {
+        return rank;
+    }
+
+    public void setRank(double rank) {
+        this.rank = rank;
+    }
 
 	public URI getUri() {
 		return uri;
@@ -33,13 +43,25 @@ public class WebURL {
 		this.hostController = hostController;
 	}
 
-	public String getFragment() {
-		return fragment;
-	}
+    @Override
+    public int compareTo(WebURL o) {
+        return new Double(rank).compareTo(o.rank);
+    }
 
-	public void setFragment(String fragment) {
-		this.fragment = fragment;
-	}
-	
-	
+    @Override
+    public int hashCode() {
+        return uri.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof WebURL)) return false;
+
+        WebURL url = (WebURL) o;
+
+        if (!uri.toString().equals(url.uri.toString())) return false;
+
+        return true;
+    }
 }

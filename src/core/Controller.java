@@ -1,20 +1,28 @@
 package core;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.LinkedBlockingQueue;
-
+import java.util.concurrent.PriorityBlockingQueue;
 
 
 public class Controller {
-	private Map<String, HostController> hostMap = new ConcurrentHashMap<String, HostController>();
-	private Set<String> crawled = Collections.synchronizedSet(new HashSet<String>());
-	private Set<String> inProcessing = Collections.synchronizedSet(new HashSet<String>());
-	private Queue<WebURL> toCrawl = new LinkedBlockingQueue<>();
+	private Map<String, HostController> hostMap = new ConcurrentHashMap<>();
+	private Set<String> crawled = new HashSet<>();
+	private Set<WebURL> inQueue = new HashSet<>();
+    private Set<WebURL> inProcessing = new HashSet<>();
+    private Map<WebURL, Double> ranks = new ConcurrentHashMap<>();
+    private PriorityBlockingQueue<WebURL> toCrawl = new PriorityBlockingQueue<>();
+
+    public synchronized WebURL nextURL() {
+        WebURL next = toCrawl.poll();
+        inProcessing.add(next);
+        inQueue.remove(next);
+        return next;
+    }
+
+    public synchronized boolean hasNext() {
+        return toCrawl.size() != 0;
+    }
 	
 	public void addAll(Set<WebURL> urls) {
 		for (WebURL url: urls) {
@@ -23,11 +31,17 @@ public class Controller {
 	}
 	
 	private synchronized boolean add(WebURL url) {
-		if (crawled.contains(url.getUri().toString()) || inProcessing.contains(url.getUri().toString())) {
+		if (crawled.contains(url.getUri().toString()) || inProcessing.contains(url)) {
 			return false;
 		}
+        if (inQueue.contains(url)) {
+            double rank = ranks.get(url);
+            toCrawl.remove(url);
+            url.setRank(Math.min(url.getRank(), rank));
+        }
+        ranks.put(url, url.getRank());
 		toCrawl.add(url);
-		inProcessing.add(url.getUri().toString());
+		inQueue.add(url);
 		HostController hc;
 		String curHost = url.getUri().getHost();
 		if (hostMap.containsKey(curHost)) {
@@ -40,13 +54,9 @@ public class Controller {
 		return false;
 	}
 	
-	public void setCrawledURL(WebURL url) {
+	public synchronized void setCrawledURL(WebURL url) {
 		crawled.add(url.getUri().toString());
-		inProcessing.remove(url.getUri().toString());
+		inProcessing.remove(url);
 		System.out.println(url.getUri().toString());
-	}
-
-	public Queue<WebURL> getToCrawl() {
-		return toCrawl;
 	}
 }

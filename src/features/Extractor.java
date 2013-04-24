@@ -1,11 +1,11 @@
 package features;
 
+import core.WebURL;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import core.WebURL;
 
 public class Extractor {
 	private List<Double> features;
@@ -26,7 +26,7 @@ public class Extractor {
 		components[3] = url.getUri().getPath();
 		components[4] = url.getUri().getQuery();
 		components[5] = url.getFragment();
-		features = new ArrayList<Double>();
+		features = new ArrayList<>();
 	}
 	
 	private void extractLengthFeatures() {

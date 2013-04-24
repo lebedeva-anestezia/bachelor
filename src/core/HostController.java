@@ -10,7 +10,7 @@ public class HostController {
 		this.host = host;
 		lastRequest = 0;
 		canRequest = true;
-	}
+    }
 	
 	public synchronized boolean canRequest() {
 		canRequest = System.currentTimeMillis() - lastRequest > interval;

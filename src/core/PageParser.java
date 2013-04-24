@@ -23,7 +23,7 @@ public class PageParser {
 		m = aTeg.matcher(page.getContent());
 		Set<WebURL> out = new HashSet<>();
 		while (m.find()) {
-			String link = m.group(1);
+            String link = m.group(1);
 			URI uri = URLCanonizer.canonize(link);
 			if (uri == null || nonHTML.matcher(uri.toString()).matches()) {
 				continue;
@@ -44,5 +44,4 @@ public class PageParser {
 		}
 		page.setOutLinks(out);
 	}
-
 }
