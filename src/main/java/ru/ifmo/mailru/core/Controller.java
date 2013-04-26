@@ -1,9 +1,12 @@
-package core;
+package ru.ifmo.mailru.core;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.PriorityBlockingQueue;
 
+/**
+ * @author Anastasia Lebedeva
+ */
 
 public class Controller {
 	private Map<String, HostController> hostMap = new ConcurrentHashMap<>();

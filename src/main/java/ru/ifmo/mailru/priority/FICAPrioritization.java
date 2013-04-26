@@ -1,14 +1,10 @@
-package priority;
+package ru.ifmo.mailru.priority;
 
-import core.Page;
-import core.WebURL;
+import ru.ifmo.mailru.core.Page;
+import ru.ifmo.mailru.core.WebURL;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Anastasia Lebedeva
- * Date: 4/23/13
- * Time: 11:38 PM
- * To change this template use File | Settings | File Templates.
+ * @author Anastasia Lebedeva
  */
 public class FICAPrioritization implements ModulePrioritization {
     private static double beta = 0.1, gamma = 0.5;

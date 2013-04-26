@@ -1,4 +1,4 @@
-package core;
+package ru.ifmo.mailru.core;
 
 import java.net.URI;
 

@@ -1,4 +1,4 @@
-package core;
+package ru.ifmo.mailru.core;
 
 public class HostController {
 	private String host;

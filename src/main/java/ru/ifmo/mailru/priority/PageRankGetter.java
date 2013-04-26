@@ -1,24 +1,19 @@
-package priority;
+package ru.ifmo.mailru.priority;
 
-import com.temesoft.google.pr.PageRankService;
+import google.pagerank.*;
 
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Anastasia Lebedeva
- * Date: 4/10/13
- * Time: 12:16 AM
- * To change this template use File | Settings | File Templates.
+ * @author Anastasia Lebedeva
  */
+
 public class PageRankGetter {
-    private PageRankService pageRankService;
     private Map<String, Integer> pageRanks;
 
     public PageRankGetter() {
-        pageRankService = new PageRankService();
         pageRanks = new HashMap<>();
     }
 
@@ -27,7 +22,7 @@ public class PageRankGetter {
         if (pageRanks.containsKey(domen)) {
             return pageRanks.get(domen);
         }
-        int rank = pageRankService.getPR(domen);
+        int rank = PageRank.get(domen);
         pageRanks.put(domen, rank);
         return rank;
     }

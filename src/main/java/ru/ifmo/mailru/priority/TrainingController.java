@@ -1,4 +1,4 @@
-package priority;
+package ru.ifmo.mailru.priority;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,11 +8,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Anastasia Lebedeva
- * Date: 4/10/13
- * Time: 1:07 AM
- * To change this template use File | Settings | File Templates.
+ * @author Anastasia Lebedeva
  */
 public class TrainingController {
     private ArrayList<URI> urls;
@@ -31,7 +27,7 @@ public class TrainingController {
             try {
                 urls.add(new URI(s));
             } catch (URISyntaxException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e.printStackTrace();
             }
             s = reader.readLine();
         }

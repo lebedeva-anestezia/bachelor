@@ -1,4 +1,4 @@
-package test;
+package ru.ifmo.mailru.test;
 
 import core.Spider;
 import core.WebURL;

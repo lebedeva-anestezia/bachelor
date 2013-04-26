@@ -1,5 +1,6 @@
-package core;
-import priority.EmptyPrioritization;
+package ru.ifmo.mailru.core;
+
+import ru.ifmo.mailru.priority.EmptyPrioritization;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -38,7 +39,7 @@ public class Spider implements Runnable {
                 }
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         } finally {
             pw.close();
         }

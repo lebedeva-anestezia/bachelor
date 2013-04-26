@@ -1,6 +1,6 @@
-package core;
+package ru.ifmo.mailru.core;
 
-import priority.ModulePrioritization;
+import ru.ifmo.mailru.priority.ModulePrioritization;
 
 import java.io.BufferedReader;
 import java.io.IOException;

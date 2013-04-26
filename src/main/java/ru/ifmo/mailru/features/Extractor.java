@@ -1,4 +1,4 @@
-package features;
+package ru.ifmo.mailru.features;
 
 import core.WebURL;
 
