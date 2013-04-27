@@ -1,7 +1,7 @@
 package ru.ifmo.mailru.test;
 
-import core.Spider;
-import core.WebURL;
+import ru.ifmo.mailru.core.Spider;
+import ru.ifmo.mailru.core.WebURL;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -16,7 +16,7 @@ public class SimpleTest {
 		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
-		Set<WebURL> list = new HashSet<WebURL>();
+		Set<WebURL> list = new HashSet<>();
 		list.add(url);
 		Spider spider = new Spider(list);
 		spider.run();

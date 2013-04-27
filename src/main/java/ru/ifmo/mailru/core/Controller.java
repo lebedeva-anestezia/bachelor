@@ -60,6 +60,6 @@ public class Controller {
 	public synchronized void setCrawledURL(WebURL url) {
 		crawled.add(url.getUri().toString());
 		inProcessing.remove(url);
-		System.out.println(url.getUri().toString());
+		//System.out.println(url.getUri().toString());
 	}
 }

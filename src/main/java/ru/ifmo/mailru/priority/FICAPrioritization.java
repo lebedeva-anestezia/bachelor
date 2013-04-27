@@ -8,7 +8,7 @@ import ru.ifmo.mailru.core.WebURL;
  */
 public class FICAPrioritization implements ModulePrioritization {
     private static double beta = 0.1, gamma = 0.5;
-    private static double time, K = 250000, size;
+    private static double time, K = 25, size;
 
     @Override
     public void setPriorities(Page page) {

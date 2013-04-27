@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-
 public class PageProcessor implements Runnable {
 
 	private Page page;
@@ -42,7 +41,8 @@ public class PageProcessor implements Runnable {
 			page.setContent(sb.toString());
 			return true;
 		} catch (IOException e) {
-			e.printStackTrace();
+            System.err.println("Load exception for page: " + page.getUrl().getUri());
+            e.printStackTrace();
 			return false;
 		}
 	}

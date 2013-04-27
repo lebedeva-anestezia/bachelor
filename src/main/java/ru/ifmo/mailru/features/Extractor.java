@@ -1,6 +1,6 @@
 package ru.ifmo.mailru.features;
 
-import core.WebURL;
+import ru.ifmo.mailru.core.WebURL;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Extractor {
 		}
 	}
 	
-	private void extractOrphograficFeatures() {
+	private void extractOrthographicFeatures() {
 		Pattern digit = Pattern.compile("\\d+");
 		for (int i = 0; i < COMPONENT_NUMBER; i++) {
 			Matcher m = digit.matcher(components[i]);
@@ -59,7 +59,7 @@ public class Extractor {
 	
 	public Double[] buildVector() {
 		extractLengthFeatures();
-		extractOrphograficFeatures();
+		extractOrthographicFeatures();
 		Double[] res = new Double[features.size()];
 		return features.toArray(res);
 	}
