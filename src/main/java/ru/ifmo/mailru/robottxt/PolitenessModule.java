@@ -5,8 +5,7 @@ import ru.ifmo.mailru.core.ContentLoader;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.NavigableSet;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,25 +13,17 @@ import java.util.regex.Pattern;
  * @author Anastasia Lebedeva
  */
 public class PolitenessModule {
-    private final Pattern allowPattern = Pattern.compile("Allow: (.*)");
-    private final Pattern disallowPattern = Pattern.compile("Disallow: (.*)");
+    private final Pattern allowPattern    = Pattern.compile("Allow: (\\S*).*"),
+                          disallowPattern = Pattern.compile("Disallow: (\\S*).*");
     private final String ROBOTS_TXT = "/robots.txt";
-    private TreeSet<String> allows, disallows;
+    private TreeMap<String, Pattern> allows    = new TreeMap<>(),
+                                     disallows = new TreeMap<>();
     private String host;
-
-    public TreeSet<String> getDisallows() {
-        return disallows;
-    }
-
-    public TreeSet<String> getAllows() {
-        return allows;
-    }
+    private int delay = 1;
 
     public PolitenessModule(String host) throws URISyntaxException, IOException {
         this.host = host;
-        String content = ContentLoader.loadContent(new URI(host + ROBOTS_TXT));
-        allows = new TreeSet<>();
-        disallows = new TreeSet<>();
+        String content = ContentLoader.loadContent(new URI(host + ROBOTS_TXT), true);
         extractRules(content);
     }
 
@@ -45,31 +36,62 @@ public class PolitenessModule {
             }
         }
         for (int j = i + 1; j < lines.length; j++) {
-            if (Pattern.matches(String.valueOf(allowPattern), lines[i])) {
-                Matcher m = allowPattern.matcher(lines[i]);
-                allows.add(m.group());
-                continue;
-            }
-            if (Pattern.matches(String.valueOf(disallowPattern), lines[i])) {
-                Matcher m = disallowPattern.matcher(lines[i]);
-                disallows.add(m.group());
-                continue;
-            }
-            if (!(lines[i].equals("") || lines[i].startsWith("#"))) {
-                break;
+            String rule = null;
+            if (Pattern.matches(String.valueOf(allowPattern), lines[j])) {
+                Matcher m = allowPattern.matcher(lines[j]);
+                m.matches();
+                rule = m.group(1);
+                allows.put(rule, generateRulePattern(rule));
+            } else {
+                if (Pattern.matches(String.valueOf(disallowPattern), lines[j])) {
+                    Matcher m = disallowPattern.matcher(lines[j]);
+                    m.matches();
+                    rule = m.group(1);
+                    allows.put(rule, generateRulePattern(rule));
+                } else {
+                    if (!(lines[j].equals("") || lines[j].startsWith("#"))) {
+                        break;
+                    }
+                }
             }
         }
     }
 
-
-    public boolean checkAllow(String uri) {
-        String locate = uri.replaceFirst(host, "");
-        NavigableSet<String> head = disallows.headSet(locate, true);
-        String[] locateArr = locate.split("/");
-        for (String disallowLocate : head) {
-            //if (disallowLocate.startsWith(locateArr[0]))
-        }
-        return false;
+    private Pattern generateRulePattern(String s) {
+        return Pattern.compile(s.replaceAll("\\*", ".*"));
     }
 
+    public boolean isAllow(String uri) throws URISyntaxException {
+        return isAllow(new URI(uri));
+    }
+
+    public boolean isAllow(URI uri) {
+        String locate = uri.getPath();
+        if (locate.equals("")) {
+            locate = "/";
+        }
+        String query = uri.getQuery();
+        if (query != null) {
+            locate += "?" + query;
+        }
+        NavigableMap<String, Pattern> pertinentDisallowRules = disallows.headMap(locate, true);
+        for (String rule : pertinentDisallowRules.keySet()) {
+
+        }
+        return false;  //To change body of created methods use File | Settings | File Templates.
+    }
+
+    private class Rule {
+        private String locate;
+        private RuleType type;
+        private Pattern pattern;
+
+       private Rule(String s) {
+
+       }
+    }
+
+    private enum RuleType {
+        allow, disallow;
+    }
 }

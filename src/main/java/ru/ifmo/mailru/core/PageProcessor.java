@@ -28,7 +28,7 @@ public class PageProcessor implements Runnable {
 		}
 		try {
 			page.getUrl().getHostController().request();
-            String content = ContentLoader.loadContent(page.getUrl().getUri());
+            String content = ContentLoader.loadContent(page.getUrl().getUri(), false);
 			page.getUrl().getHostController().request();
 			page.setContent(content);
 			return true;

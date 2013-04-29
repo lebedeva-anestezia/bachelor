@@ -10,13 +10,18 @@ import java.net.URI;
  */
 public class ContentLoader {
 
-    public static String loadContent(URI uri) throws IOException {
+    public static String loadContent(URI uri, boolean includeEnters) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(
                 uri.toURL().openStream()));
         StringBuilder sb = new StringBuilder();
+        String separator = "";
+        if (includeEnters) {
+            separator = "\n";
+        }
         String s;
         while ((s = reader.readLine()) != null) {
             sb.append(s);
+            sb.append(separator);
         }
         return sb.toString();
     }

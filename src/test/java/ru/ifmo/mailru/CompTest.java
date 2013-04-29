@@ -98,8 +98,9 @@ public class CompTest {
         TreeSet<String> expDisallowTreeSet = new TreeSet<>();
         Collections.addAll(expDisallowTreeSet, "/search/realtime", "/search/users", "/search/*/grid", "/*?", "/*/followers", "/*/following", "/oauth", "/1/oauth");
         String[] expDisallows = new String[politenessModule.getDisallows().size()];
+        expDisallows = expDisallowTreeSet.toArray(expDisallows);
         String[] disallows = new String[politenessModule.getDisallows().size()];
-        politenessModule.getDisallows().toArray(disallows);
+        disallows = politenessModule.getDisallows().toArray(disallows);
         Assert.assertArrayEquals(expDisallows, disallows);
     }
 

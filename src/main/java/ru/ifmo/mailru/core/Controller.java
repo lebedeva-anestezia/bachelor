@@ -43,7 +43,7 @@ public class Controller {
             url.setRank(Math.min(url.getRank(), rank));
         }
         HostController hc = addHostController(url);
-       // hc.checkAllow(url);
+        hc.checkAllow(url.getUri());
         ranks.put(url, url.getRank());
 		toCrawl.add(url);
 		inQueue.add(url);
