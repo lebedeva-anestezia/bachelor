@@ -2,9 +2,7 @@ package ru.ifmo.mailru.core;
 
 import ru.ifmo.mailru.priority.ModulePrioritization;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 
 public class PageProcessor implements Runnable {
@@ -30,15 +28,9 @@ public class PageProcessor implements Runnable {
 		}
 		try {
 			page.getUrl().getHostController().request();
-			BufferedReader reader = new BufferedReader(new InputStreamReader(
-					page.getUrl().getUri().toURL().openStream()));
-			StringBuilder sb = new StringBuilder();
-			String s;
-			while ((s = reader.readLine()) != null) {
-				sb.append(s);
-			}
+            String content = ContentLoader.loadContent(page.getUrl().getUri());
 			page.getUrl().getHostController().request();
-			page.setContent(sb.toString());
+			page.setContent(content);
 			return true;
 		} catch (IOException e) {
             System.err.println("Load exception for page: " + page.getUrl().getUri());

@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class Extractor {
 	private List<Double> features;
 	private String[] components;
-	private int COMPONENT_NUMBER = 6;
+	private int COMPONENT_NUMBER = 5;
 	/*private String uri;
 	private String scheme;
 	private String host;
@@ -25,7 +25,7 @@ public class Extractor {
 		components[2] = url.getUri().getHost();
 		components[3] = url.getUri().getPath();
 		components[4] = url.getUri().getQuery();
-		components[5] = url.getFragment();
+		//components[5] = url.getFragment();
 		features = new ArrayList<>();
 	}
 	

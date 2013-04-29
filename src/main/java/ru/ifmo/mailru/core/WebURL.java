@@ -5,19 +5,15 @@ import java.net.URI;
 
 
 public class WebURL implements Comparable<WebURL> {
-	private URI uri;
 
-    public String getFragment() {
-        return fragment;
-    }
+	private URI uri;
+    private HostController hostController;
+    private String fragment;
+    private double rank;
 
     public void setFragment(String fragment) {
         this.fragment = fragment;
     }
-
-    private String fragment;
-	private HostController hostController;
-    private double rank;
 
     public double getRank() {
         return rank;

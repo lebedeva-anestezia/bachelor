@@ -2,8 +2,9 @@ package ru.ifmo.mailru.priority;
 
 import com.temesoft.google.pr.PageRankService;
 
+import java.io.PrintWriter;
 import java.net.URI;
-import java.net.URISyntaxException;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -12,24 +13,34 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class PageRankGetter {
     private PageRankService pageRankService;
-    private ConcurrentMap<String, Integer> pageRanks;
+    private PrintWriter pw = null;
+
+    public static ConcurrentMap<String, Integer> getPageRanks() {
+        return pageRanks;
+    }
+
+    private static ConcurrentMap<String, Integer> pageRanks = new ConcurrentHashMap<>();
 
     public PageRankGetter() {
         pageRankService = new PageRankService();
-        pageRanks = new ConcurrentHashMap<>();
-    }
-
-    public int getPageRank(String s) throws URISyntaxException {
-        return getPageRank(new URI(s));
     }
 
     public int getPageRank(URI uri) {
-        String domen = uri.getHost();
-        if (pageRanks.containsKey(domen)) {
-            return pageRanks.get(domen);
+        return getPageRank(uri.toString());
+    }
+
+    public int getPageRank(String url) {
+        if (pageRanks.containsKey(url)) {
+            return pageRanks.get(url);
         }
-        int rank = pageRankService.getPR(domen);
-        pageRanks.put(domen, rank);
+        int rank = pageRankService.getPR(url);
+        pageRanks.put(url, rank);
         return rank;
+    }
+
+    public static void printResults(PrintWriter pw) {
+        for (Map.Entry<String, Integer> stringIntegerEntry : pageRanks.entrySet()) {
+            pw.println(stringIntegerEntry.getKey() + " " + stringIntegerEntry.getValue());
+        }
     }
 }

@@ -1,20 +1,25 @@
 package ru.ifmo.mailru;
 
+import org.junit.Assert;
 import org.junit.Test;
 import ru.ifmo.mailru.core.Spider;
 import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.priority.EmptyPrioritization;
 import ru.ifmo.mailru.priority.FICAPrioritization;
+import ru.ifmo.mailru.priority.GettingPageRankExecutor;
 import ru.ifmo.mailru.priority.PageRankGetter;
+import ru.ifmo.mailru.robottxt.PolitenessModule;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Collections;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @author Anastasia Lebedeva
@@ -60,43 +65,42 @@ public class CompTest {
 
     @Test
     public void compareResults() {
-        PageRankGetter rankGetter = new PageRankGetter();
-        Scanner scanner = null;
+        PrintWriter pw1 = null;
+        PrintWriter pw2 = null;
         try {
-            scanner = new Scanner(new File("output1.txt"));
+            GettingPageRankExecutor executor1 = new GettingPageRankExecutor(new File("output1.txt"));
+            GettingPageRankExecutor executor2 = new GettingPageRankExecutor(new File("output2.txt"));
+            pw1 = new PrintWriter(new File("pagerank1.txt"));
+            pw2 = new PrintWriter(new File("pagerank2.txt"));
+            executor1.execute();
+            PageRankGetter.printResults(pw1);
+            pw1.close();
+            executor2.execute();
+            PageRankGetter.printResults(pw2);
+            pw2.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } finally {
+            pw1.close();
+            pw2.close();
         }
-        int count1 = 0;
-        long pr1 = 0;
+    }
 
-        while (scanner.hasNext()) {
-            try {
-                int pr = rankGetter.getPageRank(scanner.nextLine());
-                pr1 += pr;
-                count1++;
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("Mean PR bfs spider: " + (double) pr1 / count1);
+    @Test
+    public void testingRobotTxt() {
+        PolitenessModule politenessModule = null;
         try {
-            scanner = new Scanner(new File("output2.txt"));
-        } catch (FileNotFoundException e) {
+            politenessModule = new PolitenessModule("https://twitter.com");
+        } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
         }
-        int count2 = 0;
-        long pr2 = 0;
-        while (scanner.hasNext()) {
-            try {
-                int pr = rankGetter.getPageRank(scanner.nextLine());
-                pr2 += pr;
-                count2++;
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("Mean PR FICA spider: " + (double) pr2 / count2);
+        String[] expAllows = new String[] {"/search?q=%23"};
+        TreeSet<String> expDisallowTreeSet = new TreeSet<>();
+        Collections.addAll(expDisallowTreeSet, "/search/realtime", "/search/users", "/search/*/grid", "/*?", "/*/followers", "/*/following", "/oauth", "/1/oauth");
+        String[] expDisallows = new String[politenessModule.getDisallows().size()];
+        String[] disallows = new String[politenessModule.getDisallows().size()];
+        politenessModule.getDisallows().toArray(disallows);
+        Assert.assertArrayEquals(expDisallows, disallows);
     }
 
 }

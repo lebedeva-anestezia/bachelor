@@ -14,7 +14,7 @@ public class Spider implements Runnable {
 	private Controller controller = new Controller();
 	private ExecutorService pool;
     private ModulePrioritization modulePrioritization;
-	private final int POOL_SIZE = 10;
+	//private final int POOL_SIZE = 10;
 
     public Spider(ModulePrioritization modulePrioritization, Set<WebURL> URLSet, PrintWriter pw) {
         this(URLSet);
@@ -24,7 +24,7 @@ public class Spider implements Runnable {
 
     public Spider(Set<WebURL> URLSet) {
 		controller.addAll(URLSet);
-		pool = Executors.newFixedThreadPool(POOL_SIZE);
+		pool = Executors.newCachedThreadPool();
 	}
 
 

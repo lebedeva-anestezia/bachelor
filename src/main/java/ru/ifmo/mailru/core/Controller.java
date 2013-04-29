@@ -42,20 +42,26 @@ public class Controller {
             toCrawl.remove(url);
             url.setRank(Math.min(url.getRank(), rank));
         }
+        HostController hc = addHostController(url);
+       // hc.checkAllow(url);
         ranks.put(url, url.getRank());
 		toCrawl.add(url);
 		inQueue.add(url);
-		HostController hc;
-		String curHost = url.getUri().getHost();
-		if (hostMap.containsKey(curHost)) {
-			hc = hostMap.get(curHost);
-		} else {
-			hc = new HostController(curHost);
-			hostMap.put(curHost, hc);
-		}
-		url.setHostController(hc);
-		return false;
+		return true;
 	}
+
+    private HostController addHostController(WebURL url) {
+        HostController hc;
+        String curHost = url.getUri().getHost();
+        if (hostMap.containsKey(curHost)) {
+            hc = hostMap.get(curHost);
+        } else {
+            hc = new HostController(curHost);
+            hostMap.put(curHost, hc);
+        }
+        url.setHostController(hc);
+        return hc;
+    }
 	
 	public synchronized void setCrawledURL(WebURL url) {
 		crawled.add(url.getUri().toString());

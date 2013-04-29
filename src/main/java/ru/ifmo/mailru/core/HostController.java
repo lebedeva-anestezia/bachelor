@@ -1,10 +1,13 @@
 package ru.ifmo.mailru.core;
 
+import ru.ifmo.mailru.robottxt.PolitenessModule;
+
 public class HostController {
 	private String host;
 	private long lastRequest;
 	private boolean canRequest;
 	private long interval = 1000;
+    private PolitenessModule politenessModule;
 	
 	public HostController(String host) {
 		this.host = host;
@@ -21,4 +24,8 @@ public class HostController {
 		canRequest = false;
 		lastRequest = System.currentTimeMillis();
 	}
+
+    public boolean checkAllow(String uri) {
+        return politenessModule.checkAllow(uri);
+    }
 }
