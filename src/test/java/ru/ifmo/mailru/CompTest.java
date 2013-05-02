@@ -1,13 +1,9 @@
 package ru.ifmo.mailru;
 
-import org.junit.Assert;
 import org.junit.Test;
 import ru.ifmo.mailru.core.Spider;
 import ru.ifmo.mailru.core.WebURL;
-import ru.ifmo.mailru.priority.EmptyPrioritization;
-import ru.ifmo.mailru.priority.FICAPrioritization;
-import ru.ifmo.mailru.priority.GettingPageRankExecutor;
-import ru.ifmo.mailru.priority.PageRankGetter;
+import ru.ifmo.mailru.priority.*;
 import ru.ifmo.mailru.robottxt.PolitenessModule;
 
 import java.io.File;
@@ -16,15 +12,53 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Collections;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * @author Anastasia Lebedeva
  */
 public class CompTest {
+    private static final String resourceDir = "src/test/resources/";
+    private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+    private static final Date date = new Date();
+
+    @Test
+    public void bfsSpiderRun() {
+       spiderRun(new EmptyPrioritization(), "bfs");
+    }
+
+    private void spiderRun(ModulePrioritization prioritization, String teg) {
+        WebURL url = new WebURL();
+        try {
+            url.setUri(new URI("http://pogoda.yandex.ru/saint-petersburg/"));
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        String fileName = resourceDir + teg + dateFormat.format(date);
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(new File(fileName));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Set<WebURL> list1 = new HashSet<>();
+        list1.add(url);
+        Spider spider = new Spider(prioritization, list1, pw);
+        Thread thread = new Thread(spider);
+        thread.start();
+        try {
+            Thread.sleep(36000);
+            //Thread.sleep(30000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        thread.interrupt();
+        pw.close();
+    }
 
     @Test
     public void spiderRun() {
@@ -87,21 +121,14 @@ public class CompTest {
     }
 
     @Test
-    public void testingRobotTxt() {
+    public void testingRobotTxt() throws URISyntaxException {
         PolitenessModule politenessModule = null;
         try {
-            politenessModule = new PolitenessModule("https://twitter.com");
+            politenessModule = new PolitenessModule("http://stackoverflow.com");
         } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
         }
-        String[] expAllows = new String[] {"/search?q=%23"};
-        TreeSet<String> expDisallowTreeSet = new TreeSet<>();
-        Collections.addAll(expDisallowTreeSet, "/search/realtime", "/search/users", "/search/*/grid", "/*?", "/*/followers", "/*/following", "/oauth", "/1/oauth");
-        String[] expDisallows = new String[politenessModule.getDisallows().size()];
-        expDisallows = expDisallowTreeSet.toArray(expDisallows);
-        String[] disallows = new String[politenessModule.getDisallows().size()];
-        disallows = politenessModule.getDisallows().toArray(disallows);
-        Assert.assertArrayEquals(expDisallows, disallows);
+        System.out.println(politenessModule.isAllow("http://stackoverflow.com/users/hkdhj/a?njjs?tab=accountssss"));
     }
 
 }

@@ -49,7 +49,7 @@ public class PageParser {
             }
             page.setOutLinks(out);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());;
         }
 	}
 }

@@ -1,5 +1,7 @@
 package ru.ifmo.mailru.core;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.PriorityBlockingQueue;
@@ -29,11 +31,15 @@ public class Controller {
 	
 	public void addAll(Set<WebURL> urls) {
 		for (WebURL url: urls) {
-			add(url);
-		}
+            try {
+                add(url);
+            } catch (IOException | URISyntaxException e) {
+                System.err.println(e.getMessage());
+            }
+        }
 	}
 	
-	private synchronized boolean add(WebURL url) {
+	private synchronized boolean add(WebURL url) throws IOException, URISyntaxException {
 		if (crawled.contains(url.getUri().toString()) || inProcessing.contains(url)) {
 			return false;
 		}
@@ -50,7 +56,7 @@ public class Controller {
 		return true;
 	}
 
-    private HostController addHostController(WebURL url) {
+    private HostController addHostController(WebURL url) throws IOException, URISyntaxException {
         HostController hc;
         String curHost = url.getUri().getHost();
         if (hostMap.containsKey(curHost)) {

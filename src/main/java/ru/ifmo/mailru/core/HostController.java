@@ -2,7 +2,9 @@ package ru.ifmo.mailru.core;
 
 import ru.ifmo.mailru.robottxt.PolitenessModule;
 
+import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 
 public class HostController {
 	private String host;
@@ -11,10 +13,11 @@ public class HostController {
 	private long interval = 1000;
     private PolitenessModule politenessModule;
 	
-	public HostController(String host) {
+	public HostController(String host) throws IOException, URISyntaxException {
 		this.host = host;
 		lastRequest = 0;
 		canRequest = true;
+        this.politenessModule = new PolitenessModule(host);
     }
 	
 	public synchronized boolean canRequest() {

@@ -34,7 +34,6 @@ public class PageProcessor implements Runnable {
 			return true;
 		} catch (IOException e) {
             System.err.println("Load exception for page: " + page.getUrl().getUri());
-            e.printStackTrace();
 			return false;
 		}
 	}

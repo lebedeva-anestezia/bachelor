@@ -6,24 +6,20 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * @author Anastasia Lebedeva
  */
 public class PolitenessModule {
-    private final Pattern allowPattern    = Pattern.compile("Allow: (\\S*).*"),
-                          disallowPattern = Pattern.compile("Disallow: (\\S*).*");
+
+    public static final Pattern rulePattern = Pattern.compile("(Allow|Disallow): (\\S+).*");
     private final String ROBOTS_TXT = "/robots.txt";
-    private TreeMap<String, Pattern> allows    = new TreeMap<>(),
-                                     disallows = new TreeMap<>();
-    private String host;
-    private int delay = 1;
+    private final String USER_AGENT = "(?i)User-agent: \\*";
+    private TreeSet<Rule> rules = new TreeSet<>();
 
     public PolitenessModule(String host) throws URISyntaxException, IOException {
-        this.host = host;
-        String content = ContentLoader.loadContent(new URI(host + ROBOTS_TXT), true);
+        String content = ContentLoader.loadContent(new URI("http://" + host + ROBOTS_TXT), true);
         extractRules(content);
     }
 
@@ -31,34 +27,19 @@ public class PolitenessModule {
         String[] lines = content.split("\n");
         int i = -1;
         while (++i < lines.length) {
-            if (lines[i].matches("User-agent: \\*")) {
+            if (lines[i].matches(USER_AGENT)) {
                 break;
             }
         }
         for (int j = i + 1; j < lines.length; j++) {
-            String rule = null;
-            if (Pattern.matches(String.valueOf(allowPattern), lines[j])) {
-                Matcher m = allowPattern.matcher(lines[j]);
-                m.matches();
-                rule = m.group(1);
-                allows.put(rule, generateRulePattern(rule));
-            } else {
-                if (Pattern.matches(String.valueOf(disallowPattern), lines[j])) {
-                    Matcher m = disallowPattern.matcher(lines[j]);
-                    m.matches();
-                    rule = m.group(1);
-                    allows.put(rule, generateRulePattern(rule));
-                } else {
-                    if (!(lines[j].equals("") || lines[j].startsWith("#"))) {
-                        break;
-                    }
+            if (Pattern.matches(String.valueOf(rulePattern), lines[j])) {
+                rules.add(new Rule(lines[j]));
+            }  else {
+                if (!(lines[j].equals("") || lines[j].startsWith("#"))) {
+                    break;
                 }
             }
         }
-    }
-
-    private Pattern generateRulePattern(String s) {
-        return Pattern.compile(s.replaceAll("\\*", ".*"));
     }
 
     public boolean isAllow(String uri) throws URISyntaxException {
@@ -70,28 +51,18 @@ public class PolitenessModule {
         if (locate.equals("")) {
             locate = "/";
         }
-        String query = uri.getQuery();
+        String query = uri.getRawQuery();
         if (query != null) {
             locate += "?" + query;
         }
-        NavigableMap<String, Pattern> pertinentDisallowRules = disallows.headMap(locate, true);
-        for (String rule : pertinentDisallowRules.keySet()) {
-
+        NavigableSet<Rule> pertinentDisallowRules = rules.headSet(new Rule(locate, null, null), true);
+        RuleType ruleType = RuleType.Allow;
+        for (Rule rule : pertinentDisallowRules) {
+            if (locate.matches(String.valueOf(rule.getPattern()))) {
+                ruleType = rule.getType();
+            }
         }
-        return false;  //To change body of created methods use File | Settings | File Templates.
+        return ruleType.equals(RuleType.Allow);
     }
 
-    private class Rule {
-        private String locate;
-        private RuleType type;
-        private Pattern pattern;
-
-       private Rule(String s) {
-
-       }
-    }
-
-    private enum RuleType {
-        allow, disallow;
-    }
 }
