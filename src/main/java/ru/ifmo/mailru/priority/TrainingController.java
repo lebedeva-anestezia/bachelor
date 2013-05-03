@@ -1,5 +1,7 @@
 package ru.ifmo.mailru.priority;
 
+import ru.ifmo.mailru.google.pr.PageRankGetter;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

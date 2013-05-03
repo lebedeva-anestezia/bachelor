@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
 * @author Anastasia Lebedeva
 */
-class Rule implements Comparable<Rule> {
+public class Rule implements Comparable<Rule> {
     private String locate;
     private RuleType type;
     private Pattern pattern;

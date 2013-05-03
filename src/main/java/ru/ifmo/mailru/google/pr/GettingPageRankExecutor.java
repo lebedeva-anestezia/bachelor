@@ -1,4 +1,4 @@
-package ru.ifmo.mailru.priority;
+package ru.ifmo.mailru.google.pr;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,7 +25,17 @@ public class GettingPageRankExecutor {
 
                 @Override
                 public void run() {
-                    getter.getPageRank(s);
+                    int res = 0;
+                    do {
+                        if (res == -3) {
+                            try {
+                                Thread.sleep(3000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        res = getter.getPageRank(s);
+                    } while (res == -3);
                 }
             });
         }
@@ -35,6 +45,11 @@ public class GettingPageRankExecutor {
     public void execute() {
         for (Runnable url : urls) {
             executor.execute(url);
+        }
+        try {
+            executor.awaitTermination(30, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

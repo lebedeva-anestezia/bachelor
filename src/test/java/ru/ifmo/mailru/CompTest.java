@@ -3,6 +3,8 @@ package ru.ifmo.mailru;
 import org.junit.Test;
 import ru.ifmo.mailru.core.Spider;
 import ru.ifmo.mailru.core.WebURL;
+import ru.ifmo.mailru.google.pr.GettingPageRankExecutor;
+import ru.ifmo.mailru.google.pr.PageRankGetter;
 import ru.ifmo.mailru.priority.*;
 import ru.ifmo.mailru.robottxt.PolitenessModule;
 
@@ -23,6 +25,7 @@ import java.util.Set;
  */
 public class CompTest {
     private static final String resourceDir = "src/test/resources/";
+    private static final String pageRanksDir = resourceDir + "pageRanks/";
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private static final Date date = new Date();
 
@@ -60,75 +63,50 @@ public class CompTest {
         pw.close();
     }
 
-    @Test
-    public void spiderRun() {
-        WebURL url = new WebURL();
+    public void constructPRGetter() {
+        File file = new File(pageRanksDir + "pageRanks.pr");
         try {
-            url.setUri(new URI("http://pogoda.yandex.ru/saint-petersburg/"));
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        PrintWriter pw1 = null;
-        PrintWriter pw2 = null;
-        try {
-            pw1 = new PrintWriter(new File("output1.txt"));
-            pw2 = new PrintWriter(new File("output2.txt"));
+            PageRankGetter getter = new PageRankGetter(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.exit(1);
         }
-        Set<WebURL> list1 = new HashSet<>();
-        list1.add(url);
-
-        Spider spiderSimple = new Spider(new EmptyPrioritization(), list1, pw1);
-        Spider spiderFICA = new Spider(new FICAPrioritization(), list1, pw2);
-        Thread thread1 = new Thread(spiderSimple);
-        Thread thread2 = new Thread(spiderFICA);
-        thread1.start();
-        thread2.start();
-        try {
-            Thread.sleep(3600000);
-            //Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        thread1.interrupt();
-        thread2.interrupt();
-        pw1.close();
-        pw2.close();
     }
 
     @Test
-    public void compareResults() {
-        PrintWriter pw1 = null;
-        PrintWriter pw2 = null;
+    public void getPageRanks() {
+        constructPRGetter();
+        File file = new File(resourceDir + "output1.txt");
         try {
-            GettingPageRankExecutor executor1 = new GettingPageRankExecutor(new File("output1.txt"));
-            GettingPageRankExecutor executor2 = new GettingPageRankExecutor(new File("output2.txt"));
-            pw1 = new PrintWriter(new File("pagerank1.txt"));
-            pw2 = new PrintWriter(new File("pagerank2.txt"));
-            executor1.execute();
-            PageRankGetter.printResults(pw1);
-            pw1.close();
-            executor2.execute();
-            PageRankGetter.printResults(pw2);
-            pw2.close();
+            printRageRanks(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } finally {
-            pw1.close();
-            pw2.close();
         }
+    }
+
+    public void printRageRanks(File file) throws FileNotFoundException {
+        GettingPageRankExecutor executor = new GettingPageRankExecutor(file);
+        PrintWriter pw = new PrintWriter(new File(pageRanksDir + file.getName() + "new" + ".pr"));
+        executor.execute();
+        try {
+            PageRankGetter.printResults(pw);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            pw.close();
+        }
+
     }
 
     @Test
     public void testingRobotTxt() throws URISyntaxException {
         PolitenessModule politenessModule = null;
         try {
-            politenessModule = new PolitenessModule("http://stackoverflow.com");
+            politenessModule = new PolitenessModule("twitter.com");
         } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
         }
-        System.out.println(politenessModule.isAllow("http://stackoverflow.com/users/hkdhj/a?njjs?tab=accountssss"));
+        System.out.println(politenessModule.isAllow("https://twitter.com/search?q=%23"));
     }
 
 }

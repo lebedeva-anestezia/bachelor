@@ -1,10 +1,12 @@
-package ru.ifmo.mailru.priority;
+package ru.ifmo.mailru.google.pr;
 
-import com.temesoft.google.pr.PageRankService;
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URI;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -13,16 +15,28 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class PageRankGetter {
     private PageRankService pageRankService;
-    private PrintWriter pw = null;
-
-    public static ConcurrentMap<String, Integer> getPageRanks() {
-        return pageRanks;
-    }
 
     private static ConcurrentMap<String, Integer> pageRanks = new ConcurrentHashMap<>();
 
     public PageRankGetter() {
         pageRankService = new PageRankService();
+    }
+
+    public PageRankGetter(File file) throws FileNotFoundException {
+        Scanner sc = new Scanner(file);
+        while (sc.hasNext()) {
+            try {
+                addURL(sc.nextLine());
+            } catch (Exception e) {
+                System.err.println(e.getMessage());
+            }
+        }
+        sc.close();
+    }
+
+    public void addURL(String url) {
+        String[] tmp = url.split(" ");
+        pageRanks.put(tmp[0], Integer.valueOf(tmp[1]));
     }
 
     public int getPageRank(URI uri) {
@@ -33,12 +47,18 @@ public class PageRankGetter {
         if (pageRanks.containsKey(url)) {
             return pageRanks.get(url);
         }
-        int rank = pageRankService.getPR(url);
+        int rank = 0;
+        try {
+            rank = pageRankService.getPR(url);
+        } catch (IOException e) {
+            System.err.println("OLOLO " + e.getMessage());
+            return -3;
+        }
         pageRanks.put(url, rank);
         return rank;
     }
 
-    public static void printResults(PrintWriter pw) {
+    public static void printResults(PrintWriter pw) throws Exception {
         for (Map.Entry<String, Integer> stringIntegerEntry : pageRanks.entrySet()) {
             pw.println(stringIntegerEntry.getKey() + " " + stringIntegerEntry.getValue());
         }
