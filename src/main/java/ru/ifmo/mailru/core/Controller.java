@@ -1,8 +1,9 @@
 package ru.ifmo.mailru.core;
 
-import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.PriorityBlockingQueue;
 
@@ -20,6 +21,9 @@ public class Controller {
 
     public synchronized WebURL nextURL() {
         WebURL next = toCrawl.poll();
+        if (next == null) {
+            return null;
+        }
         inProcessing.add(next);
         inQueue.remove(next);
         return next;
@@ -32,14 +36,15 @@ public class Controller {
 	public void addAll(Set<WebURL> urls) {
 		for (WebURL url: urls) {
             try {
+                addHostController(url);
                 add(url);
-            } catch (IOException | URISyntaxException e) {
+            } catch (URISyntaxException e) {
                 System.err.println(e.getMessage());
             }
         }
 	}
 	
-	private synchronized boolean add(WebURL url) throws IOException, URISyntaxException {
+	private synchronized boolean add(WebURL url) throws URISyntaxException {
 		if (crawled.contains(url.getUri().toString()) || inProcessing.contains(url)) {
 			return false;
 		}
@@ -48,15 +53,17 @@ public class Controller {
             toCrawl.remove(url);
             url.setRank(Math.min(url.getRank(), rank));
         }
-        HostController hc = addHostController(url);
-        hc.checkAllow(url.getUri());
+       // HostController hc = addHostController(url);
+        if (!url.getHostController().addIfCan(url.getUri())) {
+            return false;
+        }
         ranks.put(url, url.getRank());
 		toCrawl.add(url);
 		inQueue.add(url);
 		return true;
 	}
 
-    private HostController addHostController(WebURL url) throws IOException, URISyntaxException {
+    private HostController addHostController(WebURL url) throws URISyntaxException {
         HostController hc;
         String curHost = url.getUri().getHost();
         if (hostMap.containsKey(curHost)) {

@@ -10,9 +10,25 @@ import java.net.URI;
  */
 public class ContentLoader {
 
-    public static String loadContent(URI uri, boolean includeEnters) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(
-                uri.toURL().openStream()));
+    public static String loadContent(URI uri, boolean includeEnters, int attemptsNumber) throws IOException {
+        int n = 0;
+        boolean done = false;
+        BufferedReader reader = null;
+        while (!done)
+            try {
+                reader = new BufferedReader(new InputStreamReader(
+                        uri.toURL().openStream()));
+                done = true;
+            } catch (IOException e) {
+                if (++n >= attemptsNumber) {
+                    throw e;
+                }
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e1) {
+                    System.err.println(e1.getMessage());
+                }
+            }
         StringBuilder sb = new StringBuilder();
         String separator = "";
         if (includeEnters) {

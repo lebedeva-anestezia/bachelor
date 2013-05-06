@@ -1,7 +1,7 @@
 package ru.ifmo.mailru.core;
 
 import java.net.URI;
-
+import java.net.URISyntaxException;
 
 
 public class WebURL implements Comparable<WebURL> {
@@ -10,6 +10,8 @@ public class WebURL implements Comparable<WebURL> {
     private HostController hostController;
     private String fragment;
     private double rank;
+
+    public WebURL(){}
 
     public void setFragment(String fragment) {
         this.fragment = fragment;
@@ -27,7 +29,15 @@ public class WebURL implements Comparable<WebURL> {
 		return uri;
 	}
 
-	public void setUri(URI uri) {
+    public WebURL(String uri) throws URISyntaxException {
+        this(new URI(uri));
+    }
+
+    public WebURL(URI uri) {
+        this.uri = uri;
+    }
+
+    public void setUri(URI uri) {
 		this.uri = uri;
 	}
 

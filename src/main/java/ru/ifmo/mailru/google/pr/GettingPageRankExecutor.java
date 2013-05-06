@@ -25,21 +25,23 @@ public class GettingPageRankExecutor {
 
                 @Override
                 public void run() {
-                    int res = 0;
-                    do {
-                        if (res == -3) {
-                            try {
+                    try {
+                        int res = 0;
+                        int t = 0;
+                        do {
+                            if (res == -3) {
+                                t++;
                                 Thread.sleep(3000);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
                             }
-                        }
-                        res = getter.getPageRank(s);
-                    } while (res == -3);
+                            res = getter.getPageRank(s);
+                        } while (res == -3 && t < 10);
+                    } catch (InterruptedException e) {
+                        System.err.println(e.getMessage());
+                    }
                 }
             });
         }
-        executor = Executors.newCachedThreadPool();
+        executor = Executors.newFixedThreadPool(10);
     }
 
     public void execute() {
@@ -47,7 +49,7 @@ public class GettingPageRankExecutor {
             executor.execute(url);
         }
         try {
-            executor.awaitTermination(30, TimeUnit.SECONDS);
+            executor.awaitTermination(1, TimeUnit.HOURS);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

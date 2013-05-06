@@ -19,16 +19,16 @@ public class PageProcessor implements Runnable {
 	}
 
 	private boolean load() {
-		while (!page.getUrl().getHostController().canRequest()) {
+		/*while (!page.getUrl().getHostController().canRequest()) {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
+		}  */
 		try {
 			page.getUrl().getHostController().request();
-            String content = ContentLoader.loadContent(page.getUrl().getUri(), false);
+            String content = ContentLoader.loadContent(page.getUrl().getUri(), false, 5);
 			page.getUrl().getHostController().request();
 			page.setContent(content);
 			return true;

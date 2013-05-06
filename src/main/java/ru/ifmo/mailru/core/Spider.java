@@ -15,6 +15,7 @@ public class Spider implements Runnable {
 	private ExecutorService pool;
     private ModulePrioritization modulePrioritization;
 	//private final int POOL_SIZE = 10;
+    private Thread curThread;
 
     public Spider(ModulePrioritization modulePrioritization, Set<WebURL> URLSet, PrintWriter pw) {
         this(URLSet);
@@ -24,24 +25,34 @@ public class Spider implements Runnable {
 
     public Spider(Set<WebURL> URLSet) {
 		controller.addAll(URLSet);
-		pool = Executors.newCachedThreadPool();
+		pool = Executors.newFixedThreadPool(50);
 	}
 
+    public void start() {
+        curThread = new Thread(this);
+        curThread.start();
+    }
+
+    public void stop() {
+        curThread = null;
+    }
 
 	@Override
 	public void run() {
-        while (true) {
-            if (!controller.hasNext()) {
-                try {
+        Thread thisThread = Thread.currentThread();
+        try {
+            while (curThread == thisThread) {
+                WebURL next = controller.nextURL();
+                while (next == null) {
                     Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    next = controller.nextURL();
                 }
-            } else {
-                WebURL url = controller.nextURL();
-                pool.execute(new PageProcessor(url, controller, modulePrioritization));
-                pw.println(url.getUri().toString());
+                pool.execute(new PageProcessor(next, controller, modulePrioritization));
+                pw.println(next.getUri().toString());
+                System.out.println(next.getUri().toString());
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 	}
 }

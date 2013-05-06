@@ -27,7 +27,7 @@ public class Rule implements Comparable<Rule> {
            this.locate = matcher.group(2);
            String regex = locate.replaceAll("\\*", ".*").replaceAll("\\?", "\\\\?");
            if (!regex.endsWith("$")) {
-               regex = regex + ".*";
+               regex += ".*";
            }
            this.pattern = Pattern.compile(regex);
        } catch (Exception e) {

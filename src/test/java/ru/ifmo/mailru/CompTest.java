@@ -1,24 +1,28 @@
 package ru.ifmo.mailru;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import ru.ifmo.mailru.core.Spider;
 import ru.ifmo.mailru.core.WebURL;
+import ru.ifmo.mailru.features.DictionaryModule;
 import ru.ifmo.mailru.google.pr.GettingPageRankExecutor;
 import ru.ifmo.mailru.google.pr.PageRankGetter;
-import ru.ifmo.mailru.priority.*;
+import ru.ifmo.mailru.priority.EmptyPrioritization;
+import ru.ifmo.mailru.priority.FICAPrioritization;
+import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.robottxt.PolitenessModule;
+import ru.ifmo.mailru.util.ValueComparator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author Anastasia Lebedeva
@@ -26,57 +30,79 @@ import java.util.Set;
 public class CompTest {
     private static final String resourceDir = "src/test/resources/";
     private static final String pageRanksDir = resourceDir + "pageRanks/";
-    private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+    private static final String crawledPagesDir = resourceDir + "crawledPages/";
+    private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmm");
     private static final Date date = new Date();
+    private static final long MINUTE = 1000 * 60;
+    private static final long HOUR = 60 * MINUTE;
 
+    @Ignore
     @Test
     public void bfsSpiderRun() {
        spiderRun(new EmptyPrioritization(), "bfs");
     }
 
-    private void spiderRun(ModulePrioritization prioritization, String teg) {
-        WebURL url = new WebURL();
-        try {
-            url.setUri(new URI("http://pogoda.yandex.ru/saint-petersburg/"));
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
+    @Ignore
+    @Test
+    public void FICASpiderRun() {
+        spiderRun(new FICAPrioritization(), "FICA");
+    }
+
+    private Set<WebURL> readStartSet(File file) throws FileNotFoundException {
+        Set<WebURL> set = new HashSet<>();
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNext()) {
+            try {
+                set.add(new WebURL(scanner.nextLine()));
+            } catch (URISyntaxException e) {
+                System.err.println(e.getMessage());
+            }
         }
-        String fileName = resourceDir + teg + dateFormat.format(date);
+        return set;
+    }
+
+    private void spiderRun(ModulePrioritization prioritization, String teg) {
+        Set<WebURL> startSet = null;
+        try {
+            startSet = readStartSet(new File(crawledPagesDir + "start.txt"));
+        } catch (FileNotFoundException e) {
+            System.err.println(e.getMessage());
+            return;
+        }
+        String fileName = crawledPagesDir + teg + dateFormat.format(date) + ".txt";
         PrintWriter pw = null;
         try {
             pw = new PrintWriter(new File(fileName));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        Set<WebURL> list1 = new HashSet<>();
-        list1.add(url);
-        Spider spider = new Spider(prioritization, list1, pw);
-        Thread thread = new Thread(spider);
-        thread.start();
+        Spider spider = new Spider(prioritization, startSet, pw);
         try {
-            Thread.sleep(36000);
-            //Thread.sleep(30000);
-        } catch (InterruptedException e) {
+            spider.start();
+            Thread.sleep(3 * HOUR);
+            spider.stop();
+        } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            pw.close();
         }
-        thread.interrupt();
-        pw.close();
     }
 
     public void constructPRGetter() {
         File file = new File(pageRanksDir + "pageRanks.pr");
         try {
-            PageRankGetter getter = new PageRankGetter(file);
+           new PageRankGetter(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(1);
         }
     }
 
+    @Ignore
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(resourceDir + "output1.txt");
+        File file = new File(crawledPagesDir + "output1.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -106,7 +132,43 @@ public class CompTest {
         } catch (URISyntaxException | IOException e) {
             e.printStackTrace();
         }
-        System.out.println(politenessModule.isAllow("https://twitter.com/search?q=%23"));
+        assertTrue(politenessModule.isAllow("https://twitter.com/search?q=%23"));
+    }
+
+    @Ignore
+    @Test
+    public void testPageRankTool() {
+        PageRankGetter getter = new PageRankGetter();
+        System.out.println(getter.getPageRank("http://ololonyashechki.livejournal.com/"));
+    }
+
+
+    @Ignore
+    @Test
+    public void testTokenizer() {
+        File input = new File(crawledPagesDir + "common.txt");
+        DictionaryModule m = new DictionaryModule();
+        Map<String, Integer> map = m.getFrequencyTerm();
+        try {
+            m.separateFrequencyTerms(input);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        ValueComparator<String, Integer> comparator = new ValueComparator<>(map);
+        TreeMap<String, Integer> treeMap = new TreeMap<>(comparator);
+        treeMap.putAll(map);
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(new File(resourceDir + "terms_" + input.getName()));
+            for (String s : treeMap.keySet()) {
+                pw.println(s + " " + map.get(s));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            pw.close();
+        }
     }
 
 }

@@ -70,7 +70,11 @@ public class PageRankService {
             googlePrResult = new String(buff, 0, read);
             read = is.read(buff);
         }
-        googlePrResult = googlePrResult.split(":")[2].trim();
+        try {
+            googlePrResult = googlePrResult.split(":")[2].trim();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return -1;
+        }
         result = new Long(googlePrResult).intValue();
 
 

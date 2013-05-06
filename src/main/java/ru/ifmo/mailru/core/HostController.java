@@ -12,12 +12,19 @@ public class HostController {
 	private boolean canRequest;
 	private long interval = 1000;
     private PolitenessModule politenessModule;
+    private int pageNumber;
+    public static final int maxCount = 100;
 	
-	public HostController(String host) throws IOException, URISyntaxException {
+	public HostController(String host) throws URISyntaxException {
+        this.pageNumber = 0;
 		this.host = host;
 		lastRequest = 0;
 		canRequest = true;
-        this.politenessModule = new PolitenessModule(host);
+        try {
+            this.politenessModule = new PolitenessModule(host);
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
     }
 	
 	public synchronized boolean canRequest() {
@@ -30,7 +37,16 @@ public class HostController {
 		lastRequest = System.currentTimeMillis();
 	}
 
-    public boolean checkAllow(URI uri) {
-        return politenessModule.isAllow(uri);
+    private boolean isItTooMuch() {
+        return pageNumber >= maxCount;
+    }
+
+    public boolean addIfCan(URI uri) {
+        boolean ret = false;
+        if (!isItTooMuch()) {
+            ret = politenessModule == null || politenessModule.isAllow(uri);
+            if (ret) pageNumber++;
+        }
+        return ret;
     }
 }
