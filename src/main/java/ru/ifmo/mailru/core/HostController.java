@@ -41,11 +41,14 @@ public class HostController {
         return pageNumber >= maxCount;
     }
 
-    public boolean addIfCan(URI uri) {
+    public void incNumber() {
+        pageNumber++;
+    }
+
+    public boolean canAdd(URI uri) {
         boolean ret = false;
         if (!isItTooMuch()) {
             ret = politenessModule == null || politenessModule.isAllow(uri);
-            if (ret) pageNumber++;
         }
         return ret;
     }

@@ -40,19 +40,17 @@ public class Spider implements Runnable {
 	@Override
 	public void run() {
         Thread thisThread = Thread.currentThread();
-        try {
-            while (curThread == thisThread) {
-                WebURL next = controller.nextURL();
-                while (next == null) {
-                    Thread.sleep(1000);
-                    next = controller.nextURL();
-                }
-                pool.execute(new PageProcessor(next, controller, modulePrioritization));
-                pw.println(next.getUri().toString());
-                System.out.println(next.getUri().toString());
+        int n = 0;
+        while (curThread == thisThread) {
+            WebURL next = controller.nextURL();
+            if (next == null) continue;
+            pool.execute(new PageProcessor(next, controller, modulePrioritization));
+            pw.println(next.getUri().toString());
+            n++;
+            if (n % 1000 == 0) {
+                System.out.println(n);
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+           // System.out.println(next.getUri().toString());
         }
 	}
 }

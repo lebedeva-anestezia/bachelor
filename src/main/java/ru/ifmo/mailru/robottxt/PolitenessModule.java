@@ -19,7 +19,9 @@ public class PolitenessModule {
     private TreeSet<Rule> rules = new TreeSet<>();
 
     public PolitenessModule(String host) throws URISyntaxException, IOException {
-        String content = ContentLoader.loadContent(new URI("http://" + host + ROBOTS_TXT), true, 3);
+        ContentLoader loader = new ContentLoader(new URI("http://" + host + ROBOTS_TXT), 3);
+        String content = loader.loadRobotsTxt();
+        if (content == null) return;
         extractRules(content);
     }
 
