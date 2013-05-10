@@ -2,6 +2,7 @@ package ru.ifmo.mailru;
 
 import org.junit.Ignore;
 import org.junit.Test;
+import ru.ifmo.mailru.core.PageParser;
 import ru.ifmo.mailru.core.Spider;
 import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.features.DictionaryModule;
@@ -17,10 +18,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.*;
 
 import static org.junit.Assert.assertTrue;
 
@@ -39,13 +42,21 @@ public class CompTest {
     @Ignore
     @Test
     public void bfsSpiderRun() {
-       spiderRun(new EmptyPrioritization(), "bfs");
+        try {
+            spiderRun(new EmptyPrioritization(), "bfs");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Ignore
     @Test
     public void FICASpiderRun() {
-        spiderRun(new FICAPrioritization(), "FICA");
+        try {
+            spiderRun(new FICAPrioritization(), "FICA");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private Set<WebURL> readStartSet(File file) throws FileNotFoundException {
@@ -61,14 +72,15 @@ public class CompTest {
         return set;
     }
 
-    private void spiderRun(ModulePrioritization prioritization, String teg) {
-        Set<WebURL> startSet = null;
+    private void spiderRun(ModulePrioritization prioritization, String teg) throws FileNotFoundException {
+        Set<WebURL> startSet;
         try {
             startSet = readStartSet(new File(crawledPagesDir + "start.txt"));
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
             return;
         }
+        //String fileName = crawledPagesDir + teg + dateFormat.format(date) + ".txt";
         String fileName = crawledPagesDir + teg + dateFormat.format(date) + ".txt";
         PrintWriter pw = null;
         try {
@@ -76,10 +88,12 @@ public class CompTest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        Scanner scanner = new Scanner(new File(crawledPagesDir + "rus.txt"));
         Spider spider = new Spider(prioritization, startSet, pw);
+        scanner.close();
         try {
             spider.start();
-            Thread.sleep(3 * HOUR);
+            Thread.sleep(4 * HOUR);
             spider.stop();
         } catch (Exception e) {
             e.printStackTrace();
@@ -102,7 +116,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "output1.txt");
+        File file = new File(crawledPagesDir + "russian_urls.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -110,12 +124,39 @@ public class CompTest {
         }
     }
 
+    @Ignore
+    @Test
+    public void getRu() throws FileNotFoundException {
+        HashSet<String> urls = new HashSet<>();
+        String[] list = new File(crawledPagesDir).list();
+        for (String s : list) {
+            File file = new File(crawledPagesDir + s);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNext()) {
+                String urlStr = scanner.nextLine();
+                try {
+                    if (PageParser.isRuURL(new URI(urlStr))) {
+                        urls.add(urlStr);
+                    }
+                } catch (URISyntaxException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        PrintWriter printWriter = new PrintWriter(crawledPagesDir + "russian_urls.txt");
+        for (String url : urls) {
+            printWriter.println(url);
+        }
+        printWriter.close();
+    }
+
     public void printRageRanks(File file) throws FileNotFoundException {
-        GettingPageRankExecutor executor = new GettingPageRankExecutor(file);
-        PrintWriter pw = new PrintWriter(new File(pageRanksDir + file.getName() + "new" + ".pr"));
-        executor.execute();
+        PrintWriter pw = null;
         try {
-            PageRankGetter.printResults(pw);
+            pw = new PrintWriter(new File(pageRanksDir + file.getName() + "new" + ".pr"));
+            GettingPageRankExecutor executor = new GettingPageRankExecutor(file, pw);
+            executor.execute();
+            //PageRankGetter.printResults(pw);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -146,7 +187,7 @@ public class CompTest {
     @Ignore
     @Test
     public void testTokenizer() {
-        File input = new File(crawledPagesDir + "common.txt");
+        File input = new File(crawledPagesDir + "russian_urls.txt");
         DictionaryModule m = new DictionaryModule();
         Map<String, Integer> map = m.getFrequencyTerm();
         try {
@@ -168,6 +209,33 @@ public class CompTest {
             e.printStackTrace();
         } finally {
             pw.close();
+        }
+    }
+
+    @Ignore
+    @Test
+    public void testSomething() {
+        ExecutorService service = Executors.newSingleThreadExecutor();
+        Future<?> f = service.submit(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("GEGE");
+            }
+        });
+        Future<String> future = service.submit(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                Thread.sleep(4000);
+                System.out.println("GEGE");
+                return "OPA";
+            }
+        });
+        try {
+            System.out.println("START");
+            f.get(3, TimeUnit.SECONDS);
+            System.out.println("Finished");
+        } catch (InterruptedException | ExecutionException | TimeoutException e) {
+            e.printStackTrace();
         }
     }
 

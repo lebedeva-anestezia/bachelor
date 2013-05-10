@@ -5,23 +5,17 @@ import java.net.URISyntaxException;
 
 public class URLCanonizer {
 
-	public static URI canonize(String url) {
-		try {
-            url.trim();
-			url = url.replaceAll("%7E", "~").replaceAll(" ", "%20");
-            if (url.startsWith("%20")) {
-                url = url.substring(3);
-            }
-			URI uri = new URI(url).normalize();
-            return uri;
-		} catch (URISyntaxException e) {
-			e.printStackTrace();
-			System.err.println("Illegal URI syntax: " + url);
-			return null;
-		}
+	public static URI canonize(String url) throws URISyntaxException {
+        url.trim();
+        url = url.replaceAll("%7E", "~").replaceAll(" ", "%20");
+        if (url.startsWith("%20")) {
+            url = url.substring(3);
+        }
+        URI uri = new URI(url).normalize();
+        return uri;
 	}
 
-    public static final URI canonizeHttpURI(URI uri) {
+    public static final URI canonizeHttpURI(URI uri) throws URISyntaxException {
         String path = uri.getPath();
         if (path != null) {
             if (path.endsWith("/")) {
@@ -35,13 +29,7 @@ public class URLCanonizer {
                 }
             }
         }
-        try {
-            return new URI(uri.getScheme(), uri.getHost(), path, uri.getQuery(), uri.getFragment());
-        } catch (URISyntaxException e) {
-            System.err.println("Illegal http URI index: " + uri);
-            e.printStackTrace();
-            return null;
-        }
+        return new URI(uri.getScheme(), uri.getHost(), path, uri.getQuery(), uri.getFragment());
     }
 	
 	public static URI resolver(URI uri, URI parentURI) {

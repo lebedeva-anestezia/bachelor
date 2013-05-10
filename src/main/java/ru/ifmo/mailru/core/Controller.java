@@ -5,8 +5,8 @@ import java.net.URISyntaxException;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * @author Anastasia Lebedeva
@@ -15,20 +15,23 @@ import java.util.concurrent.PriorityBlockingQueue;
 public class Controller {
 	private Map<String, HostController> hostMap = new ConcurrentHashMap<>();
     private Set<String> crawled = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
-	//private Set<WebURL> inQueue = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
+	private Set<WebURL> inQueue = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
     private Set<WebURL> inProcessing = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
-    private ConcurrentHashMap<WebURL, Double> ranks = new ConcurrentHashMap<>();
-    private PriorityBlockingQueue<WebURL> toCrawl = new PriorityBlockingQueue<>();
+    //private PriorityBlockingQueue<WebURL> toCrawl = new PriorityBlockingQueue<>();
+    private TreeSet<WebURL> toCrawl = new TreeSet<>(Collections.reverseOrder());
+    public final int MAX_PAGE = 1000000000;
 
     public WebURL nextURL() {
-        WebURL next = null;
-        try {
-            next = toCrawl.take();
-            inProcessing.add(next);
-            ranks.remove(next);
-        } catch (InterruptedException e) {
-            System.err.println(e.getMessage());
+        WebURL next;
+        synchronized (toCrawl) {
+            next = toCrawl.pollFirst();
+            //next = toCrawl.poll();
         }
+        if (next == null) {
+            return null;
+        }
+        inProcessing.add(next);
+        inQueue.remove(next);
         return next;
     }
 
@@ -36,32 +39,49 @@ public class Controller {
 		for (WebURL url: urls) {
             try {
                 addHostController(url);
-                add(url);
-            } catch (URISyntaxException | IOException e ) {
+            } catch (URISyntaxException e) {
                 System.err.println(e.getMessage());
+            }
+            try {
+                add(url);
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
 	}
+
+    private boolean tooMuch() {
+        return inQueue.size() + crawled.size() > MAX_PAGE;
+    }
 	
 	private boolean add(WebURL url) throws URISyntaxException, IOException {
-		if (crawled.contains(url.getUri().toString()) || inProcessing.contains(url) || ranks.containsKey(url)) {
+        if (tooMuch()) {
+            return false;
+        }
+		if (crawled.contains(url.getUri().toString()) || inProcessing.contains(url)) {
 			return false;
 		}
         if (!url.getHostController().canAdd(url.getUri())) {
             return false;
         }
+        synchronized (toCrawl) {
+            if (toCrawl.size() > MAX_PAGE) {
+                if (url.compareTo(toCrawl.last()) > 0) {
+                    toCrawl.pollLast();
+                } else {
+                    return false;
+                }
+            }
+            toCrawl.add(url);
+        }
+        inQueue.add(url);
         url.getHostController().incNumber();
-        /*Double rank = ranks.get(url);
-        if (rank != null) {
-            toCrawl.remove(url);
-            url.setRank(Math.min(url.getRank(), rank));
-        }                              */
-        ranks.put(url, url.getRank());
-		toCrawl.add(url);
 		return true;
 	}
 
-    private void addHostController(WebURL url) throws URISyntaxException {
+    public void addHostController(WebURL url) throws URISyntaxException {
         HostController hc;
         String curHost = url.getUri().getHost();
         if (hostMap.containsKey(curHost)) {

@@ -2,6 +2,7 @@ package ru.ifmo.mailru.google.pr;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ public class GettingPageRankExecutor {
     private final ExecutorService executor;
     private final List<Runnable> urls;
 
-    public GettingPageRankExecutor(File file) throws FileNotFoundException {
+    public GettingPageRankExecutor(File file, final PrintWriter out) throws FileNotFoundException {
         urls = new ArrayList<>();
         Scanner sc = new Scanner(file);
         while (sc.hasNext()) {
@@ -30,11 +31,17 @@ public class GettingPageRankExecutor {
                         int t = 0;
                         do {
                             if (res == -3) {
-                                t++;
-                                Thread.sleep(3000);
+                         //       t++;
+                                Thread.sleep(10);
                             }
                             res = getter.getPageRank(s);
                         } while (res == -3 && t < 10);
+                        if (res != 22) {
+                            synchronized (out) {
+                                out.println(s + " " + res);
+                                out.flush();
+                            }
+                        }
                     } catch (InterruptedException e) {
                         System.err.println(e.getMessage());
                     }
@@ -49,7 +56,7 @@ public class GettingPageRankExecutor {
             executor.execute(url);
         }
         try {
-            executor.awaitTermination(1, TimeUnit.HOURS);
+            executor.awaitTermination(10, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

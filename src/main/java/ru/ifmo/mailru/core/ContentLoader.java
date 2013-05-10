@@ -11,12 +11,41 @@ import java.net.URI;
 public class ContentLoader {
     private BufferedReader reader;
 
+
+    private class Timer implements Runnable {
+        private Timer(long time, Thread thread) {
+            this.time = time;
+            this.thread = thread;
+        }
+
+        private Thread thread;
+        private long time = 1000;
+
+        public Timer(Thread thread) {
+            this.thread = thread;
+        }
+
+
+        @Override
+        public void run() {
+            try {
+                System.out.println(thread);
+                Thread.currentThread().sleep(time);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                thread.interrupt();
+            }
+        }
+    }
+
     public ContentLoader(URI uri, int attemptsNumber) throws IOException {
         int n = 0;
         boolean done = false;
         while (!done)
         {
             try {
+                //new Thread(new Timer(Thread.currentThread())).start();
                 reader = new BufferedReader(new InputStreamReader(
                         uri.toURL().openStream()));
                 done = true;
@@ -46,10 +75,6 @@ public class ContentLoader {
     }
 
     private String loadContent(String separator) throws IOException {
-        if (!isWebPage()) {
-            reader.close();
-            return null;
-        }
         StringBuilder sb = new StringBuilder();
         String s;
         while ((s = nextLine()) != null) {
@@ -61,6 +86,10 @@ public class ContentLoader {
     }
 
     public String loadWebPage() throws IOException {
+        if (!isWebPage()) {
+            reader.close();
+            return null;
+        }
         return loadContent("");
     }
 

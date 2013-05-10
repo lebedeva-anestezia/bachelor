@@ -23,7 +23,6 @@ public class HostController {
         try {
             this.politenessModule = new PolitenessModule(host);
         } catch (IOException e) {
-            System.err.println(e.getMessage());
         }
     }
 	

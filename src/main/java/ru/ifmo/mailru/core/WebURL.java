@@ -6,12 +6,17 @@ import java.net.URISyntaxException;
 
 public class WebURL implements Comparable<WebURL> {
 
-	private URI uri;
+    private URI uri;
     private HostController hostController;
     private String fragment;
     private double rank;
 
     public WebURL(){}
+
+    public WebURL(URI uri, double rank) {
+        this.uri = uri;
+        this.rank = rank;
+    }
 
     public void setFragment(String fragment) {
         this.fragment = fragment;
@@ -51,7 +56,13 @@ public class WebURL implements Comparable<WebURL> {
 
     @Override
     public int compareTo(WebURL o) {
-        return new Double(rank).compareTo(o.rank);
+        //if (new Double(rank).compareTo(o.rank) == 0)
+          //  return uri.compareTo(o.uri);
+        //return new Double(rank).compareTo(o.rank);
+        if (new Double(rank).compareTo(o.rank) >= 0) {
+            return 1;
+        }
+        return -1;
     }
 
     @Override

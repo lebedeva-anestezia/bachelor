@@ -45,13 +45,13 @@ public class PageRankGetter {
 
     public int getPageRank(String url) {
         if (pageRanks.containsKey(url)) {
-            return pageRanks.get(url);
+            return 22;
         }
         int rank = 0;
         try {
             rank = pageRankService.getPR(url);
         } catch (IOException e) {
-            System.err.println("OLOLO " + e.getMessage());
+            //System.err.println("OLOLO " + e.getMessage());
             return -3;
         }
         pageRanks.put(url, rank);
