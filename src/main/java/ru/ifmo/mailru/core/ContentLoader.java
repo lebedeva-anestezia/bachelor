@@ -11,41 +11,12 @@ import java.net.URI;
 public class ContentLoader {
     private BufferedReader reader;
 
-
-    private class Timer implements Runnable {
-        private Timer(long time, Thread thread) {
-            this.time = time;
-            this.thread = thread;
-        }
-
-        private Thread thread;
-        private long time = 1000;
-
-        public Timer(Thread thread) {
-            this.thread = thread;
-        }
-
-
-        @Override
-        public void run() {
-            try {
-                System.out.println(thread);
-                Thread.currentThread().sleep(time);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } finally {
-                thread.interrupt();
-            }
-        }
-    }
-
     public ContentLoader(URI uri, int attemptsNumber) throws IOException {
         int n = 0;
         boolean done = false;
         while (!done)
         {
             try {
-                //new Thread(new Timer(Thread.currentThread())).start();
                 reader = new BufferedReader(new InputStreamReader(
                         uri.toURL().openStream()));
                 done = true;
@@ -63,11 +34,11 @@ public class ContentLoader {
     }
 
     public boolean isWebPage() throws IOException {
-        char[] firstSymbols = new char[9];
+        char[] firstSymbols = new char[40];
         reader.read(firstSymbols);
         String firstLine = new String(firstSymbols);
-        //reader.close();
-        return firstLine.startsWith("<?xml") || firstLine.startsWith("<!DOCTYPE");
+        firstLine = firstLine.toLowerCase().trim();
+        return firstLine.startsWith("<?xml") || firstLine.startsWith("<!doctype") || firstLine.startsWith("<html");
     }
 
     public String loadRobotsTxt() throws IOException {
@@ -96,36 +67,4 @@ public class ContentLoader {
     private String nextLine() throws IOException {
         return reader.readLine();
     }
-
-   /* public String loadContent(URI uri, boolean includeEnters, int attemptsNumber) throws IOException {
-        int n = 0;
-        boolean done = false;
-        BufferedReader reader = null;
-        while (!done)
-            try {
-                reader = new BufferedReader(new InputStreamReader(
-                        uri.toURL().openStream()));
-                done = true;
-            } catch (IOException e) {
-                if (++n >= attemptsNumber) {
-                    throw e;
-                }
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException e1) {
-                    System.err.println(e1.getMessage());
-                }
-            }
-        StringBuilder sb = new StringBuilder();
-        String separator = "";
-        if (includeEnters) {
-            separator = "\n";
-        }
-        String s;
-        while ((s = reader.readLine()) != null) {
-            sb.append(s);
-            sb.append(separator);
-        }
-        return sb.toString();
-    } */
 }

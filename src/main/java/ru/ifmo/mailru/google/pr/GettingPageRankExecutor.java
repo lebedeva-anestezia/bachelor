@@ -29,13 +29,11 @@ public class GettingPageRankExecutor {
                     try {
                         int res = 0;
                         int t = 0;
-                        do {
                             if (res == -3) {
-                         //       t++;
+                                t++;
                                 Thread.sleep(10);
                             }
                             res = getter.getPageRank(s);
-                        } while (res == -3 && t < 10);
                         if (res != 22) {
                             synchronized (out) {
                                 out.println(s + " " + res);
@@ -48,12 +46,17 @@ public class GettingPageRankExecutor {
                 }
             });
         }
-        executor = Executors.newFixedThreadPool(10);
+        executor = Executors.newSingleThreadExecutor();
     }
 
     public void execute() {
         for (Runnable url : urls) {
             executor.execute(url);
+            try {
+                Thread.sleep(60000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         try {
             executor.awaitTermination(10, TimeUnit.MINUTES);

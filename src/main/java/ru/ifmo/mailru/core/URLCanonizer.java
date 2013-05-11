@@ -15,7 +15,7 @@ public class URLCanonizer {
         return uri;
 	}
 
-    public static final URI canonizeHttpURI(URI uri) throws URISyntaxException {
+    public static URI canonizeHttpURI(URI uri) throws URISyntaxException {
         String path = uri.getPath();
         if (path != null) {
             if (path.endsWith("/")) {

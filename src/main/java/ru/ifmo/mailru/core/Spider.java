@@ -3,23 +3,23 @@ package ru.ifmo.mailru.core;
 import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.util.TimeOutFixedThreadPullExecutor;
 
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 
 public class Spider implements Runnable {
 
     private PrintWriter pw;
-	private Controller controller = new Controller();
-	private ExecutorService pool;
+	private Controller controller;
     private ModulePrioritization modulePrioritization;
-	private final int POOL_SIZE = 10;
+	private final int POOL_SIZE = 20;
     private Thread curThread;
-    AtomicLong n = new AtomicLong(0);
     private TimeOutFixedThreadPullExecutor executor = new TimeOutFixedThreadPullExecutor(POOL_SIZE);
 
     public Spider(ModulePrioritization modulePrioritization, Set<WebURL> URLSet, PrintWriter pw, Scanner sc) {
@@ -44,8 +44,14 @@ public class Spider implements Runnable {
 
 
     public Spider(Set<WebURL> URLSet) {
-		controller.addAll(URLSet);
-		pool = Executors.newFixedThreadPool(10);
+        try {
+            controller = new Controller();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.exit(0);
+        }
+        controller.addAll(URLSet);
+		//pool = Executors.newFixedThreadPool(10);
 	}
 
     public void start() {
@@ -55,34 +61,6 @@ public class Spider implements Runnable {
 
     public void stop() {
         curThread = null;
-    }
-
-    class SpiderRunner implements Runnable {
-        Future future;
-        String uri;
-
-        SpiderRunner(Future future, String uri) {
-            this.future = future;
-            this.uri = uri;
-        }
-
-        @Override
-        public void run() {
-            try {
-                future.get(1, TimeUnit.MINUTES);
-                synchronized (pw) {
-                    pw.println(uri);
-                    pw.flush();
-                }
-                System.out.println(n.incrementAndGet());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (TimeoutException e) {
-                System.err.println("TimeOut: " + uri);
-            }
-        }
     }
 
 	@Override
@@ -102,11 +80,10 @@ public class Spider implements Runnable {
                 e.printStackTrace();
             } catch (TimeoutException e) {
                 System.err.println("TimeOut: " + next.getUri().toString());
+                controller.setFailedPage(next);
             } catch (ExecutionException e) {
                 e.printStackTrace();
             }
-            //Future f = pool.submit(new PageProcessor(next, controller, modulePrioritization));
-            //new Thread(new SpiderRunner(f, next.getUri().toString())).start();
         }
 	}
 }

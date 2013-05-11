@@ -24,7 +24,7 @@ public class PageProcessor implements Runnable {
         this.prioritization = prioritization;
     }
 
-    private boolean load() {
+    private boolean load() throws IOException {
 		/*while (!page.getUrl().getHostController().canRequest()) {
 			try {
 				Thread.sleep(1000);
@@ -33,32 +33,39 @@ public class PageProcessor implements Runnable {
 			}
 		}  */
         try {
-            page.getUrl().getHostController().request();
+//            page.getUrl().getHostController().request();
             ContentLoader loader = new ContentLoader(page.getUrl().getUri(), 5);
             String content = loader.loadWebPage();
-            if (content == null) return false;
-            page.getUrl().getHostController().request();
+            if (content == null) throw new IOException();
+       //     page.getUrl().getHostController().request();
             page.setContent(content);
             return true;
         } catch (IOException e) {
-            System.err.println("Load exception for page: " + page.getUrl().getUri());
-            return false;
+            throw new IOException("Load exception for page: " + page.getUrl().getUri());
         }
     }
 
     @Override
     public void run() {
-        if (!load()) {
-            return;
+        try {
+            processingWebPage();
+            prioritization.setPriorities(page);
+            controller.addAll(page.getOutLinks());
+            controller.setCrawledURL(page.getUrl());
+            synchronized (printWriter) {
+                printWriter.println(page.getUrl().getUri());
+                printWriter.flush();
+            }
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+            //e.printStackTrace();
+            controller.setFailedPage(page.getUrl());
         }
+    }
+
+    void processingWebPage() throws IOException {
+        load();
         PageParser.parse(page);
-        prioritization.setPriorities(page);
-        controller.addAll(page.getOutLinks());
-        controller.setCrawledURL(page.getUrl());
-        synchronized (printWriter) {
-            printWriter.println(page.getUrl().getUri());
-            printWriter.flush();
-        }
     }
 }
 

@@ -43,6 +43,13 @@ public class PageRankGetter {
         return getPageRank(uri.toString());
     }
 
+    public int getExistPageRank(String url) {
+        if (pageRanks.containsKey(url)) {
+            return pageRanks.get(url);
+        }
+        return -1;
+    }
+
     public int getPageRank(String url) {
         if (pageRanks.containsKey(url)) {
             return 22;
@@ -50,11 +57,11 @@ public class PageRankGetter {
         int rank = 0;
         try {
             rank = pageRankService.getPR(url);
+            pageRanks.put(url, rank);
         } catch (IOException e) {
-            //System.err.println("OLOLO " + e.getMessage());
+            System.err.println("OLOLO " + e.getMessage());
             return -3;
         }
-        pageRanks.put(url, rank);
         return rank;
     }
 

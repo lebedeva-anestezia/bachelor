@@ -58,7 +58,7 @@ public class PageRankService {
 
         long hash = jHash.hash(("info:" + domain).getBytes());
 
-        String url = "http://"+GOOGLE_PR_DATACENTER_IPS[dataCenterIdx]+"/tbr?client=navclient-auto&hl=en&"+
+        String url = "http://"+GOOGLE_PR_DATACENTER_IPS[dataCenterIdx]+"/tbr?client=navclient-auto&hl=ru&"+
                 "ch=6"+hash+"&ie=UTF-8&oe=UTF-8&features=Rank&q=info:" + domain;
 
 

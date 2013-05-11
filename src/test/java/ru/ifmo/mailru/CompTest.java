@@ -2,11 +2,9 @@ package ru.ifmo.mailru;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import ru.ifmo.mailru.core.PageParser;
 import ru.ifmo.mailru.core.Spider;
 import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.features.DictionaryModule;
-import ru.ifmo.mailru.google.pr.GettingPageRankExecutor;
 import ru.ifmo.mailru.google.pr.PageRankGetter;
 import ru.ifmo.mailru.priority.EmptyPrioritization;
 import ru.ifmo.mailru.priority.FICAPrioritization;
@@ -14,16 +12,11 @@ import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.robottxt.PolitenessModule;
 import ru.ifmo.mailru.util.ValueComparator;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URI;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.concurrent.*;
 
 import static org.junit.Assert.assertTrue;
 
@@ -80,7 +73,6 @@ public class CompTest {
             System.err.println(e.getMessage());
             return;
         }
-        //String fileName = crawledPagesDir + teg + dateFormat.format(date) + ".txt";
         String fileName = crawledPagesDir + teg + dateFormat.format(date) + ".txt";
         PrintWriter pw = null;
         try {
@@ -102,10 +94,34 @@ public class CompTest {
         }
     }
 
+    @Ignore
+    @Test
+    public void printMeanPR() {
+        File file = new File(pageRanksDir + "FICA201305100930.txtnew.pr");
+        try {
+            System.out.println(meanPR(file));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public double meanPR(File file) throws FileNotFoundException {
+        Scanner sc = new Scanner(file);
+        long sum = 0;
+        int count = 0;
+        while (sc.hasNext()) {
+            String s = sc.nextLine();
+            String[] arr = s.split(" ");
+            sum += Integer.valueOf(arr[1]);
+            count++;
+        }
+        return (double) sum / count;
+    }
+
     public void constructPRGetter() {
         File file = new File(pageRanksDir + "pageRanks.pr");
         try {
-           new PageRankGetter(file);
+            new PageRankGetter(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(1);
@@ -116,7 +132,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "russian_urls.txt");
+        File file = new File(crawledPagesDir + "bfsRU1700.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -124,39 +140,26 @@ public class CompTest {
         }
     }
 
-    @Ignore
-    @Test
-    public void getRu() throws FileNotFoundException {
-        HashSet<String> urls = new HashSet<>();
-        String[] list = new File(crawledPagesDir).list();
-        for (String s : list) {
-            File file = new File(crawledPagesDir + s);
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNext()) {
-                String urlStr = scanner.nextLine();
-                try {
-                    if (PageParser.isRuURL(new URI(urlStr))) {
-                        urls.add(urlStr);
-                    }
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        PrintWriter printWriter = new PrintWriter(crawledPagesDir + "russian_urls.txt");
-        for (String url : urls) {
-            printWriter.println(url);
-        }
-        printWriter.close();
-    }
-
     public void printRageRanks(File file) throws FileNotFoundException {
         PrintWriter pw = null;
         try {
             pw = new PrintWriter(new File(pageRanksDir + file.getName() + "new" + ".pr"));
-            GettingPageRankExecutor executor = new GettingPageRankExecutor(file, pw);
-            executor.execute();
-            //PageRankGetter.printResults(pw);
+            PageRankGetter getter = new PageRankGetter();
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNext()) {
+                String s = scanner.nextLine();
+                int res = getter.getPageRank(s);
+                if (res != 22) {
+                    if (res != -3) {
+                        pw.println(s + " " + res);
+                        pw.flush();
+                    }
+                    System.out.println(s + " " + res);
+                    Thread.sleep(1000);
+                } else {
+                    System.out.println("exists PR for " + s);
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -215,26 +218,11 @@ public class CompTest {
     @Ignore
     @Test
     public void testSomething() {
-        ExecutorService service = Executors.newSingleThreadExecutor();
-        Future<?> f = service.submit(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("GEGE");
-            }
-        });
-        Future<String> future = service.submit(new Callable<String>() {
-            @Override
-            public String call() throws Exception {
-                Thread.sleep(4000);
-                System.out.println("GEGE");
-                return "OPA";
-            }
-        });
+        String s = "http://m.ya.ru/operamini/download.xml?platform=4&amp;branch=";
         try {
-            System.out.println("START");
-            f.get(3, TimeUnit.SECONDS);
-            System.out.println("Finished");
-        } catch (InterruptedException | ExecutionException | TimeoutException e) {
+            String out = new String(s.getBytes("UTF-8"), "ISO-8859-1");
+            System.out.println(out);
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
