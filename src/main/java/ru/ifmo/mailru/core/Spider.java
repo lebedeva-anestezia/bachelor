@@ -80,7 +80,7 @@ public class Spider implements Runnable {
                 e.printStackTrace();
             } catch (TimeoutException e) {
                 System.err.println("TimeOut: " + next.getUri().toString());
-                controller.setFailedPage(next);
+                controller.setFailedPage(next, "TimeOut");
             } catch (ExecutionException e) {
                 e.printStackTrace();
             }

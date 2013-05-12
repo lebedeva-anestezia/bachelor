@@ -11,8 +11,8 @@ public class PageProcessorTest {
     @Ignore
     @Test
     public void testProcessingWebPage() throws Exception {
-        WebURL url = new WebURL("http://www.domodedovo.ru/");
-        //WebURL url = new WebURL("https://mail.rambler.ru");
+       // WebURL url = new WebURL("https://www.aeroflot.ru/cms/time_table/search");
+        WebURL url = new WebURL("https://mail.rambler.ru");
         PageProcessor processor = new PageProcessor(url, null, null);
         long t = System.currentTimeMillis();
         processor.processingWebPage();

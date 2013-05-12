@@ -57,7 +57,7 @@ public class PolitenessModule {
         if (query != null) {
             locate += "?" + query;
         }
-        NavigableSet<Rule> pertinentDisallowRules = rules.headSet(new Rule(locate, null, null), true);
+        NavigableSet<Rule> pertinentDisallowRules = rules.headSet(new Rule(locate + "$", null, null), true);
         RuleType ruleType = RuleType.Allow;
         for (Rule rule : pertinentDisallowRules) {
             if (locate.matches(String.valueOf(rule.getPattern()))) {

@@ -59,7 +59,7 @@ public class ContentLoader {
     public String loadWebPage() throws IOException {
         if (!isWebPage()) {
             reader.close();
-            return null;
+            throw new IOException("Is not web page");
         }
         return loadContent("");
     }

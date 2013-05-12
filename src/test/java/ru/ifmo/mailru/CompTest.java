@@ -34,6 +34,13 @@ public class CompTest {
 
     @Ignore
     @Test
+    public void comparedRun() {
+        bfsSpiderRun();
+        FICASpiderRun();
+    }
+
+    @Ignore
+    @Test
     public void bfsSpiderRun() {
         try {
             spiderRun(new EmptyPrioritization(), "bfs");
@@ -97,7 +104,7 @@ public class CompTest {
     @Ignore
     @Test
     public void printMeanPR() {
-        File file = new File(pageRanksDir + "FICA201305100930.txtnew.pr");
+        File file = new File(pageRanksDir + "FICA201305112204.txtnew.pr");
         try {
             System.out.println(meanPR(file));
         } catch (FileNotFoundException e) {
@@ -132,7 +139,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "bfsRU1700.txt");
+        File file = new File(crawledPagesDir + "FICA201305112204.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -148,14 +155,14 @@ public class CompTest {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNext()) {
                 String s = scanner.nextLine();
-                int res = getter.getPageRank(s);
+                int res = getter.getExistPageRank(s);
                 if (res != 22) {
                     if (res != -3) {
                         pw.println(s + " " + res);
                         pw.flush();
                     }
                     System.out.println(s + " " + res);
-                    Thread.sleep(1000);
+                   // Thread.sleep(1000);
                 } else {
                     System.out.println("exists PR for " + s);
                 }
@@ -177,6 +184,17 @@ public class CompTest {
             e.printStackTrace();
         }
         assertTrue(politenessModule.isAllow("https://twitter.com/search?q=%23"));
+    }
+
+    @Test
+    public void testingRobotTxt1() throws URISyntaxException {
+        PolitenessModule politenessModule = null;
+        try {
+            politenessModule = new PolitenessModule("mail.ru");
+        } catch (URISyntaxException | IOException e) {
+            e.printStackTrace();
+        }
+        assertTrue(politenessModule.isAllow("http://mail.ru/"));
     }
 
     @Ignore

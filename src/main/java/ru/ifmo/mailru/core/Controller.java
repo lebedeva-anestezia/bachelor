@@ -112,11 +112,11 @@ public class Controller {
         url.setHostController(hc);
     }
 
-    public void setFailedPage(WebURL url) {
+    public void setFailedPage(WebURL url, String exception) {
         failed.add(url.getUri().toString());
         inProcessing.remove(url);
         synchronized (failedPagePrintWriter) {
-            failedPagePrintWriter.println(url.getUri().toString());
+            failedPagePrintWriter.println(url.getUri().toString() + " " + exception);
             failedPagePrintWriter.flush();
         }
     }

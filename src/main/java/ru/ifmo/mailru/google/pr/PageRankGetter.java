@@ -59,7 +59,7 @@ public class PageRankGetter {
             rank = pageRankService.getPR(url);
             pageRanks.put(url, rank);
         } catch (IOException e) {
-            System.err.println("OLOLO " + e.getMessage());
+            System.err.println(e.getMessage());
             return -3;
         }
         return rank;

@@ -8,7 +8,7 @@ import ru.ifmo.mailru.core.WebURL;
  */
 public class FICAPrioritization implements ModulePrioritization {
     private static double beta = 0.1, gamma = 0.5;
-    private static double time, K = 100, size;
+    private static double time, K = 300, size;
 
     @Override
     public void setPriorities(Page page) {
@@ -20,7 +20,7 @@ public class FICAPrioritization implements ModulePrioritization {
         for (WebURL webURL : page.getOutLinks()) {
             double curRank = -((1 - alpha) * absRank + alpha * dist);
             webURL.setRank(curRank);
-            System.out.println(webURL.getUri().toString() + " " + webURL.getRank());
+           // System.out.println(webURL.getUri().toString() + " " + webURL.getRank());
         }
     }
 }
