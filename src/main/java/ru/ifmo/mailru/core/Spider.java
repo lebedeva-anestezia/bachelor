@@ -56,6 +56,22 @@ public class Spider implements Runnable {
 
     public void start() {
         curThread = new Thread(this);
+     /*   Thread lever = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        if (System.in.read() == '\n') {
+                            stop();
+                            break;
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+        lever.start();   */
         curThread.start();
     }
 

@@ -3,12 +3,13 @@ package ru.ifmo.mailru.features;
 import ru.ifmo.mailru.core.WebURL;
 
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Extractor {
+public class FeaturesExtractor {
 	private List<Double> features;
 	private String[] components;
 	private final int COMPONENT_NUMBER = 5;
@@ -22,8 +23,12 @@ public class Extractor {
             }
         }
     }
+
+    public FeaturesExtractor(String url) throws URISyntaxException {
+        this(new WebURL(new URI(url)));
+    }
 	
-	public Extractor(WebURL url) {
+	public FeaturesExtractor(WebURL url) {
 		components = new String[COMPONENT_NUMBER];
         URI uri = url.getUri();
         components[0] = uri.toString();

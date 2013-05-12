@@ -12,11 +12,11 @@ public class PageProcessorTest {
     @Test
     public void testProcessingWebPage() throws Exception {
        // WebURL url = new WebURL("https://www.aeroflot.ru/cms/time_table/search");
-        WebURL url = new WebURL("https://mail.rambler.ru");
+        WebURL url = new WebURL("http://www.guarantee.ru/services/users");
+        System.out.println(url.getUri().toURL());
         PageProcessor processor = new PageProcessor(url, null, null);
         long t = System.currentTimeMillis();
         processor.processingWebPage();
         System.out.println(System.currentTimeMillis() - t);
     }
-    //TODO: выяснить насчет контента страниц (начинается с \r\n<html>)
 }

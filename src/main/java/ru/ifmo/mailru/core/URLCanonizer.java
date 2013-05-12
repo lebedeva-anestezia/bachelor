@@ -32,9 +32,10 @@ public class URLCanonizer {
         return new URI(uri.getScheme(), uri.getHost(), path, uri.getQuery(), uri.getFragment());
     }
 	
-	public static URI resolver(URI uri, URI parentURI) {
+	public static URI resolver(URI uri, URI parentURI) throws URISyntaxException {
 		URI res = parentURI.resolve(uri);
-		return res;
+        String tmp = res.toString().replaceAll("/\\.\\.", "");
+        return new URI(tmp);
 	}
 
 }

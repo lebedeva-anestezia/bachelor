@@ -104,7 +104,7 @@ public class CompTest {
     @Ignore
     @Test
     public void printMeanPR() {
-        File file = new File(pageRanksDir + "FICA201305112204.txtnew.pr");
+        File file = new File(pageRanksDir + "bfs201305120922.txtnew.pr");
         try {
             System.out.println(meanPR(file));
         } catch (FileNotFoundException e) {
@@ -139,7 +139,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "FICA201305112204.txt");
+        File file = new File(crawledPagesDir + "FICA201305120922.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -162,7 +162,7 @@ public class CompTest {
                         pw.flush();
                     }
                     System.out.println(s + " " + res);
-                   // Thread.sleep(1000);
+                    //Thread.sleep(1000);
                 } else {
                     System.out.println("exists PR for " + s);
                 }

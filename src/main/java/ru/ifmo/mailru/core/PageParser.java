@@ -32,7 +32,6 @@ public class PageParser {
                 WebURL url = new WebURL();
                 url.setFragment(uri.getFragment());
                 uri = new URI(uri.getScheme(), uri.getSchemeSpecificPart(), null);
-                System.out.println(uri);
                 if (isRuURL(uri)) {
                     url.setUri(uri);
                     out.add(url);
@@ -48,6 +47,9 @@ public class PageParser {
         Matcher linkMatcher = LINK_TEG.matcher(href);
         if (linkMatcher.find()) {
             String link = linkMatcher.group(1);
+            if (link.length() < 3) {
+                return null;
+            }
             return link.substring(1, link.length() - 1);
         }
         return null;

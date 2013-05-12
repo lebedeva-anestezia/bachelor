@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
+import java.net.URLConnection;
+import java.nio.charset.Charset;
 
 /**
  * @author Anastasia Lebedeva
@@ -14,11 +16,12 @@ public class ContentLoader {
     public ContentLoader(URI uri, int attemptsNumber) throws IOException {
         int n = 0;
         boolean done = false;
+        URLConnection connection = uri.toURL().openConnection();
+       // URLConnection.guessContentTypeFromStream(connection.getInputStream());
         while (!done)
         {
             try {
-                reader = new BufferedReader(new InputStreamReader(
-                        uri.toURL().openStream()));
+                reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), Charset.forName("utf-8")));
                 done = true;
             } catch (IOException e) {
                 if (++n >= attemptsNumber) {
@@ -36,9 +39,15 @@ public class ContentLoader {
     public boolean isWebPage() throws IOException {
         char[] firstSymbols = new char[40];
         reader.read(firstSymbols);
+        int i = 0;
+        while (i < firstSymbols.length && (Character.codePointAt(firstSymbols, i) == 65279 ||
+                Character.codePointAt(firstSymbols, i) == 31)) {
+            firstSymbols[i] = ' ';
+            i++;
+        }
         String firstLine = new String(firstSymbols);
         firstLine = firstLine.toLowerCase().trim();
-        return firstLine.startsWith("<?xml") || firstLine.startsWith("<!doctype") || firstLine.startsWith("<html");
+        return firstLine.startsWith("<");
     }
 
     public String loadRobotsTxt() throws IOException {
