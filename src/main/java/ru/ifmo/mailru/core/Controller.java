@@ -23,7 +23,7 @@ public class Controller {
     private Set<WebURL> inProcessing = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
     //private PriorityBlockingQueue<WebURL> toCrawl = new PriorityBlockingQueue<>();
     //private ConcurrentHashMap<URI, Double> ranks = new ConcurrentHashMap<>();
-    private TreeSet<WebURL> toCrawl = new TreeSet<>(Collections.reverseOrder());
+    TreeSet<WebURL> toCrawl = new TreeSet<>(Collections.reverseOrder());
     public final int MAX_PAGE = 1000000000;
     private final PrintWriter failedPagePrintWriter;
 

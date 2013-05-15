@@ -15,6 +15,11 @@ public class TrainingController {
     public final Map<String, Double> positiveExamples;
     public final Map<String, Double> negativeExamples;
     private NeuralNetwork neuralNetwork;
+    public static final String RANKS_FILE = "src/test/resources/pageRanks/pageRanks.pr";
+
+    public TrainingController() throws FileNotFoundException {
+        this(new File(RANKS_FILE));
+    }
 
     public TrainingController(File file) throws FileNotFoundException {
         positiveExamples = new LinkedHashMap<>();
@@ -43,7 +48,7 @@ public class TrainingController {
         for (String item : input) {
             if (i == 0) break;
             res.add(item);
-            i++;
+            i--;
         }
         return  res;
     }
@@ -64,7 +69,6 @@ public class TrainingController {
         trainingSet.addAll(getRandomList(new ArrayList<>(negativeExamples.keySet()), negativeCount));
         List<Double[]> inputVectors = new ArrayList<>();
         List<Double> outputValues = new ArrayList<>();
-        int count = 0;
         for (String item : trainingSet) {
             try {
                 FeaturesExtractor extractor = new FeaturesExtractor(item);
@@ -78,10 +82,16 @@ public class TrainingController {
                 System.err.println("Illegal URI syntax for " + item);
             }
         }
-        Double[][] out = new Double[1][outputValues.size()];
-        out[0] = (Double[]) outputValues.toArray();
-        neuralNetwork = new NeuralNetwork(replaceToPrimitiveDouble2D((Double[][]) inputVectors.toArray()),
+        Double[][] out = new Double[outputValues.size()][1];
+        Double[][] in = new Double[inputVectors.size()][inputVectors.get(0).length];
+        int i = 0;
+        for (Double value : outputValues) {
+            out[i][0] = value;
+            i++;
+        }
+        neuralNetwork = new NeuralNetwork(replaceToPrimitiveDouble2D(inputVectors.toArray(in)),
                 replaceToPrimitiveDouble2D(out));
+        neuralNetwork.train();
     }
 
     private double[][] replaceToPrimitiveDouble2D(Double[][] matrix) {

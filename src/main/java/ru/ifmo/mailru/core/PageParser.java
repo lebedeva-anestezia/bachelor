@@ -15,8 +15,9 @@ public class PageParser {
         Matcher tagMatcher = A_TAG.matcher(page.getContent());
         Set<WebURL> out = new HashSet<>();
         while (tagMatcher.find()) {
+            String link = null;
             try {
-                String link = extractLink(tagMatcher.group(1));
+                link = extractLink(tagMatcher.group(1));
                 if (link == null) {
                     continue;
                 }
@@ -37,7 +38,7 @@ public class PageParser {
                     out.add(url);
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                System.err.println(e.getMessage() + " " + link);
             }
         }
         page.setOutLinks(out);

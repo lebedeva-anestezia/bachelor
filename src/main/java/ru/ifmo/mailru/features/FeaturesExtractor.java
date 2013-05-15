@@ -15,13 +15,27 @@ public class FeaturesExtractor {
 	private final int COMPONENT_NUMBER = 5;
     private static double[][] MAXIMUMS;
 
+    /**
+     * row 0: length features
+     * row 1: orthographic features (digits)
+     * row 2: orthographic features (capital case)
+     * row 3: number of term
+     */
+
     {
-        MAXIMUMS = new double[5][4];
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 4; j++) {
-                MAXIMUMS[i][j] = 10; // TODO: replace to trust values
+        MAXIMUMS = new double[COMPONENT_NUMBER][4];
+        for (int j = 0; j < 3; j++) {
+            for (int i = 1; i < COMPONENT_NUMBER; i++) {
+                MAXIMUMS[i][j] = 100; // TODO: replace to trust values
             }
         }
+        for (int i = 0; i < 3; i++) {
+            MAXIMUMS[0][i] = 200;
+        }
+        for (int i = 1; i < COMPONENT_NUMBER; i++) {
+            MAXIMUMS[i][3] = 10;
+        }
+        MAXIMUMS[0][3] = 30;
     }
 
     public FeaturesExtractor(String url) throws URISyntaxException {
@@ -74,7 +88,7 @@ public class FeaturesExtractor {
 
     private void extractCountTerm() {
         List<String[]> terms = extractTerms();
-        for (int i = 1; i < COMPONENT_NUMBER; i++) {
+        for (int i = 0; i < COMPONENT_NUMBER - 1; i++) {
             features.add(terms.get(i).length / MAXIMUMS[i][3]);
         }
     }

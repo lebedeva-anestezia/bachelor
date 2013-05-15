@@ -9,6 +9,7 @@ import ru.ifmo.mailru.google.pr.PageRankGetter;
 import ru.ifmo.mailru.priority.EmptyPrioritization;
 import ru.ifmo.mailru.priority.FICAPrioritization;
 import ru.ifmo.mailru.priority.ModulePrioritization;
+import ru.ifmo.mailru.priority.NeuralPrioritization;
 import ru.ifmo.mailru.robottxt.PolitenessModule;
 import ru.ifmo.mailru.util.ValueComparator;
 
@@ -37,6 +38,16 @@ public class CompTest {
     public void comparedRun() {
         bfsSpiderRun();
         FICASpiderRun();
+    }
+
+    @Ignore
+    @Test
+    public void neuralSpiderRun() {
+        try {
+            spiderRun(new NeuralPrioritization(), "neural");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Ignore
@@ -92,7 +103,7 @@ public class CompTest {
         scanner.close();
         try {
             spider.start();
-            Thread.sleep(4 * HOUR);
+            Thread.sleep(5 * HOUR);
             spider.stop();
         } catch (Exception e) {
             e.printStackTrace();
@@ -104,7 +115,7 @@ public class CompTest {
     @Ignore
     @Test
     public void printMeanPR() {
-        File file = new File(pageRanksDir + "bfs201305120922.txtnew.pr");
+        File file = new File(pageRanksDir + "neural201305132350.txtnew.pr");
         try {
             System.out.println(meanPR(file));
         } catch (FileNotFoundException e) {
@@ -139,7 +150,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "FICA201305120922.txt");
+        File file = new File(crawledPagesDir + "neural201305132350.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -155,14 +166,14 @@ public class CompTest {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNext()) {
                 String s = scanner.nextLine();
-                int res = getter.getExistPageRank(s);
+                int res = getter.getPageRank(s);
                 if (res != 22) {
                     if (res != -3) {
                         pw.println(s + " " + res);
                         pw.flush();
                     }
                     System.out.println(s + " " + res);
-                    //Thread.sleep(1000);
+                    Thread.sleep(1000);
                 } else {
                     System.out.println("exists PR for " + s);
                 }

@@ -3,6 +3,7 @@ package ru.ifmo.mailru.core;
 import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.util.TimeOutFixedThreadPullExecutor;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
@@ -76,6 +77,17 @@ public class Spider implements Runnable {
     }
 
     public void stop() {
+        try {
+            PrintWriter printWriter = new PrintWriter(new File("queue" +  System.currentTimeMillis() + ".txt"));
+            synchronized (controller.toCrawl) {
+                for (WebURL webURL : controller.toCrawl) {
+                    printWriter.println(webURL.getUri().toString() + " " + webURL.getRank());
+                }
+            }
+            printWriter.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         curThread = null;
     }
 
@@ -89,9 +101,6 @@ public class Spider implements Runnable {
             try {
                 executor.submitTask(new PageProcessor(next, controller, modulePrioritization, pw), 1, TimeUnit.MINUTES);
                 n++;
-                if (n % 5000 == 0) {
-                    System.out.println(n);
-                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (TimeoutException e) {
