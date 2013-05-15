@@ -10,13 +10,6 @@ public class PageProcessor implements Runnable {
     private Page page;
     private Controller controller;
     private ModulePrioritization prioritization;
-    private PrintWriter printWriter;
-
-    public PageProcessor(WebURL url, Controller controller, ModulePrioritization prioritization, PrintWriter printWriter) {
-        this(url, controller, prioritization);
-        this.printWriter = printWriter;
-    }
-
 
     public PageProcessor(WebURL url, Controller controller, ModulePrioritization prioritization) {
         this.page = new Page(url);
@@ -47,10 +40,6 @@ public class PageProcessor implements Runnable {
             prioritization.setPriorities(page);
             controller.addAll(page.getOutLinks());
             controller.setCrawledURL(page.getUrl());
-            synchronized (printWriter) {
-                printWriter.println(page.getUrl().getUri());
-                printWriter.flush();
-            }
         } catch (Exception e) {
             System.err.println(e.getMessage());
             //e.printStackTrace();

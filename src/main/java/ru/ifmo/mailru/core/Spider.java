@@ -3,12 +3,6 @@ package ru.ifmo.mailru.core;
 import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.util.TimeOutFixedThreadPullExecutor;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.net.URISyntaxException;
-import java.util.Scanner;
-import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -16,44 +10,16 @@ import java.util.concurrent.TimeoutException;
 
 public class Spider implements Runnable {
 
-    private PrintWriter pw;
 	private Controller controller;
     private ModulePrioritization modulePrioritization;
 	private final int POOL_SIZE = 20;
     private Thread curThread;
     private TimeOutFixedThreadPullExecutor executor = new TimeOutFixedThreadPullExecutor(POOL_SIZE);
 
-    public Spider(ModulePrioritization modulePrioritization, Set<WebURL> URLSet, PrintWriter pw, Scanner sc) {
-        this(modulePrioritization, URLSet, pw);
-        while (sc.hasNext()) {
-            try {
-                String uri = sc.nextLine();
-                WebURL url = new WebURL(uri);
-                controller.setCrawledURL(url);
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("DONE");
-    }
-
-    public Spider(ModulePrioritization modulePrioritization, Set<WebURL> URLSet, PrintWriter pw) {
-        this(URLSet);
-        this.pw = pw;
+    public Spider(Controller controller, ModulePrioritization modulePrioritization) {
+        this.controller = controller;
         this.modulePrioritization = modulePrioritization;
     }
-
-
-    public Spider(Set<WebURL> URLSet) {
-        try {
-            controller = new Controller();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.exit(0);
-        }
-        controller.addAll(URLSet);
-		//pool = Executors.newFixedThreadPool(10);
-	}
 
     public void start() {
         curThread = new Thread(this);
@@ -77,21 +43,11 @@ public class Spider implements Runnable {
     }
 
     public void stop() {
-        try {
-            PrintWriter printWriter = new PrintWriter(new File("queue" +  System.currentTimeMillis() + ".txt"));
-            synchronized (controller.toCrawl) {
-                for (WebURL webURL : controller.toCrawl) {
-                    printWriter.println(webURL.getUri().toString() + " " + webURL.getRank());
-                }
-            }
-            printWriter.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        controller.stop();
         curThread = null;
     }
 
-	@Override
+    @Override
 	public void run() {
         Thread thisThread = Thread.currentThread();
         int n = 0;
@@ -99,7 +55,7 @@ public class Spider implements Runnable {
             WebURL next = controller.nextURL();
             if (next == null) continue;
             try {
-                executor.submitTask(new PageProcessor(next, controller, modulePrioritization, pw), 1, TimeUnit.MINUTES);
+                executor.submitTask(new PageProcessor(next, controller, modulePrioritization), 1, TimeUnit.MINUTES);
                 n++;
             } catch (InterruptedException e) {
                 e.printStackTrace();

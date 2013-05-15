@@ -4,11 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -21,14 +19,59 @@ public class Controller {
     private Set<String> failed = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
 	private Set<WebURL> inQueue = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
     private Set<WebURL> inProcessing = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
-    //private PriorityBlockingQueue<WebURL> toCrawl = new PriorityBlockingQueue<>();
-    //private ConcurrentHashMap<URI, Double> ranks = new ConcurrentHashMap<>();
-    TreeSet<WebURL> toCrawl = new TreeSet<>(Collections.reverseOrder());
+    private TreeSet<WebURL> toCrawl = new TreeSet<>(Collections.reverseOrder());
     public final int MAX_PAGE = 1000000000;
-    private final PrintWriter failedPagePrintWriter;
+    private PrintWriter failedPagePrintWriter;
+    private PrintWriter crawledPrintWriter;
 
-    public Controller() throws FileNotFoundException {
-        failedPagePrintWriter = new PrintWriter(new File("failed" + System.currentTimeMillis() + ".txt"));
+    public Controller(File startFile) throws FileNotFoundException {
+        Set<WebURL> set = new LinkedHashSet<>();
+        Scanner scanner = new Scanner(startFile);
+        while (scanner.hasNext()) {
+            try {
+                set.add(new WebURL(scanner.nextLine()));
+            } catch (URISyntaxException e) {
+                System.err.println(e.getMessage());
+            }
+        }
+        addAll(set);
+    }
+
+    public Controller(File queueFile, File crawledPages) throws FileNotFoundException {
+        Scanner scanner = new Scanner(queueFile);
+        Set<WebURL> startSet = new LinkedHashSet<>();
+        while (scanner.hasNext()) {
+            String s = null;
+            try {
+                s = scanner.nextLine();
+                String[] arr = s.split(" ");
+                startSet.add(new WebURL(new URI(arr[0]), Double.valueOf(arr[1])));
+            } catch (URISyntaxException e) {
+                System.err.println("Illegal URI syntax: " + s);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.err.println(e.getMessage() + " in " + s);
+            }
+        }
+        addAll(startSet);
+        scanner = new Scanner(crawledPages);
+        while (scanner.hasNext()) {
+            String s = scanner.nextLine();
+            try {
+                WebURL url = new WebURL(s);
+                addHostController(url);
+                setCrawledURL(url);
+            } catch (URISyntaxException e) {
+                System.err.println("Illegal URI syntax: " + s);
+            }
+        }
+    }
+
+    public void setCrawledLogging(PrintWriter crawledPrintWriter) {
+        this.crawledPrintWriter = crawledPrintWriter;
+    }
+
+    public void setFailedLogging(PrintWriter failed) throws FileNotFoundException {
+        this.failedPagePrintWriter = failed;
     }
 
     public WebURL nextURL() {
@@ -96,7 +139,7 @@ public class Controller {
             toCrawl.add(url);
         }
         inQueue.add(url);
-        url.getHostController().incNumber();
+        //url.getHostController().incNumber();
 		return true;
 	}
 
@@ -115,6 +158,9 @@ public class Controller {
     public void setFailedPage(WebURL url, String exception) {
         failed.add(url.getUri().toString());
         inProcessing.remove(url);
+        if (failedPagePrintWriter == null) {
+            return;
+        }
         synchronized (failedPagePrintWriter) {
             failedPagePrintWriter.println(url.getUri().toString() + " " + exception);
             failedPagePrintWriter.flush();
@@ -122,8 +168,29 @@ public class Controller {
     }
 	
 	public void setCrawledURL(WebURL url) {
-        //url.getHostController().incNumber();
+        url.getHostController().incNumber();
 		crawled.add(url.getUri().toString());
 		inProcessing.remove(url);
+        if (crawledPrintWriter == null) {
+            return;
+        }
+        synchronized (crawledPrintWriter) {
+            crawledPrintWriter.println(url.getUri());
+            crawledPrintWriter.flush();
+        }
 	}
+
+    void stop() {
+        try {
+            PrintWriter printWriter = new PrintWriter(new File("queue" +  System.currentTimeMillis() + ".txt"));
+            synchronized (toCrawl) {
+                for (WebURL webURL : toCrawl) {
+                    printWriter.println(webURL.getUri().toString() + " " + webURL.getRank());
+                }
+            }
+            printWriter.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }

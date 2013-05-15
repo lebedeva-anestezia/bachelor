@@ -2,8 +2,8 @@ package ru.ifmo.mailru;
 
 import org.junit.Ignore;
 import org.junit.Test;
+import ru.ifmo.mailru.core.Controller;
 import ru.ifmo.mailru.core.Spider;
-import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.features.DictionaryModule;
 import ru.ifmo.mailru.google.pr.PageRankGetter;
 import ru.ifmo.mailru.priority.EmptyPrioritization;
@@ -17,7 +17,10 @@ import java.io.*;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
 
 import static org.junit.Assert.assertTrue;
 
@@ -28,6 +31,7 @@ public class CompTest {
     private static final String resourceDir = "src/test/resources/";
     private static final String pageRanksDir = resourceDir + "pageRanks/";
     private static final String crawledPagesDir = resourceDir + "crawledPages/";
+    private static final String failedPagesDir = resourceDir + "failedPages/";
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmm");
     private static final Date date = new Date();
     private static final long MINUTE = 1000 * 60;
@@ -70,37 +74,23 @@ public class CompTest {
         }
     }
 
-    private Set<WebURL> readStartSet(File file) throws FileNotFoundException {
-        Set<WebURL> set = new HashSet<>();
-        Scanner scanner = new Scanner(file);
-        while (scanner.hasNext()) {
-            try {
-                set.add(new WebURL(scanner.nextLine()));
-            } catch (URISyntaxException e) {
-                System.err.println(e.getMessage());
-            }
-        }
-        return set;
-    }
-
     private void spiderRun(ModulePrioritization prioritization, String teg) throws FileNotFoundException {
-        Set<WebURL> startSet;
+        File startSet = new File(resourceDir + "start.txt");
+        File crawledFile = new File(crawledPagesDir + teg + "/" + teg + dateFormat.format(date) + ".txt");
+        File failedFile = new File(failedPagesDir + teg + "/failed" + teg + dateFormat.format(date) + ".txt");
+        PrintWriter pwCrawled = null;
+        PrintWriter pwFailed = null;
         try {
-            startSet = readStartSet(new File(crawledPagesDir + "start.txt"));
-        } catch (FileNotFoundException e) {
-            System.err.println(e.getMessage());
-            return;
-        }
-        String fileName = crawledPagesDir + teg + dateFormat.format(date) + ".txt";
-        PrintWriter pw = null;
-        try {
-            pw = new PrintWriter(new File(fileName));
+            pwCrawled = new PrintWriter(crawledFile);
+            pwFailed = new PrintWriter(pwFailed);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.exit(1);
         }
-        Scanner scanner = new Scanner(new File(crawledPagesDir + "rus.txt"));
-        Spider spider = new Spider(prioritization, startSet, pw);
-        scanner.close();
+        Controller controller = new Controller(startSet);
+        controller.setFailedLogging(pwFailed);
+        controller.setCrawledLogging(pwCrawled);
+        Spider spider = new Spider(controller, prioritization);
         try {
             spider.start();
             Thread.sleep(5 * HOUR);
@@ -108,7 +98,8 @@ public class CompTest {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            pw.close();
+            pwCrawled.close();
+            pwFailed.close();
         }
     }
 
