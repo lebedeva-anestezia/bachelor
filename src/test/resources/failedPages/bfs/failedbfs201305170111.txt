@@ -1,0 +1,182 @@
+http://narod.ru Is not web page
+http://wildberries.ru Is not web page
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://livetvstatic.ru livetvstatic.ru
+http://imhonet.ru Unexpected end of file from server
+http://google.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://rambler.ru/cooking Connection reset
+http://avito.ru/location/chukotskiy_ao http://www.avito.ru/location/chukotskiy_ao
+http://avito.ru/location/stavropolskiy_kray http://www.avito.ru/location/stavropolskiy_kray
+http://avito.ru/location/chechenskaya_respublika http://www.avito.ru/location/chechenskaya_respublika
+http://avito.ru/location/kaliningradskaya_oblast http://www.avito.ru/location/kaliningradskaya_oblast
+http://avito.ru/location/mariy_el http://www.avito.ru/location/mariy_el
+http://avito.ru/location/kamchatskiy_kray http://www.avito.ru/location/kamchatskiy_kray
+http://avito.ru/location/rostovskaya_oblast http://www.avito.ru/location/rostovskaya_oblast
+http://avito.ru/location/respublika_altay http://www.avito.ru/location/respublika_altay
+http://avito.ru/location/penzenskaya_oblast http://www.avito.ru/location/penzenskaya_oblast
+http://avito.ru/location/saha_yakutiya http://www.avito.ru/location/saha_yakutiya
+http://avito.ru/location/dagestan http://www.avito.ru/location/dagestan
+http://avito.ru/location/kirovskaya_oblast http://www.avito.ru/location/kirovskaya_oblast
+http://avito.ru/location/moskovskaya_oblast http://www.avito.ru/location/moskovskaya_oblast
+http://avito.ru/location/permskiy_kray http://www.avito.ru/location/permskiy_kray
+http://avito.ru/location/leningradskaya_oblast http://www.avito.ru/location/leningradskaya_oblast
+http://avito.ru/location/bashkortostan http://www.avito.ru/location/bashkortostan
+http://avito.ru/location/yaroslavskaya_oblast http://www.avito.ru/location/yaroslavskaya_oblast
+http://avito.ru/location/ryazanskaya_oblast http://www.avito.ru/location/ryazanskaya_oblast
+http://avito.ru/location/evreyskaya_ao http://www.avito.ru/location/evreyskaya_ao
+http://avito.ru/location/voronezhskaya_oblast http://www.avito.ru/location/voronezhskaya_oblast
+http://avito.ru/location/nizhegorodskaya_oblast http://www.avito.ru/location/nizhegorodskaya_oblast
+http://avito.ru/location/magadanskaya_oblast http://www.avito.ru/location/magadanskaya_oblast
+http://avito.ru/location/amurskaya_oblast http://www.avito.ru/location/amurskaya_oblast
+http://avito.ru/location/novgorodskaya_oblast http://www.avito.ru/location/novgorodskaya_oblast
+http://avito.ru/location/chelyabinskaya_oblast http://www.avito.ru/location/chelyabinskaya_oblast
+http://avito.ru/location/altayskiy_kray http://www.avito.ru/location/altayskiy_kray
+http://avito.ru/location/kabardino-balkariya http://www.avito.ru/location/kabardino-balkariya
+http://avito.ru/location/primorskiy_kray http://www.avito.ru/location/primorskiy_kray
+http://avito.ru/location/tambovskaya_oblast http://www.avito.ru/location/tambovskaya_oblast
+http://avito.ru/location/tyva http://www.avito.ru/location/tyva
+http://avito.ru/location/smolenskaya_oblast http://www.avito.ru/location/smolenskaya_oblast
+http://avito.ru/location/murmanskaya_oblast http://www.avito.ru/location/murmanskaya_oblast
+http://avito.ru/location/pskovskaya_oblast http://www.avito.ru/location/pskovskaya_oblast
+http://avito.ru/location/vladimirskaya_oblast http://www.avito.ru/location/vladimirskaya_oblast
+http://avito.ru/location/vologodskaya_oblast http://www.avito.ru/location/vologodskaya_oblast
+http://avito.ru/location/yamalo-nenetskiy_ao http://www.avito.ru/location/yamalo-nenetskiy_ao
+http://avito.ru/location/kostromskaya_oblast http://www.avito.ru/location/kostromskaya_oblast
+http://avito.ru/location/komi http://www.avito.ru/location/komi
+http://avito.ru/location/hakasiya http://www.avito.ru/location/hakasiya
+http://avito.ru/location/bryanskaya_oblast http://www.avito.ru/location/bryanskaya_oblast
+http://avito.ru/location/tomskaya_oblast http://www.avito.ru/location/tomskaya_oblast
+http://avito.ru/location/adygeya http://www.avito.ru/location/adygeya
+http://avito.ru/location/mordoviya http://www.avito.ru/location/mordoviya
+http://avito.ru/location/kurskaya_oblast http://www.avito.ru/location/kurskaya_oblast
+http://avito.ru/location/sverdlovskaya_oblast http://www.avito.ru/location/sverdlovskaya_oblast
+http://avito.ru/catalog/moskva http://www.avito.ru/catalog/moskva
+http://avito.ru/location/samarskaya_oblast http://www.avito.ru/location/samarskaya_oblast
+http://avito.ru/location/arhangelskaya_oblast http://www.avito.ru/location/arhangelskaya_oblast
+http://avito.ru/location/krasnodarskiy_kray http://www.avito.ru/location/krasnodarskiy_kray
+http://avito.ru/location/tatarstan http://www.avito.ru/location/tatarstan
+http://avito.ru/location/krasnoyarskiy_kray http://www.avito.ru/location/krasnoyarskiy_kray
+http://avito.ru/location/omskaya_oblast http://www.avito.ru/location/omskaya_oblast
+http://avito.ru/location/kareliya http://www.avito.ru/location/kareliya
+http://avito.ru/location/severnaya_osetiya http://www.avito.ru/location/severnaya_osetiya
+http://avito.ru/add http://www.avito.ru/add
+http://avito.ru/location/novosibirskaya_oblast http://www.avito.ru/location/novosibirskaya_oblast
+http://avito.ru/location/karachaevo-cherkesiya http://www.avito.ru/location/karachaevo-cherkesiya
+http://avito.ru/location/saratovskaya_oblast http://www.avito.ru/location/saratovskaya_oblast
+http://avito.ru/location/tulskaya_oblast http://www.avito.ru/location/tulskaya_oblast
+http://avito.ru/location/kalmykiya http://www.avito.ru/location/kalmykiya
+http://avito.ru/catalog/sankt-peterburg http://www.avito.ru/catalog/sankt-peterburg
+http://avito.ru/location/belgorodskaya_oblast http://www.avito.ru/location/belgorodskaya_oblast
+http://avito.ru/location/nenetskiy_ao http://www.avito.ru/location/nenetskiy_ao
+http://avito.ru/location/orenburgskaya_oblast http://www.avito.ru/location/orenburgskaya_oblast
+http://avito.ru/location/zabaykalskiy_kray http://www.avito.ru/location/zabaykalskiy_kray
+http://avito.ru/location/tverskaya_oblast http://www.avito.ru/location/tverskaya_oblast
+http://avito.ru/location/ulyanovskaya_oblast http://www.avito.ru/location/ulyanovskaya_oblast
+http://avito.ru/location/chuvashiya http://www.avito.ru/location/chuvashiya
+http://avito.ru/location/ingushetiya http://www.avito.ru/location/ingushetiya
+http://avito.ru/location/buryatiya http://www.avito.ru/location/buryatiya
+http://avito.ru/location/sahalinskaya_oblast http://www.avito.ru/location/sahalinskaya_oblast
+http://avito.ru/location/udmurtiya http://www.avito.ru/location/udmurtiya
+http://avito.ru/location/lipetskaya_oblast http://www.avito.ru/location/lipetskaya_oblast
+http://avito.ru/location/ivanovskaya_oblast http://www.avito.ru/location/ivanovskaya_oblast
+http://avito.ru/location/orlovskaya_oblast http://www.avito.ru/location/orlovskaya_oblast
+http://avito.ru/location/irkutskaya_oblast http://www.avito.ru/location/irkutskaya_oblast
+http://avito.ru/location/astrahanskaya_oblast http://www.avito.ru/location/astrahanskaya_oblast
+http://avito.ru/location/kurganskaya_oblast http://www.avito.ru/location/kurganskaya_oblast
+http://avito.ru/location/habarovskiy_kray http://www.avito.ru/location/habarovskiy_kray
+http://avito.ru/location/hanty-mansiyskiy_ao http://www.avito.ru/location/hanty-mansiyskiy_ao
+http://avito.ru/location/kaluzhskaya_oblast http://www.avito.ru/location/kaluzhskaya_oblast
+http://avito.ru/location/tyumenskaya_oblast http://www.avito.ru/location/tyumenskaya_oblast
+http://avito.ru/location/volgogradskaya_oblast http://www.avito.ru/location/volgogradskaya_oblast
+http://avito.ru/location/kemerovskaya_oblast http://www.avito.ru/location/kemerovskaya_oblast
+http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0 http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0
+http://blogspot.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://rbc.ru/rbcfreenews/20130516200743.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516175558.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130517004538.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516173822.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130517005419.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516202107.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516171239.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516185313.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516172720.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130517003038.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516231238.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130517002538.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516223152.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516230044.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516212708.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516204421.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516221227.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516193458.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516174511.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130517005746.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516193913.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516173400.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516175031.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130517001158.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516214624.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516194457.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516170552.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516172049.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516174025.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516181718.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516180938.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516183615.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516233451.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516190632.shtml Is not web page
+http://rbc.ru/rbcfreenews/20130516210556.shtml Is not web page
+http://searchengines.ru?month=06&amp;year=2013 Invalid Http response
+http://searchengines.ru/calendar/digital_bez_silikona+_2013.html http://www.searchengines.ru/calendar/digital_bez_silikona+_2013.html
+http://sberbank.ru/saintpetersburg/ru/person/transfers/autopayment/bonus/%20 http://sberbank.ru/saintpetersburg/ru/person/transfers/autopayment/bonus/%20
+http://wmmail.ru?cf=news-viewn Invalid Http response
+http://wmmail.ru?cf=news-viewn&nid=116 Invalid Http response
+http://wmmail.ru?cf=news-viewn&nid=118 Invalid Http response
+http://wmmail.ru?cf=news-viewn&nid=117 Invalid Http response
+http://pr-cy.ru/blogpost/20319-http:/feedproxy.google.com/~r/http/maiamiblogcom/rssxml/~3/fFukJKDByBc/bisnes-russkij.html http://maiamiblog.com/bisnes-russkij.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+http%2Fmaiamiblogcom%2Frssxml+%28Maiami+Blog%29
+http://worldoftanks.ru/registration/ru Is not web page
+http://worldoftanks.ru/personal/password_reset/new Is not web page
+http://worldoftanks.ru/personal/payment Is not web page
+http://ria.ru/weekend Server returned HTTP response code: 503 for URL: http://weekend.ria.ru/weekend
+http://ria.ru/load/937082999 Is not web page
+http://subscribe.ru/archive/media.today.kpcover/201304/20080039.html Is not web page
+http://subscribe.ru/archive/home.woman.sym/200912/27013048.html Is not web page
+http://subscribe.ru/archive/nature.zooclub/201305/13113700.html Is not web page
+http://subscribe.ru/archive/home.child.family/201305/06091112.html Is not web page
+http://subscribe.ru/archive/help.lifeschool/201305/06010132.html Is not web page
+http://subscribe.ru/archive/help.lifeschool/201305/11010111.html Is not web page
+http://subscribe.ru/archive/science.health.symhealth/201305/08094540.html Is not web page
+http://subscribe.ru/archive/help.lifeschool/201301/31010123.html Is not web page
+http://subscribe.ru/catalog/map http://subscribe.ru/catalog/map
+http://subscribe.ru/archive/realty.domnaruipoteka/201305/07124527.html Is not web page
+http://subscribe.ru/archive/media.news.press.aif/201305/15090038.html Is not web page
+http://subscribe.ru/archive/media.news.press.aif/201302/07090034.html Is not web page
+http://subscribe.ru/archive/help.lifeschool/201304/23010113.html Is not web page
+http://subscribe.ru/archive/woman.magazines.womanbook2010/201305/16153335.html Is not web page
+http://subscribe.ru/archive/socio.science.faceplanet/201304/18131534.html Is not web page
+http://subscribe.ru/archive/news.3dfx.review/201305/08051529.html Is not web page
+http://subscribe.ru/archive/media.today.kpcover/201304/17080153.html Is not web page
+http://subscribe.ru/archive/media.news.press.aif/201305/13090031.html Is not web page
+http://subscribe.ru/archive/rest.hscope.asmonth/201305/13130745.html Is not web page
+http://subscribe.ru/archive/realty.domnarupolezno/201305/13124521.html Is not web page
+http://subscribe.ru/archive/media.today.exportfirst/201304/29160134.html Is not web page
+http://subscribe.ru/archive/media.news.press.wwwmkru/201304/30080158.html Is not web page
+http://subscribe.ru/archive/ad.marketingnews/201304/15112428.html Is not web page
+http://fotostrana.ru/forgot http://fotostrana.ru/forgot/
+http://qip.ru/slices/news/techlogies.html http://qip.ru/slices/news/techlogies.html
+http://qip.ru/slices/news/politics.html http://qip.ru/slices/news/politics.html
+http://qip.ru/slices/news/showbiz.html http://qip.ru/slices/news/showbiz.html
+http://sbrf.ru/saintpetersburg/ru/person/transfers/autopayment/bonus/%20 http://sberbank.ru/saintpetersburg/ru/person/transfers/autopayment/bonus/%20
+http://seasonvar.ru?mod=pause Invalid Http response
+http://seasonvar.ru?mod=com Invalid Http response
+http://seasonvar.ru?mod=abuse Invalid Http response
+http://seasonvar.ru?mod=login Invalid Http response
+http://echo.msk.ru/auth/vkontakte http://echo.msk.ru/auth/vkontakte
+http://echo.msk.ru/auth/facebook Is not web page
+http://echo.msk.ru/auth/twitter Is not web page
+http://dfiles.ru?mobile=yes Server returned HTTP response code: 503 for URL: http://dfiles.ru?mobile=yes
+http://sotmarket.ru/fotoramki http://www.sotmarket.ru/fotoramki
+http://kp.ru/go/daily/26074/2980974 Server returned HTTP response code: 502 for URL: http://www.kp.ru/daily/26074/2980974?geo=26
+http://kp.ru/online/news/1439814 Server returned HTTP response code: 502 for URL: http://www.kp.ru/online/news/1439814
+http://kp.ru/swad http://www.kp.ru/swad
+http://kp.ru/go/http: http://www.kp.ru/http:?geo=26

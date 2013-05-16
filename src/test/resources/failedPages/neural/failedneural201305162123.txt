@@ -1,0 +1,237 @@
+http://sochi.rpod.ru http://sochi.rpod.ru
+http://msh.mosreg.ru Server returned HTTP response code: 500 for URL: http://msh.mosreg.ru
+http://ktc.mosreg.ru TimeOut
+http://www.sigla.ru Connection refused
+http://nashe1c.ru Is not web page
+http://www.spb-fa.ru TimeOut
+http://gumf.ru gumf.ru
+http://spb-gumf.ru TimeOut
+http://www.spb-sp.ru TimeOut
+http://www.elec.ru Server returned HTTP response code: 403 for URL: http://www.elec.ru
+http://www.np-ats.ru TimeOut
+http://www.np-ats.ru Connection timed out
+http://www.tnt-tv.ru TimeOut
+http://www.aif.ru TimeOut
+https://subscr.aif.ru Connection refused
+http://mari-el.er.ru TimeOut
+http://doska.aif.ru TimeOut
+http://test.er.ru Server returned HTTP response code: 403 for URL: http://test.er.ru
+http://doska.aif.ru Connection timed out
+http://mo.fas.gov.ru TimeOut
+http://cyril.rpod.ru http://cyril.rpod.ru
+http://minstm.gov.ru minstm.gov.ru
+http://www.replay.ru TimeOut
+http://vjoomla.ru Server returned HTTP response code: 403 for URL: http://vjoomla.ru
+http://www.ogk2.ru TimeOut
+http://www.ogk6.ru TimeOut
+http://auto.ykt.ru Is not web page
+http://doska.ykt.ru Is not web page
+http://joker.ykt.ru Server returned HTTP response code: 403 for URL: http://www.ykt.ru/inform/noaccess/
+http://rabota.ykt.ru Is not web page
+http://pechka.ykt.ru Is not web page
+http://zps.ya1.ru Is not web page
+http://www.ogk6.ru Connection timed out
+http://sf-mag.ru Server redirected too many  times (20)
+http://tech.ya1.ru TimeOut
+http://stcm.ru Is not web page
+http://www.replay.ru Connection reset
+http://poll.ya1.ru TimeOut
+http://dod.ya1.ru dod.ya1.ru
+http://soft.ya1.ru Server returned HTTP response code: 403 for URL: http://soft.ya1.ru
+http://bnet.ya1.ru Server returned HTTP response code: 403 for URL: http://bnet.ya1.ru
+http://ombudsmanrf.ru Server returned HTTP response code: 403 for URL: http://ombudsmanrf.ru
+http://tube.ya1.ru TimeOut
+http://level6.ru TimeOut
+http://donotsneeze.ru donotsneeze.ru
+http://tube.ya1.ru Connection timed out
+http://level6.ru Connection timed out
+http://smmfor.ru smmfor.ru
+http://www.void.ru www.void.ru
+http://eaapa.ru TimeOut
+http://skrew.ru Connection reset
+http://pr-info.ru Is not web page
+http://www.prbb.ru TimeOut
+http://www.ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru
+http://gctm.ru TimeOut
+http://x-route.ru Server returned HTTP response code: 500 for URL: http://x-route.ru
+http://sberbank.ru TimeOut
+http://www.mppi.ru Server returned HTTP response code: 500 for URL: http://www.mppi.ru
+http://www.hse.ru TimeOut
+http://hse.ru TimeOut
+http://ulric.ru Is not web page
+http://www.ugd.ru TimeOut
+http://ugd.ru TimeOut
+http://blog.nszr.ru www.blog.nszr.ru
+http://deloros.ru TimeOut
+http://kartoteka.ru TimeOut
+http://www.mapic.ru Is not web page
+http://www.fcpas.ru TimeOut
+http://lsts.hse.ru TimeOut
+http://standard.gost.ru/wps/portal/!ut/p/c5/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gLHzeXUFNLYwMLD1dLA09vR39DD68g42BHU6B8JG75YDNKdLsbUqTbgCTdBpZOLiB5A3M_FyMDAyNTCnS7u6C6HE3WzQi_3WYGBHSHg2IJf6jjkweFK155AzR5LGEDkjfAARzx6weHDj7zgf7388jPTdUvyA0FgQiDTM9MT11HRQATjhdN/dl3/d3/L2dJQSEvUUt3QS9ZQnZ3LzZfOExGRFU1OTMwOEhFOTBJS0FPMUhKUjNTSzE! Is not web page
+http://rt.ru Is not web page
+http://www.rt.ru Is not web page
+http://expoagro.ru TimeOut
+http://www.rp-com.ru TimeOut
+http://tech-touch.ru Server returned HTTP response code: 403 for URL: http://tech-touch.ru
+http://rector.rea.ru TimeOut
+http://tdigitals.ru TimeOut
+http://tdigitals.ru Connection timed out
+http://www.ntrust.ru TimeOut
+http://www.museum.ru TimeOut
+http://www.ridom.ru TimeOut
+http://www.museum.ru Connection timed out
+http://www.ridom.ru Connection timed out
+http://ITSZ.ru TimeOut
+http://kpfu.ru TimeOut
+http://dis.kpfu.ru TimeOut
+http://ultoday.mv.ru ultoday.mv.ru
+http://www.scloud.ru Is not web page
+http://www.levada.ru TimeOut
+http://forum.cska.ru TimeOut
+http://forum.cska.ru Connection timed out
+http://mirq.ucoz.ru TimeOut
+http://transna.ru Server returned HTTP response code: 500 for URL: http://transna.ru
+http://cip.guu.ru cip.guu.ru
+http://obi.ru TimeOut
+http://kpmg.ru/RU/RU/SERVICES/ADVISORY/TRANSACTIONS-AND-RESTRUCTURING/TRANSACTION-SERVICES/Pages/default.aspx Server returned HTTP response code: 403 for URL: http://kpmg.ru/RU/RU/SERVICES/ADVISORY/TRANSACTIONS-AND-RESTRUCTURING/TRANSACTION-SERVICES/Pages/default.aspx
+http://kpmg.ru/RU/RU/SERVICES/ADVISORY/TRANSACTIONS-AND-RESTRUCTURING/CORPORATE-FINANCE/Pages/default.aspx Server returned HTTP response code: 403 for URL: http://kpmg.ru/RU/RU/SERVICES/ADVISORY/TRANSACTIONS-AND-RESTRUCTURING/CORPORATE-FINANCE/Pages/default.aspx
+http://peugeot.ru TimeOut
+https://f-demo.infin.ru?company=DEMO_OSN Server returned HTTP response code: 400 for URL: https://f-demo.infin.ru?company=DEMO_OSN
+https://f-demo.infin.ru?company=DEMO Server returned HTTP response code: 400 for URL: https://f-demo.infin.ru?company=DEMO
+http://kartadom.ru kartadom.ru
+http://www.ultima.ru Is not web page
+http://portal.rea.ru TimeOut
+http://portal.rea.ru Connection timed out
+http://old.levada.ru TimeOut
+http://www.mazars.ru Is not web page
+http://webparadox.ru?fdlfile=BTAyLwL1LJR4BTR2ZGtmZmtkLzIvAGV3ZmSxAwHmZTLlZGR3AwqvLmR3ZQSwMTIwAGDjAwL1AmOvAwx4LGZlAGD5ZQZlMzV4AzR5AGH5MwpjZmHjZwLkMQN5Lwt1BQN5LwVlLzL3BJEzL2VjAmSvAGHkLGMyBJLjL2ZmATLmLwt= Invalid Http response
+http://lovecrete.ru Server returned HTTP response code: 500 for URL: http://lovecrete.ru
+http://TimeofNewz.ru Is not web page
+http://old.levada.ru Connection timed out
+http://zlat-go.ru TimeOut
+http://pda.mchs.ru pda.www.mchs.gov.ru
+http://archives.ru TimeOut
+http://www.e-mfc.ru Server returned HTTP response code: 502 for URL: http://www.e-mfc.ru
+http://volkswagen.ru Is not web page
+http://zlatinvest.ru TimeOut
+http://seltservice.ru Is not web page
+http://springforum.ru Server returned HTTP response code: 403 for URL: http://springforum.ru
+http://kybmebel.ru Server returned HTTP response code: 403 for URL: http://kybmebel.ru
+http://zlatinvest.ru Connection timed out
+http://www.mgsu.ru TimeOut
+http://www.spksl.ru http://www.spksl.ru
+http://mba.mgsu.ru TimeOut
+http://oms.mgsu.ru Server returned HTTP response code: 403 for URL: http://oms.mgsu.ru
+http://dpo.mgsu.ru Server returned HTTP response code: 403 for URL: http://dpo.mgsu.ru
+http://www.mirj.ru www.mirj.ru
+http://strahinfo.ru strahinfo.ru
+http://kaska.mgsu.ru Server returned HTTP response code: 403 for URL: http://kaska.mgsu.ru
+http://dom6.ru TimeOut
+http://ephotolab.ru ephotolab.ru
+http://www.stroi.ru Server returned HTTP response code: 500 for URL: http://www.stroi.ru
+http://elyon.ru elyon.ru
+http://www.np-sr.ru Server returned HTTP response code: 503 for URL: http://www.np-sr.ru
+http://allbusiness.ru TimeOut
+http://kuzovmarket.ru TimeOut
+http://utrospb.ru?SHOWALL_2=1 Invalid Http response
+http://kuzovmarket.ru Connection timed out
+http://finparty.ru Is not web page
+http://www.tui.ru?City=Smr Server returned HTTP response code: 400 for URL: http://www.tui.ru?City=Smr
+http://www.tui.ru?City=Ekb Server returned HTTP response code: 400 for URL: http://www.tui.ru?City=Ekb
+http://www.tui.ru?City=Kzn Server returned HTTP response code: 400 for URL: http://www.tui.ru?City=Kzn
+http://www.rgs.ru TimeOut
+https://my.rgs.ru sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+http://binbank.ru? Invalid Http response
+http://executive.ru?F=S Invalid Http response
+http://svargi.ru svargi.ru
+http://www.npfrgs.ru TimeOut
+https://mynpf.rgs.ru sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+http://babr.ru?erty=OION.NqllEdsp Invalid Http response
+http://babr.ru?erty=OION.NqtpqbpU Invalid Http response
+http://babr.ru?erty=OION.Bhnzq Invalid Http response
+http://flamp.ru Server redirected too many  times (20)
+http://babr.ru?erty=AJM-Nyrphg Invalid Http response
+http://babr.ru?erty=VwWUedygpU Invalid Http response
+http://babr.ru?erty=ZYtp Invalid Http response
+http://gui-design.ru gui-design.ru
+http://www.oilru.ru TimeOut
+http://dlr.kamin.ru Server returned HTTP response code: 401 for URL: http://dlr.kamin.ru
+http://bambiniya.ru Server redirected too many  times (20)
+http://sng-oil.ru sng-oil.ru
+http://woweffect.ru woweffect.ru
+http://geodezika.ru geodezika.ru
+http://www.donpac.ru TimeOut
+http://www.rodim.ru TimeOut
+http://vovashiki.ru Server returned HTTP response code: 403 for URL: http://vovashiki.ru
+https://paycard.rt.ru Is not web page
+http://www.sonika.ru Is not web page
+http://www.preo.ru Server returned HTTP response code: 403 for URL: http://www.preo.ru
+http://blogs.gde.ru http://www.gde.ru/404/
+http://target.gde.ru? Invalid Http response
+http://www.pglu.ru?SHOWALL_2=1 Server returned HTTP response code: 500 for URL: http://www.pglu.ru?SHOWALL_2=1
+https://e-trade.mmk.ru TimeOut
+https://online.npfb.ru Is not web page
+http://wap.a.borda.ru? Invalid Http response
+https://e-trade.mmk.ru Connection timed out
+http://www.rambler.ru TimeOut
+http://kostroma.mk.ru TimeOut
+http://vladimir.mk.ru TimeOut
+http://www.megafon.ru TimeOut
+http://abitur.nica.ru abitur.nica.ru
+http://edu-expo.ru Server returned HTTP response code: 403 for URL: http://edu-expo.ru
+http://eng.nica.ru eng.nica.ru
+http://cis.mephi.ru TimeOut
+http://fis.mephi.ru TimeOut
+http://mephi.ru?SHOWALL_6=1 Invalid Http response
+http://fis.mephi.ru Connection timed out
+http://esta.nm.ru TimeOut
+http://forum.kai.ru TimeOut
+http://esta.msk.ru TimeOut
+http://teacher.org.ru teacher.org.ru
+http://www.ukuao.ru mobile-premium-v20.com
+http://love.vsego.ru Is not web page
+http://oboi.Bi0.ru http://oboi.Bi0.ru
+http://www.gd.ru TimeOut
+http://up.spbland.ru Server returned HTTP response code: 503 for URL: http://onlinedisk.ru/
+http://ca.gd.ru TimeOut
+http://ca.gd.ru Connection timed out
+http://blizko.ru Server returned HTTP response code: 403 for URL: http://www.blizko.ru/?intruder_3cd5eb86aae6d8e5821dbbe63f4cc302=3
+http://ekb.blizko.ru Server returned HTTP response code: 403 for URL: http://ekb.blizko.ru/?intruder_3cd5eb86aae6d8e5821dbbe63f4cc302=3
+http://www.blizko.ru Server returned HTTP response code: 403 for URL: http://www.blizko.ru/?intruder_3cd5eb86aae6d8e5821dbbe63f4cc302=3
+http://www.miepvuz.ru TimeOut
+http://docs.joom.ru docs.joom.ru
+http://www.inforeg.ru Server returned HTTP response code: 403 for URL: http://www.inforeg.ru
+http://ryazan.mesi.ru Is not web page
+http://samara.mesi.ru Is not web page
+http://kaluga.mesi.ru Is not web page
+http://www.miepvuz.ru Connection timed out
+http://db25.ru db25.ru
+http://iconza.ru Server returned HTTP response code: 502 for URL: http://iconza.ru
+http://demo.mkb.ru demo.mkb.ru
+http://blogs.pcmag.ru Server returned HTTP response code: 403 for URL: http://blogs.pcmag.ru
+http://shop.islam.ru http://shop.islam.ru
+https://panel.reggi.ru sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+http://www.minatom.ru Is not web page
+http://old.tenex.ru old.tenex.ru
+http://blog.kortec.ru?tag=MODX+EVO Invalid Http response
+http://blog.kortec.ru?tag=IIS Invalid Http response
+http://blog.kortec.ru?tag=FreeBSD Invalid Http response
+http://www.wm.ru TimeOut
+https://ssl.nic.ru sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+http://www.cialpro.ru www.cialpro.ru
+http://tv.rgo.ru tv.rgo.ru
+http://wiki.rgo.ru wiki.rgo.ru
+http://games.akado.ru TimeOut
+http://smb-expo.ru Server returned HTTP response code: 403 for URL: http://smb-expo.ru
+http://history.qip.ru Is not web page
+http://podarki.rbc.ru podarki.rbc.ru
+http://rdw.ru TimeOut
+http://bbepx.ru TimeOut
+http://hosting.qip.ru Is not web page
+http://www.custody.ru TimeOut
+http://www.russ.ru Is not web page
+https://my.prsp.ru sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+http://www.otc.ru TimeOut
+https://my.pallada.ru sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+http://garage.auto.ru TimeOut
+http://zakupki.gov.ru Is not web page

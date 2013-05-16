@@ -94,7 +94,8 @@ public class Controller {
                     return null;
                 }
             } while (crawled.contains(next.getUri().toString()) ||
-                     inProcessing.contains(next) || failed.contains(next.getUri().toString()));
+                     inProcessing.contains(next) || failed.contains(next.getUri().toString())
+                                                 || next.getHostController().isItTooMuch());
             //next = toCrawl.poll();
         }
         inProcessing.add(next);

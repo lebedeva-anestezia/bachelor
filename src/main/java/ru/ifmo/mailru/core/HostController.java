@@ -14,7 +14,7 @@ public class HostController {
     private PolitenessModule politenessModule;
     private boolean tryAddedPolitenessModule;
     private int pageNumber;
-    public static final int maxCount = 100;
+    public static final int maxCount = 120;
 	
 	public HostController(String host) throws URISyntaxException {
         this.pageNumber = 0;
@@ -45,7 +45,7 @@ public class HostController {
 		lastRequest = System.currentTimeMillis();
 	}
 
-    private boolean isItTooMuch() {
+    public boolean isItTooMuch() {
         return pageNumber >= maxCount;
     }
 
