@@ -34,8 +34,10 @@ public class PageParser {
                 url.setFragment(uri.getFragment());
                 uri = new URI(uri.getScheme(), uri.getSchemeSpecificPart(), null);
                 if (isRuURL(uri)) {
-                    url.setUri(uri);
-                    out.add(url);
+                    if (Controller.isAllowHost(uri)) {
+                        url.setUri(uri);
+                        out.add(url);
+                    }
                 }
             } catch (Exception e) {
                 System.err.println(e.getMessage() + " " + link);

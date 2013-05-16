@@ -3,6 +3,7 @@ package ru.ifmo.mailru.core;
 import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.util.TimeOutFixedThreadPullExecutor;
 
+import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -23,12 +24,12 @@ public class Spider implements Runnable {
 
     public void start() {
         curThread = new Thread(this);
-     /*   Thread lever = new Thread(new Runnable() {
+        Thread lever = new Thread(new Runnable() {
             @Override
             public void run() {
                 while (true) {
                     try {
-                        if (System.in.read() == '\n') {
+                        if (System.in.read() == 10) {
                             stop();
                             break;
                         }
@@ -38,7 +39,7 @@ public class Spider implements Runnable {
                 }
             }
         });
-        lever.start();   */
+        lever.start();
         curThread.start();
     }
 

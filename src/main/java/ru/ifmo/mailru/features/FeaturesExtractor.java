@@ -26,16 +26,16 @@ public class FeaturesExtractor {
         MAXIMUMS = new double[COMPONENT_NUMBER][4];
         for (int j = 0; j < 3; j++) {
             for (int i = 1; i < COMPONENT_NUMBER; i++) {
-                MAXIMUMS[i][j] = 100; // TODO: replace to trust values
+                MAXIMUMS[i][j] = 300; // TODO: replace to trust values
             }
         }
         for (int i = 0; i < 3; i++) {
-            MAXIMUMS[0][i] = 200;
+            MAXIMUMS[0][i] = 900;
         }
         for (int i = 1; i < COMPONENT_NUMBER; i++) {
-            MAXIMUMS[i][3] = 10;
+            MAXIMUMS[i][3] = 100;
         }
-        MAXIMUMS[0][3] = 30;
+        MAXIMUMS[0][3] = 300;
     }
 
     public FeaturesExtractor(String url) throws URISyntaxException {

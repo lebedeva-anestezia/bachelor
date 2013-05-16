@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 
 public class Controller {
-	private Map<String, HostController> hostMap = new ConcurrentHashMap<>();
+	private static Map<String, HostController> hostMap = new ConcurrentHashMap<>();
     private Set<String> crawled = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
     private Set<String> failed = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
 	private Set<WebURL> inQueue = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
@@ -39,23 +39,33 @@ public class Controller {
 
     public Controller(File queueFile, File crawledPages) throws FileNotFoundException {
         Scanner scanner = new Scanner(queueFile);
-        Set<WebURL> startSet = new LinkedHashSet<>();
+        System.out.println("OLOL");
+        //Set<WebURL> startSet = new LinkedHashSet<>();
         while (scanner.hasNext()) {
             String s = null;
             try {
                 s = scanner.nextLine();
                 String[] arr = s.split(" ");
-                startSet.add(new WebURL(new URI(arr[0]), Double.valueOf(arr[1])));
+                WebURL url = new WebURL(new URI(arr[0]), Double.valueOf(arr[1]));
+                //startSet.add(url);
+                addHostController(url);
+                try {
+                    add(url);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             } catch (URISyntaxException e) {
                 System.err.println("Illegal URI syntax: " + s);
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.err.println(e.getMessage() + " in " + s);
             }
         }
-        addAll(startSet);
+        //addAll(startSet);
         scanner = new Scanner(crawledPages);
+        int n = 0;
         while (scanner.hasNext()) {
             String s = scanner.nextLine();
+            System.out.println(n++);
             try {
                 WebURL url = new WebURL(s);
                 addHostController(url);
@@ -64,6 +74,7 @@ public class Controller {
                 System.err.println("Illegal URI syntax: " + s);
             }
         }
+        System.out.println("done2");
     }
 
     public void setCrawledLogging(PrintWriter crawledPrintWriter) {
@@ -91,10 +102,12 @@ public class Controller {
         return next;
     }
 
+
 	public void addAll(Set<WebURL> urls) {
 		for (WebURL url: urls) {
             try {
                 addHostController(url);
+                addPolitenessModule(url);
             } catch (URISyntaxException e) {
                 System.err.println(e.getMessage());
             }
@@ -142,6 +155,10 @@ public class Controller {
         //url.getHostController().incNumber();
 		return true;
 	}
+
+    public void addPolitenessModule(WebURL url) throws URISyntaxException {
+        url.getHostController().addPolitenessModule();
+    }
 
     public void addHostController(WebURL url) throws URISyntaxException {
         HostController hc;
@@ -192,5 +209,9 @@ public class Controller {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public static boolean isAllowHost(URI uri) {
+        return hostMap.containsKey(uri.getHost());
     }
 }

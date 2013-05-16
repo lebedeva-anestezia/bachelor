@@ -48,7 +48,7 @@ public class CompTest {
     @Test
     public void neuralSpiderRun() {
         try {
-            spiderRun(new NeuralPrioritization(), "neural");
+            spiderRun(new NeuralPrioritization(), createNewController(), "neural");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -58,7 +58,7 @@ public class CompTest {
     @Test
     public void bfsSpiderRun() {
         try {
-            spiderRun(new EmptyPrioritization(), "bfs");
+            spiderRun(new EmptyPrioritization(), createNewController(), "bfs");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -68,33 +68,53 @@ public class CompTest {
     @Test
     public void FICASpiderRun() {
         try {
-            spiderRun(new FICAPrioritization(), "FICA");
+            spiderRun(new FICAPrioritization(), createNewController(), "FICA");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    private void spiderRun(ModulePrioritization prioritization, String teg) throws FileNotFoundException {
-        File startSet = new File(resourceDir + "start.txt");
+
+    @Ignore
+    @Test
+    public void neuralSpiderRestore() {
+        File queueFile = new File(resourceDir + "queueNeural1368492618101.txt");
+        File crawledPage = new File(crawledPagesDir + "neural/" + "neural201305132350.txt");
+        try {
+            spiderRun(new NeuralPrioritization(), restoreController(queueFile, crawledPage), "neural");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Controller createNewController() throws FileNotFoundException {
+        File startSet = new File(resourceDir + "domens.txt");
+        return new Controller(startSet);
+    }
+
+    public Controller restoreController(File queueFile, File crawledPages) throws FileNotFoundException {
+        return new Controller(queueFile, crawledPages);
+    }
+
+
+    private void spiderRun(ModulePrioritization prioritization, Controller controller, String teg) throws FileNotFoundException {
         File crawledFile = new File(crawledPagesDir + teg + "/" + teg + dateFormat.format(date) + ".txt");
         File failedFile = new File(failedPagesDir + teg + "/failed" + teg + dateFormat.format(date) + ".txt");
         PrintWriter pwCrawled = null;
         PrintWriter pwFailed = null;
         try {
             pwCrawled = new PrintWriter(crawledFile);
-            pwFailed = new PrintWriter(pwFailed);
+            pwFailed = new PrintWriter(failedFile);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(1);
         }
-        Controller controller = new Controller(startSet);
         controller.setFailedLogging(pwFailed);
         controller.setCrawledLogging(pwCrawled);
         Spider spider = new Spider(controller, prioritization);
         try {
             spider.start();
-            Thread.sleep(5 * HOUR);
-            spider.stop();
+            Thread.sleep(Integer.MAX_VALUE);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

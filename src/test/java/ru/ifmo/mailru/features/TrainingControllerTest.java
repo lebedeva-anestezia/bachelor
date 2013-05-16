@@ -19,7 +19,8 @@ public class TrainingControllerTest {
             int pos = controller.positiveExamples.size();
             int neg = controller.negativeExamples.size();
             controller.train(pos, neg);
-            Scanner scanner = new Scanner(new File(TrainingController.RANKS_FILE));
+            System.out.println(pos + " " + neg);
+            Scanner scanner = new Scanner(new File(TrainingController.RANKS_FILE + "2"));
             int n = 0;
             double mean = 0;
             while (scanner.hasNext()) {
@@ -28,8 +29,9 @@ public class TrainingControllerTest {
                 try {
                     double real = controller.computeRank(arr[0]) * 11 - 1;
                     double expected = Double.valueOf(arr[1]);
-                    if (expected > -0.5) {
-                        mean += (real - expected) * (real - expected);
+                    if (expected > -2) {
+                        mean += Math.abs(real - expected);
+                        //mean += (real - expected) * (real - expected);
                         n++;
                     }
                     System.out.println("real: " + real + " expected: " + expected);
@@ -37,7 +39,8 @@ public class TrainingControllerTest {
                     e.printStackTrace();
                 }
             }
-            System.out.println(Math.sqrt(mean) / n);
+            //System.out.println(Math.sqrt(mean) / n);
+            System.out.println(mean / n);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

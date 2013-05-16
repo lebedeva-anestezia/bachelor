@@ -17,6 +17,8 @@ public class ContentLoader {
         int n = 0;
         boolean done = false;
         URLConnection connection = uri.toURL().openConnection();
+        //connection.setConnectTimeout(10000);
+        //connection.setReadTimeout(10000);
        // URLConnection.guessContentTypeFromStream(connection.getInputStream());
         while (!done)
         {

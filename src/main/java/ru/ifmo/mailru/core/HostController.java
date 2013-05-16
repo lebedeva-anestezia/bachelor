@@ -12,6 +12,7 @@ public class HostController {
 	private boolean canRequest;
 	private long interval = 1000;
     private PolitenessModule politenessModule;
+    private boolean tryAddedPolitenessModule;
     private int pageNumber;
     public static final int maxCount = 100;
 	
@@ -20,10 +21,18 @@ public class HostController {
 		this.host = host;
 		lastRequest = 0;
 		canRequest = true;
+        tryAddedPolitenessModule = false;
+    }
+
+    public void addPolitenessModule() throws URISyntaxException {
+        if (tryAddedPolitenessModule) {
+            return;
+        }
         try {
             this.politenessModule = new PolitenessModule(host);
         } catch (IOException e) {
         }
+        tryAddedPolitenessModule = true;
     }
 	
 	public synchronized boolean canRequest() {
