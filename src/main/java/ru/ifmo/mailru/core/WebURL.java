@@ -18,6 +18,10 @@ public class WebURL implements Comparable<WebURL> {
         this.rank = rank;
     }
 
+    public WebURL(String uri, double rank) throws URISyntaxException {
+        this(new URI(uri), rank);
+    }
+
     public void setFragment(String fragment) {
         this.fragment = fragment;
     }

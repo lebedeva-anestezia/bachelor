@@ -23,13 +23,18 @@ public class Controller {
     public final int MAX_PAGE = 1000000000;
     private PrintWriter failedPagePrintWriter;
     private PrintWriter crawledPrintWriter;
+    private String queueLogFile;
+
+    public void setQueueLogFile(String queueLogFile) {
+        this.queueLogFile = queueLogFile;
+    }
 
     public Controller(File startFile) throws FileNotFoundException {
         Set<WebURL> set = new LinkedHashSet<>();
         Scanner scanner = new Scanner(startFile);
         while (scanner.hasNext()) {
             try {
-                set.add(new WebURL(scanner.nextLine()));
+                set.add(new WebURL(scanner.nextLine(), 1));
             } catch (URISyntaxException e) {
                 System.err.println(e.getMessage());
             }
@@ -153,9 +158,24 @@ public class Controller {
             toCrawl.add(url);
         }
         inQueue.add(url);
+        if (inQueue.size() % 1000 == 0) {
+            reorder();
+        }
         //url.getHostController().incNumber();
 		return true;
 	}
+
+    private void reorder() {
+        synchronized (toCrawl) {
+            toCrawl.clear();
+            for (WebURL url : inQueue) {
+                toCrawl.add(url);
+            }
+        }
+        if (queueLogFile != null) {
+            makeSnapshot();
+        }
+    }
 
     public void addPolitenessModule(WebURL url) throws URISyntaxException {
         url.getHostController().addPolitenessModule();
@@ -198,15 +218,19 @@ public class Controller {
         }
 	}
 
-    void stop() {
+    void makeSnapshot() {
         try {
-            PrintWriter printWriter = new PrintWriter(new File("queue" +  System.currentTimeMillis() + ".txt"));
+            File newQueue = new File("tmp" + queueLogFile);
+            PrintWriter printWriter = new PrintWriter(newQueue);
             synchronized (toCrawl) {
                 for (WebURL webURL : toCrawl) {
                     printWriter.println(webURL.getUri().toString() + " " + webURL.getRank());
                 }
             }
             printWriter.close();
+            File queueLog = new File(queueLogFile);
+            queueLog.delete();
+            newQueue.renameTo(queueLog);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

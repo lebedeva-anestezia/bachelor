@@ -15,13 +15,15 @@ public class TrainingController {
     public final Map<String, Double> positiveExamples;
     public final Map<String, Double> negativeExamples;
     private NeuralNetwork neuralNetwork;
-    public static final String RANKS_FILE = "src/test/resources/pageRanks/pageRanks.pr";
+    public static final String RANKS_FILE = "src/test/resources/pageRanks/pageRanks.pr2";
+    public static final String DICTIONARY_FILE = "src/main/resources/dictionary.txt";
 
     public TrainingController() throws FileNotFoundException {
         this(new File(RANKS_FILE));
     }
 
     public TrainingController(File file) throws FileNotFoundException {
+        DictionaryModule.createDictionary(new File(DICTIONARY_FILE));
         positiveExamples = new LinkedHashMap<>();
         negativeExamples = new LinkedHashMap<>();
         Scanner scanner = new Scanner(file);

@@ -7,6 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PageParser {
+
     public static final Pattern A_TAG = Pattern.compile("(?i)<a([^>]+)>(.+?)</a>");
     public static final Pattern LINK_TEG = Pattern.compile("\\s*(?i)href\\s*=\\s*(\\\"([^\"]+\\\")|'[^']+'|([^'\">\\s]+))");
     public static final Pattern NON_HTML = Pattern.compile("(?i).*(\\.(pdf|jpe?g|tar|rar|zip|gz|7z|css|avi|djvu|png|rtf|txt|exe))$");
@@ -40,7 +41,7 @@ public class PageParser {
                     }
                 }
             } catch (Exception e) {
-                System.err.println(e.getMessage() + " " + link);
+               // System.err.println(e.getMessage() + " " + link);
             }
         }
         page.setOutLinks(out);

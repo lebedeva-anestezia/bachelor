@@ -9,14 +9,22 @@ import java.util.*;
  */
 public class DictionaryModule {
     private Map<String, Integer> frequencyTerm = new HashMap<>();
+    private static Set<String> dictionary = new TreeSet<>();
 
-    public Map<String, Integer> getFrequencyTerm() {
-        return frequencyTerm;
+    public static void createDictionary(File file) throws FileNotFoundException {
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNext()) {
+            dictionary.add(scanner.nextLine());
+        }
+    }
+
+    public static boolean isWord(String s) {
+        return dictionary.contains(s.toLowerCase());
     }
 
     public static String[] splitIntoTokens(String s) {
         s = s.replaceAll("%20", " ");
-        String[] tokens = s.split("[ \\=/\\.\\:\\&\\?\\-\\_\\,\\;]");
+        String[] tokens = s.split("[\\W_]");
         return removeEmptyStrings(tokens);
     }
 
@@ -33,9 +41,6 @@ public class DictionaryModule {
     private static String[] removeEmptyStrings(String[] tokens) {
         int length = tokens.length;
         for (int i = 0; i < tokens.length; i++) {
-            if (tokens[i].matches("\\d+") || tokens[i].length() == 1) {
-                tokens[i] = "";
-            }
             if (tokens[i].equals("")) length--;
         }
         String[] ret = new String[length];

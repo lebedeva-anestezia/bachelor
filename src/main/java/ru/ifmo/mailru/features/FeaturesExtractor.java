@@ -25,17 +25,21 @@ public class FeaturesExtractor {
     {
         MAXIMUMS = new double[COMPONENT_NUMBER][4];
         for (int j = 0; j < 3; j++) {
-            for (int i = 1; i < COMPONENT_NUMBER; i++) {
+            for (int i = 3; i < COMPONENT_NUMBER; i++) {
                 MAXIMUMS[i][j] = 300; // TODO: replace to trust values
             }
         }
         for (int i = 0; i < 3; i++) {
-            MAXIMUMS[0][i] = 900;
+            MAXIMUMS[0][i] = 650;
+            MAXIMUMS[1][i] = 5;
+            MAXIMUMS[2][i] = 50;
         }
-        for (int i = 1; i < COMPONENT_NUMBER; i++) {
+        for (int i = 3; i < COMPONENT_NUMBER; i++) {
             MAXIMUMS[i][3] = 100;
         }
         MAXIMUMS[0][3] = 300;
+        MAXIMUMS[1][3] = 1;
+        MAXIMUMS[2][3] = 10;
     }
 
     public FeaturesExtractor(String url) throws URISyntaxException {
@@ -63,39 +67,68 @@ public class FeaturesExtractor {
 		for (int i = 0; i < COMPONENT_NUMBER; i++) {
 			features.add(components[i].length() / MAXIMUMS[i][0]);
 		}
+        String[] path = components[3].split("/");
+        features.add((double) path.length / 20);
 	}
 
 	private void extractOrthographicFeatures() {
 		Pattern digit = Pattern.compile("\\d+");
-		for (int i = 0; i < COMPONENT_NUMBER; i++) {
+        double commonCount = 0;
+		for (int i = 2; i < COMPONENT_NUMBER; i++) {
 			Matcher m = digit.matcher(components[i]);
 			double count = 0;
 			while (m.find()) {
 				count += m.group().length();
 			}
+            commonCount += count;
 			features.add(count / MAXIMUMS[i][1]);
 		}
+        features.add(commonCount / MAXIMUMS[0][1]);
 		Pattern capitalCase = Pattern.compile("[A-Z]+");
+        commonCount = 0;
 		for (int i = 3; i < COMPONENT_NUMBER; i++) {
 			Matcher m = capitalCase.matcher(components[i]);
 			double count = 0;
 			while (m.find()) {
 				count += m.group().length();
 			}
+            commonCount += count;
 			features.add(count / MAXIMUMS[i][2]);
 		}
+        features.add(commonCount / MAXIMUMS[0][2]);
 	}
 
-    private void extractCountTerm() {
+    private void extractTermFeature() {
         List<String[]> terms = extractTerms();
-        for (int i = 0; i < COMPONENT_NUMBER - 1; i++) {
+        extractCountTerm(terms);
+        extractWordFrequency(terms);
+    }
+
+    private void extractWordFrequency(List<String[]> terms) {
+        for (int i = 3; i < COMPONENT_NUMBER; i++) {
+            if (terms.get(i).length == 0) {
+                features.add(1.0);
+                continue;
+            }
+            double words = 0;
+            for (String s : terms.get(i)) {
+                if (DictionaryModule.isWord(s)) {
+                    words++;
+                }
+            }
+            features.add(words / terms.get(i).length);
+        }
+    }
+
+    private void extractCountTerm(List<String[]> terms) {
+        for (int i = 0; i < COMPONENT_NUMBER; i++) {
             features.add(terms.get(i).length / MAXIMUMS[i][3]);
         }
     }
 
     private List<String[]> extractTerms() {
-        List<String[]> terms = new ArrayList<>(COMPONENT_NUMBER - 1);
-        for (int i = 1; i < COMPONENT_NUMBER; i++) {
+        List<String[]> terms = new ArrayList<>(COMPONENT_NUMBER);
+        for (int i = 0; i < COMPONENT_NUMBER; i++) {
             terms.add(DictionaryModule.splitIntoTokens(components[i]));
         }
         return terms;
@@ -105,7 +138,7 @@ public class FeaturesExtractor {
 	public Double[] buildVector() {
 		extractLengthFeatures();
 		extractOrthographicFeatures();
-        extractCountTerm();
+        extractTermFeature();
 		Double[] res = new Double[features.size()];
 		return features.toArray(res);
 	}

@@ -4,23 +4,20 @@ import org.junit.Ignore;
 import org.junit.Test;
 import ru.ifmo.mailru.core.Controller;
 import ru.ifmo.mailru.core.Spider;
-import ru.ifmo.mailru.features.DictionaryModule;
 import ru.ifmo.mailru.google.pr.PageRankGetter;
 import ru.ifmo.mailru.priority.EmptyPrioritization;
 import ru.ifmo.mailru.priority.FICAPrioritization;
 import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.priority.NeuralPrioritization;
 import ru.ifmo.mailru.robottxt.PolitenessModule;
-import ru.ifmo.mailru.util.ValueComparator;
 
 import java.io.*;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 import static org.junit.Assert.assertTrue;
 
@@ -32,6 +29,7 @@ public class CompTest {
     private static final String pageRanksDir = resourceDir + "pageRanks/";
     private static final String crawledPagesDir = resourceDir + "crawledPages/";
     private static final String failedPagesDir = resourceDir + "failedPages/";
+    public static final String queuePagesDir = resourceDir + "queue/";
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmm");
     private static final Date date = new Date();
     private static final long MINUTE = 1000 * 60;
@@ -98,8 +96,10 @@ public class CompTest {
 
 
     private void spiderRun(ModulePrioritization prioritization, Controller controller, String teg) throws FileNotFoundException {
-        File crawledFile = new File(crawledPagesDir + teg + "/" + teg + dateFormat.format(date) + ".txt");
-        File failedFile = new File(failedPagesDir + teg + "/failed" + teg + dateFormat.format(date) + ".txt");
+        String date = dateFormat.format(CompTest.date);
+        File crawledFile = new File(crawledPagesDir + teg + "/" + teg + date + ".txt");
+        File failedFile = new File(failedPagesDir + teg + "/failed" + teg + date + ".txt");
+        String queueFileName = queuePagesDir + teg + "/" + date + ".txt";
         PrintWriter pwCrawled = null;
         PrintWriter pwFailed = null;
         try {
@@ -111,6 +111,7 @@ public class CompTest {
         }
         controller.setFailedLogging(pwFailed);
         controller.setCrawledLogging(pwCrawled);
+        controller.setQueueLogFile(queueFileName);
         Spider spider = new Spider(controller, prioritization);
         try {
             spider.start();
@@ -126,7 +127,7 @@ public class CompTest {
     @Ignore
     @Test
     public void printMeanPR() {
-        File file = new File(pageRanksDir + "neural201305132350.txtnew.pr");
+        File file = new File(pageRanksDir + "bfs201305230231.txtnew.pr");
         try {
             System.out.println(meanPR(file));
         } catch (FileNotFoundException e) {
@@ -148,7 +149,7 @@ public class CompTest {
     }
 
     public void constructPRGetter() {
-        File file = new File(pageRanksDir + "pageRanks.pr");
+        File file = new File(pageRanksDir + "pageRanks.pr2");
         try {
             new PageRankGetter(file);
         } catch (FileNotFoundException e) {
@@ -161,7 +162,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "neural201305132350.txt");
+        File file = new File(crawledPagesDir + "neural/neural201305262223.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -177,14 +178,14 @@ public class CompTest {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNext()) {
                 String s = scanner.nextLine();
-                int res = getter.getPageRank(s);
+                int res = getter.getExistPageRank(s);
                 if (res != 22) {
                     if (res != -3) {
                         pw.println(s + " " + res);
                         pw.flush();
                     }
                     System.out.println(s + " " + res);
-                    Thread.sleep(1000);
+                    //Thread.sleep(1000);
                 } else {
                     System.out.println("exists PR for " + s);
                 }
@@ -223,46 +224,18 @@ public class CompTest {
     @Test
     public void testPageRankTool() {
         PageRankGetter getter = new PageRankGetter();
-        System.out.println(getter.getPageRank("http://ololonyashechki.livejournal.com/"));
-    }
-
-
-    @Ignore
-    @Test
-    public void testTokenizer() {
-        File input = new File(crawledPagesDir + "russian_urls.txt");
-        DictionaryModule m = new DictionaryModule();
-        Map<String, Integer> map = m.getFrequencyTerm();
-        try {
-            m.separateFrequencyTerms(input);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.exit(1);
-        }
-        ValueComparator<String, Integer> comparator = new ValueComparator<>(map);
-        TreeMap<String, Integer> treeMap = new TreeMap<>(comparator);
-        treeMap.putAll(map);
-        PrintWriter pw = null;
-        try {
-            pw = new PrintWriter(new File(resourceDir + "terms_" + input.getName()));
-            for (String s : treeMap.keySet()) {
-                pw.println(s + " " + map.get(s));
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            pw.close();
-        }
+        System.out.println(getter.getPageRank("http://google.com/"));
     }
 
     @Ignore
     @Test
     public void testSomething() {
-        String s = "http://m.ya.ru/operamini/download.xml?platform=4&amp;branch=";
+        String s = "http://mamba.ru?ar=1&amp;mmbsid=21720dfe5a1978c9ec227ccfc28d718b&amp;force_web=1&amp;mmbsid=21720dfe5a1978c9ec227ccfc28d718b";
         try {
-            String out = new String(s.getBytes("UTF-8"), "ISO-8859-1");
-            System.out.println(out);
-        } catch (UnsupportedEncodingException e) {
+            URI uri = new URI(s);
+            System.out.println(uri.getPath());
+            System.out.println(uri.getQuery());
+        } catch (URISyntaxException e) {
             e.printStackTrace();
         }
     }

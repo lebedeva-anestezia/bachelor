@@ -1,6 +1,6 @@
 package ru.ifmo.mailru.features;
 
-import org.encog.engine.network.activation.ActivationLOG;
+import org.encog.engine.network.activation.ActivationSigmoid;
 import org.encog.ml.data.MLData;
 import org.encog.ml.data.MLDataPair;
 import org.encog.neural.data.NeuralDataSet;
@@ -22,9 +22,10 @@ public class NeuralNetwork {
 
     public NeuralNetwork(double[][] input, double[][] output) {
         network = new BasicNetwork();
-        network.addLayer(new BasicLayer(new ActivationLOG(), true, input[0].length));
-        network.addLayer(new BasicLayer(new ActivationLOG(), true, input[0].length));
-        network.addLayer(new BasicLayer(new ActivationLOG(), true, output[0].length));
+        network.addLayer(new BasicLayer(new ActivationSigmoid(), true, input[0].length));
+        network.addLayer(new BasicLayer(new ActivationSigmoid(), true, 3*input[0].length));
+       // network.addLayer(new BasicLayer(new ActivationSigmoid(), true, input[0].length));
+        network.addLayer(new BasicLayer(new ActivationSigmoid(), true, output[0].length));
         network.getStructure().finalizeStructure();
         network.reset();
         set = new BasicNeuralDataSet(input, output);
@@ -38,7 +39,7 @@ public class NeuralNetwork {
             train.iteration();
             epoch++;
             System.out.println("epoch: " + epoch + " Error: " + train.getError());
-        } while(train.getError() > 0.041);
+        } while(train.getError() > 0.035);
     }
 
     public double[] compute(double[] input) {

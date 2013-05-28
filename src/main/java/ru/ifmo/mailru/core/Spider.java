@@ -30,6 +30,7 @@ public class Spider implements Runnable {
                 while (true) {
                     try {
                         if (System.in.read() == 10) {
+                            System.out.println("OOOOOOOOOOOOOO");
                             stop();
                             break;
                         }
@@ -44,7 +45,8 @@ public class Spider implements Runnable {
     }
 
     public void stop() {
-        controller.stop();
+        System.out.println("WILL STOP");
+        controller.makeSnapshot();
         curThread = null;
     }
 
@@ -67,5 +69,6 @@ public class Spider implements Runnable {
                 e.printStackTrace();
             }
         }
-	}
+        System.out.println("STOPPED");
+    }
 }
