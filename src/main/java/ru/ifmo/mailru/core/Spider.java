@@ -1,12 +1,9 @@
 package ru.ifmo.mailru.core;
 
 import ru.ifmo.mailru.priority.ModulePrioritization;
-import ru.ifmo.mailru.util.TimeOutFixedThreadPullExecutor;
 
-import java.io.IOException;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 
 public class Spider implements Runnable {
@@ -15,7 +12,8 @@ public class Spider implements Runnable {
     private ModulePrioritization modulePrioritization;
 	private final int POOL_SIZE = 20;
     private Thread curThread;
-    private TimeOutFixedThreadPullExecutor executor = new TimeOutFixedThreadPullExecutor(POOL_SIZE);
+//    private TimeOutFixedThreadPullExecutor executor = new TimeOutFixedThreadPullExecutor(POOL_SIZE);
+    private Executor standardExecutor = Executors.newFixedThreadPool(POOL_SIZE);
 
     public Spider(Controller controller, ModulePrioritization modulePrioritization) {
         this.controller = controller;
@@ -24,51 +22,23 @@ public class Spider implements Runnable {
 
     public void start() {
         curThread = new Thread(this);
-        Thread lever = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        if (System.in.read() == 10) {
-                            System.out.println("OOOOOOOOOOOOOO");
-                            stop();
-                            break;
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-        lever.start();
         curThread.start();
     }
 
     public void stop() {
-        System.out.println("WILL STOP");
         controller.makeSnapshot();
         curThread = null;
     }
 
     @Override
-	public void run() {
+    public void run() {
         Thread thisThread = Thread.currentThread();
         int n = 0;
         while (curThread == thisThread) {
-            WebURL next = controller.nextURL();
-            if (next == null) continue;
-            try {
-                executor.submitTask(new PageProcessor(next, controller, modulePrioritization), 1, TimeUnit.MINUTES);
-                n++;
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (TimeoutException e) {
-                System.err.println("TimeOut: " + next.getUri().toString());
-                controller.setFailedPage(next, "TimeOut");
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            }
+        WebURL next = controller.nextURL();
+        if (next == null) continue;
+            standardExecutor.execute(new PageProcessor(next, controller, modulePrioritization));
+            n++;
         }
-        System.out.println("STOPPED");
     }
 }

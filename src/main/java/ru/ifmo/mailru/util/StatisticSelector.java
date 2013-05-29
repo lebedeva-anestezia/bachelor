@@ -84,7 +84,7 @@ public class StatisticSelector {
         File input4 = new File("src/test/resources/pageRanks/neural201305220457.txtnew.pr");
         File output = new File("src/test/resources/statistic.txt");
         try {
-            StatisticSelector selector = new StatisticSelector(input4, Integer.MAX_VALUE);
+            StatisticSelector selector = new StatisticSelector(input4, 3000);
       //      selector.averagePageRank(output, 100);
             selector.computeRankFraction();
         } catch (FileNotFoundException e) {

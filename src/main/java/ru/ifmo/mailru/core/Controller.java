@@ -8,6 +8,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Anastasia Lebedeva
@@ -24,10 +25,7 @@ public class Controller {
     private PrintWriter failedPagePrintWriter;
     private PrintWriter crawledPrintWriter;
     private String queueLogFile;
-
-    public void setQueueLogFile(String queueLogFile) {
-        this.queueLogFile = queueLogFile;
-    }
+    private AtomicInteger counter = new AtomicInteger(0);
 
     public Controller(File startFile) throws FileNotFoundException {
         Set<WebURL> set = new LinkedHashSet<>();
@@ -44,15 +42,12 @@ public class Controller {
 
     public Controller(File queueFile, File crawledPages) throws FileNotFoundException {
         Scanner scanner = new Scanner(queueFile);
-        System.out.println("OLOL");
-        //Set<WebURL> startSet = new LinkedHashSet<>();
         while (scanner.hasNext()) {
             String s = null;
             try {
                 s = scanner.nextLine();
                 String[] arr = s.split(" ");
                 WebURL url = new WebURL(new URI(arr[0]), Double.valueOf(arr[1]));
-                //startSet.add(url);
                 addHostController(url);
                 try {
                     add(url);
@@ -65,12 +60,9 @@ public class Controller {
                 System.err.println(e.getMessage() + " in " + s);
             }
         }
-        //addAll(startSet);
         scanner = new Scanner(crawledPages);
-        int n = 0;
         while (scanner.hasNext()) {
             String s = scanner.nextLine();
-            System.out.println(n++);
             try {
                 WebURL url = new WebURL(s);
                 addHostController(url);
@@ -79,11 +71,14 @@ public class Controller {
                 System.err.println("Illegal URI syntax: " + s);
             }
         }
-        System.out.println("done2");
     }
 
     public void setCrawledLogging(PrintWriter crawledPrintWriter) {
         this.crawledPrintWriter = crawledPrintWriter;
+    }
+
+    public void setQueueLogFile(String queueLogFile) {
+        this.queueLogFile = queueLogFile;
     }
 
     public void setFailedLogging(PrintWriter failed) throws FileNotFoundException {
@@ -101,7 +96,6 @@ public class Controller {
             } while (crawled.contains(next.getUri().toString()) ||
                      inProcessing.contains(next) || failed.contains(next.getUri().toString())
                                                  || next.getHostController().isItTooMuch());
-            //next = toCrawl.poll();
         }
         inProcessing.add(next);
         inQueue.remove(next);
@@ -138,11 +132,6 @@ public class Controller {
 		if (crawled.contains(url.getUri().toString()) || inProcessing.contains(url)) {
 			return false;
 		}
-        /*synchronized (toCrawl) {
-            if (ranks.get(url.getUri()) < url.getRank()) {
-                ranks.put(url.getUri(), url.getRank());
-            }
-        } */
         if (!url.getHostController().canAdd(url.getUri())) {
             return false;
         }
@@ -154,14 +143,13 @@ public class Controller {
                     return false;
                 }
             }
-       //     url.setRank(ranks.get(url.getUri()))
             toCrawl.add(url);
         }
         inQueue.add(url);
-        if (inQueue.size() % 1000 == 0) {
+        if (counter.incrementAndGet() == 50000) {
+            counter.set(0);
             reorder();
         }
-        //url.getHostController().incNumber();
 		return true;
 	}
 
@@ -220,7 +208,7 @@ public class Controller {
 
     void makeSnapshot() {
         try {
-            File newQueue = new File("tmp" + queueLogFile);
+            File newQueue = new File(queueLogFile + "tmp");
             PrintWriter printWriter = new PrintWriter(newQueue);
             synchronized (toCrawl) {
                 for (WebURL webURL : toCrawl) {
@@ -237,6 +225,6 @@ public class Controller {
     }
 
     public static boolean isAllowHost(URI uri) {
-        return hostMap.containsKey(uri.getHost());
+        return hostMap.size() < 500 || hostMap.containsKey(uri.getHost());
     }
 }

@@ -9,17 +9,14 @@ import ru.ifmo.mailru.priority.EmptyPrioritization;
 import ru.ifmo.mailru.priority.FICAPrioritization;
 import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.priority.NeuralPrioritization;
-import ru.ifmo.mailru.robottxt.PolitenessModule;
 
-import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-
-import static org.junit.Assert.assertTrue;
 
 /**
  * @author Anastasia Lebedeva
@@ -29,7 +26,7 @@ public class CompTest {
     private static final String pageRanksDir = resourceDir + "pageRanks/";
     private static final String crawledPagesDir = resourceDir + "crawledPages/";
     private static final String failedPagesDir = resourceDir + "failedPages/";
-    public static final String queuePagesDir = resourceDir + "queue/";
+    public static final String queuePagesDir = resourceDir + "queues/";
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmm");
     private static final Date date = new Date();
     private static final long MINUTE = 1000 * 60;
@@ -127,7 +124,7 @@ public class CompTest {
     @Ignore
     @Test
     public void printMeanPR() {
-        File file = new File(pageRanksDir + "bfs201305230231.txtnew.pr");
+        File file = new File(pageRanksDir + "neural201305262223.txtnew.pr");
         try {
             System.out.println(meanPR(file));
         } catch (FileNotFoundException e) {
@@ -162,7 +159,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "neural/neural201305262223.txt");
+        File file = new File(crawledPagesDir + "neural/neural201305292304.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -178,14 +175,14 @@ public class CompTest {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNext()) {
                 String s = scanner.nextLine();
-                int res = getter.getExistPageRank(s);
+                int res = getter.getPageRank(s);
                 if (res != 22) {
                     if (res != -3) {
                         pw.println(s + " " + res);
                         pw.flush();
                     }
                     System.out.println(s + " " + res);
-                    //Thread.sleep(1000);
+                    Thread.sleep(1000);
                 } else {
                     System.out.println("exists PR for " + s);
                 }
@@ -198,28 +195,6 @@ public class CompTest {
 
     }
 
-    @Test
-    public void testingRobotTxt() throws URISyntaxException {
-        PolitenessModule politenessModule = null;
-        try {
-            politenessModule = new PolitenessModule("twitter.com");
-        } catch (URISyntaxException | IOException e) {
-            e.printStackTrace();
-        }
-        assertTrue(politenessModule.isAllow("https://twitter.com/search?q=%23"));
-    }
-
-    @Test
-    public void testingRobotTxt1() throws URISyntaxException {
-        PolitenessModule politenessModule = null;
-        try {
-            politenessModule = new PolitenessModule("mail.ru");
-        } catch (URISyntaxException | IOException e) {
-            e.printStackTrace();
-        }
-        assertTrue(politenessModule.isAllow("http://mail.ru/"));
-    }
-
     @Ignore
     @Test
     public void testPageRankTool() {
@@ -230,14 +205,33 @@ public class CompTest {
     @Ignore
     @Test
     public void testSomething() {
-        String s = "http://mamba.ru?ar=1&amp;mmbsid=21720dfe5a1978c9ec227ccfc28d718b&amp;force_web=1&amp;mmbsid=21720dfe5a1978c9ec227ccfc28d718b";
-        try {
-            URI uri = new URI(s);
-            System.out.println(uri.getPath());
-            System.out.println(uri.getQuery());
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
+        final Integer semaphore = new Integer(1);
+        Thread thread1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                synchronized (semaphore) {
+                    System.out.println("Th1 in critical section");
+                    for (int i = 0; i < 10000000; i++) {
+
+                    }
+                    System.out.println("Th1 out");
+                }
+            }
+        });
+        Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Th2 start");
+                synchronized (semaphore) {
+                    System.out.println("Th2 in critical section");
+                    Integer o = null;
+                    System.out.println(o.toString());
+                    System.out.println("OLLO");
+                }
+            }
+        });
+        thread1.start();
+        thread2.start();
     }
 
 }

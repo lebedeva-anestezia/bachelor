@@ -39,7 +39,7 @@ public class NeuralNetwork {
             train.iteration();
             epoch++;
             System.out.println("epoch: " + epoch + " Error: " + train.getError());
-        } while(train.getError() > 0.035);
+        } while(train.getError() > 0.0355);
     }
 
     public double[] compute(double[] input) {

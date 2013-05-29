@@ -1,6 +1,7 @@
 package ru.ifmo.mailru.robottxt;
 
 import ru.ifmo.mailru.core.ContentLoader;
+import ru.ifmo.mailru.core.HostController;
 
 import java.io.IOException;
 import java.net.URI;
@@ -18,9 +19,17 @@ public class PolitenessModule {
     private final String USER_AGENT = "(?i)User-agent: \\*";
     private TreeSet<Rule> rules = new TreeSet<>();
 
-    public PolitenessModule(String host) throws URISyntaxException, IOException {
-        ContentLoader loader = new ContentLoader(new URI("http://" + host + ROBOTS_TXT), 3);
-        String content = loader.loadRobotsTxt();
+    public PolitenessModule(HostController hostController) throws URISyntaxException, IOException {
+        String content;
+        hostController.lock.lock();
+        try {
+            ContentLoader loader = new ContentLoader(new URI("http://" + hostController.host + ROBOTS_TXT), 3);
+            content = loader.loadRobotsTxt();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            hostController.lock.unlock();
+        }
         if (content == null) return;
         extractRules(content);
     }

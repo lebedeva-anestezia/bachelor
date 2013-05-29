@@ -3,13 +3,13 @@ package ru.ifmo.mailru.core;
 import ru.ifmo.mailru.priority.ModulePrioritization;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class PageProcessor implements Runnable {
 
     private Page page;
     private Controller controller;
     private ModulePrioritization prioritization;
+    private static int count = 0;
 
     public PageProcessor(WebURL url, Controller controller, ModulePrioritization prioritization) {
         this.page = new Page(url);
@@ -17,24 +17,32 @@ public class PageProcessor implements Runnable {
         this.prioritization = prioritization;
     }
 
-    private boolean load() throws IOException {
-		/*while (!page.getUrl().getHostController().canRequest()) {
-			try {
+    private void load() throws IOException {
+    /*	while (!page.getUrl().getHostController().canRequest()) {
+            try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}  */
+		}       */
 //            page.getUrl().getHostController().request();
+        page.getUrl().getHostController().lock.lock();
+        String content;
+        try {
             ContentLoader loader = new ContentLoader(page.getUrl().getUri(), 5);
-            String content = loader.loadWebPage();
-       //     page.getUrl().getHostController().request();
-            page.setContent(content);
-            return true;
+            content = loader.loadWebPage();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            page.getUrl().getHostController().lock.unlock();
+        }
+        page.setContent(content);
+        //     page.getUrl().getHostController().request();
     }
 
     @Override
     public void run() {
+       // System.out.println(++count + " " + page.getUrl().getUri().toString());
         try {
             processingWebPage();
             prioritization.setPriorities(page);
@@ -42,12 +50,13 @@ public class PageProcessor implements Runnable {
             controller.setCrawledURL(page.getUrl());
         } catch (Exception e) {
             System.err.println(e.getMessage());
-            //e.printStackTrace();
             controller.setFailedPage(page.getUrl(), e.getMessage());
+        } finally {
+         //   System.out.println(--count + " " + page.getUrl().getUri().toString());
         }
     }
 
-    void processingWebPage() throws IOException {
+    void processingWebPage() throws IOException  {
         load();
         PageParser.parse(page);
     }

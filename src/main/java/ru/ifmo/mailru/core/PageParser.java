@@ -41,7 +41,7 @@ public class PageParser {
                     }
                 }
             } catch (Exception e) {
-               // System.err.println(e.getMessage() + " " + link);
+              //  System.err.println(e.getMessage() + " " + link);
             }
         }
         page.setOutLinks(out);

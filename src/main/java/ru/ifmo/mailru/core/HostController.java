@@ -5,9 +5,11 @@ import ru.ifmo.mailru.robottxt.PolitenessModule;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class HostController {
-	private String host;
+	public final String host;
 	private long lastRequest;
 	private boolean canRequest;
 	private long interval = 1000;
@@ -15,6 +17,7 @@ public class HostController {
     private boolean tryAddedPolitenessModule;
     private int pageNumber;
     public static final int maxCount = 500;
+    public final Lock lock;
 	
 	public HostController(String host) throws URISyntaxException {
         this.pageNumber = 0;
@@ -22,6 +25,7 @@ public class HostController {
 		lastRequest = 0;
 		canRequest = true;
         tryAddedPolitenessModule = false;
+        lock = new ReentrantLock();
     }
 
     public void addPolitenessModule() throws URISyntaxException {
@@ -29,7 +33,7 @@ public class HostController {
             return;
         }
         try {
-            this.politenessModule = new PolitenessModule(host);
+            this.politenessModule = new PolitenessModule(this);
         } catch (IOException e) {
         }
         tryAddedPolitenessModule = true;
