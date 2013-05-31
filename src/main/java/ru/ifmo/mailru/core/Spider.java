@@ -35,10 +35,13 @@ public class Spider implements Runnable {
         Thread thisThread = Thread.currentThread();
         int n = 0;
         while (curThread == thisThread) {
-        WebURL next = controller.nextURL();
-        if (next == null) continue;
+            WebURL next = controller.nextURL();
+            if (next == null) continue;
             standardExecutor.execute(new PageProcessor(next, controller, modulePrioritization));
             n++;
+            if (controller.getIndexSize() > controller.getMaxPageCount()) {
+                stop();
+            }
         }
     }
 }

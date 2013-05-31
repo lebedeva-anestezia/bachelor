@@ -5,14 +5,16 @@ import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.features.TrainingController;
 
 import java.io.FileNotFoundException;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Anastasia Lebedeva
  */
-public class NeuralPrioritization implements ModulePrioritization {
+public class NeuralGraphPrioritization implements ModulePrioritization {
     private TrainingController trainingController;
+    private static ConcurrentHashMap<WebURL, Double> cache = new ConcurrentHashMap<>();
 
-    public NeuralPrioritization() throws FileNotFoundException {
+    public NeuralGraphPrioritization() throws FileNotFoundException {
         trainingController = new TrainingController();
         int positiveSize = trainingController.positiveExamples.size();
         int negativeSize = trainingController.negativeExamples.size();
@@ -21,9 +23,17 @@ public class NeuralPrioritization implements ModulePrioritization {
 
     @Override
     public void setPriorities(Page page) {
+        double addition = page.getUrl().getRank() / page.getOutLinks().size();
         for (WebURL url : page.getOutLinks()) {
-            Double computedRank = trainingController.computeRank(url);
+            Double computedRank;
+            Double rank = cache.get(url);
+            if (rank == null) {
+                computedRank = trainingController.computeRank(url) + addition;
+            } else {
+                computedRank = rank + addition;
+            }
             url.setRank(computedRank);
+            cache.put(url, computedRank);
         }
     }
 }

@@ -5,10 +5,7 @@ import org.junit.Test;
 import ru.ifmo.mailru.core.Controller;
 import ru.ifmo.mailru.core.Spider;
 import ru.ifmo.mailru.google.pr.PageRankGetter;
-import ru.ifmo.mailru.priority.EmptyPrioritization;
-import ru.ifmo.mailru.priority.FICAPrioritization;
-import ru.ifmo.mailru.priority.ModulePrioritization;
-import ru.ifmo.mailru.priority.NeuralPrioritization;
+import ru.ifmo.mailru.priority.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -41,9 +38,9 @@ public class CompTest {
 
     @Ignore
     @Test
-    public void neuralSpiderRun() {
+    public void neuralGraphSpiderRun() {
         try {
-            spiderRun(new NeuralPrioritization(), createNewController(), "neural");
+            spiderRun(new NeuralGraphPrioritization(), createNewController(), "neuralGraph", -1);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -51,9 +48,41 @@ public class CompTest {
 
     @Ignore
     @Test
+    public void neuralSpiderRun() {
+        try {
+            spiderRun(new NeuralPrioritization(), createNewController(), "neural", -1);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Ignore
+    @Test
+    public void cycleCompareSpiderRun() {
+       /* try {
+            spiderRun(new NeuralGraphPrioritization(), createNewController(), "neuralGraph", 20000);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }*/
+
+        try {
+            spiderRun(new NeuralPrioritization(), createNewController(), "neural", 20000);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+       /* try {
+            spiderRun(new EmptyPrioritization(), createNewController(), "bfs", 20000);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }*/
+    }
+
+
+    @Ignore
+    @Test
     public void bfsSpiderRun() {
         try {
-            spiderRun(new EmptyPrioritization(), createNewController(), "bfs");
+            spiderRun(new EmptyPrioritization(), createNewController(), "bfs", -1);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -63,7 +92,7 @@ public class CompTest {
     @Test
     public void FICASpiderRun() {
         try {
-            spiderRun(new FICAPrioritization(), createNewController(), "FICA");
+            spiderRun(new FICAPrioritization(), createNewController(), "FICA", -1);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -76,7 +105,7 @@ public class CompTest {
         File queueFile = new File(resourceDir + "queueNeural1368492618101.txt");
         File crawledPage = new File(crawledPagesDir + "neural/" + "neural201305132350.txt");
         try {
-            spiderRun(new NeuralPrioritization(), restoreController(queueFile, crawledPage), "neural");
+            spiderRun(new NeuralGraphPrioritization(), restoreController(queueFile, crawledPage), "neural", -1);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -92,7 +121,7 @@ public class CompTest {
     }
 
 
-    private void spiderRun(ModulePrioritization prioritization, Controller controller, String teg) throws FileNotFoundException {
+    private void spiderRun(ModulePrioritization prioritization, Controller controller, String teg, int max) throws FileNotFoundException {
         String date = dateFormat.format(CompTest.date);
         File crawledFile = new File(crawledPagesDir + teg + "/" + teg + date + ".txt");
         File failedFile = new File(failedPagesDir + teg + "/failed" + teg + date + ".txt");
@@ -105,6 +134,9 @@ public class CompTest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.exit(1);
+        }
+        if (max != -1) {
+            controller.setMaxPageCount(max);
         }
         controller.setFailedLogging(pwFailed);
         controller.setCrawledLogging(pwCrawled);
@@ -124,7 +156,7 @@ public class CompTest {
     @Ignore
     @Test
     public void printMeanPR() {
-        File file = new File(pageRanksDir + "neural201305262223.txtnew.pr");
+        File file = new File(pageRanksDir + "neural201305301706.txtnew.pr");
         try {
             System.out.println(meanPR(file));
         } catch (FileNotFoundException e) {
@@ -145,6 +177,7 @@ public class CompTest {
         return (double) sum / count;
     }
 
+
     public void constructPRGetter() {
         File file = new File(pageRanksDir + "pageRanks.pr2");
         try {
@@ -159,7 +192,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "neural/neural201305292304.txt");
+        File file = new File(crawledPagesDir + "neuralGraph/neuralGraph201305300304.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -175,16 +208,17 @@ public class CompTest {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNext()) {
                 String s = scanner.nextLine();
-                int res = getter.getPageRank(s);
+                String url = s.split(" ")[0];
+                int res = getter.getExistPageRank(url);
                 if (res != 22) {
                     if (res != -3) {
-                        pw.println(s + " " + res);
+                        pw.println(url + " " + res);
                         pw.flush();
                     }
-                    System.out.println(s + " " + res);
-                    Thread.sleep(1000);
+                    System.out.println(url + " " + res);
+                    //Thread.sleep(1000);
                 } else {
-                    System.out.println("exists PR for " + s);
+                    System.out.println("exists PR for " + url);
                 }
             }
         } catch (Exception e) {

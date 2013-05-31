@@ -42,6 +42,22 @@ public class StatisticSelector {
         out.close();
     }
 
+    public void averagePageRankFixedInterval(File file, int period) throws FileNotFoundException {
+        PrintWriter out = new PrintWriter(file);
+        int count = 0;
+        double sum = 0;
+        for (Double rank : ranks) {
+            sum += rank;
+            count++;
+            if (count % period == 0) {
+                out.println(sum / period);
+                sum = 0;
+            }
+        }
+        out.println(sum / (count % period));
+        out.close();
+    }
+
     public void cumulativePageRank(File file, int intervals) throws FileNotFoundException {
         PrintWriter out = new PrintWriter(file);
         int period = ranks.size() / intervals;
@@ -82,11 +98,13 @@ public class StatisticSelector {
         File input2 = new File("src/test/resources/pageRanks/neural201305262223.txtnew.pr");
         File input3 = new File("src/test/resources/pageRanks/bfs201305230231.txtnew.pr");
         File input4 = new File("src/test/resources/pageRanks/neural201305220457.txtnew.pr");
+        File input5 = new File("src/test/resources/pageRanks/neural201305301706.txtnew.pr");
+        File input6 = new File("src/test/resources/pageRanks/neuralGraph201305300304.txtnew.pr");
         File output = new File("src/test/resources/statistic.txt");
         try {
-            StatisticSelector selector = new StatisticSelector(input4, 3000);
-      //      selector.averagePageRank(output, 100);
-            selector.computeRankFraction();
+            StatisticSelector selector = new StatisticSelector(input3, 17700);
+            selector.averagePageRankFixedInterval(output, 1770);
+           // selector.computeRankFraction();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

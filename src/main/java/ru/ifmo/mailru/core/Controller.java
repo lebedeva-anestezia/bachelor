@@ -22,6 +22,12 @@ public class Controller {
     private Set<WebURL> inProcessing = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
     private TreeSet<WebURL> toCrawl = new TreeSet<>(Collections.reverseOrder());
     public final int MAX_PAGE = 1000000000;
+
+    public int getMaxPageCount() {
+        return maxPageCount;
+    }
+
+    private int maxPageCount = MAX_PAGE;
     private PrintWriter failedPagePrintWriter;
     private PrintWriter crawledPrintWriter;
     private String queueLogFile;
@@ -38,6 +44,10 @@ public class Controller {
             }
         }
         addAll(set);
+    }
+
+    public void setMaxPageCount(int maxPageCount) {
+        this.maxPageCount = maxPageCount;
     }
 
     public Controller(File queueFile, File crawledPages) throws FileNotFoundException {
@@ -192,11 +202,9 @@ public class Controller {
             failedPagePrintWriter.flush();
         }
     }
-	
+
 	public void setCrawledURL(WebURL url) {
-        url.getHostController().incNumber();
-		crawled.add(url.getUri().toString());
-		inProcessing.remove(url);
+        addCrawledURL(url);
         if (crawledPrintWriter == null) {
             return;
         }
@@ -205,6 +213,24 @@ public class Controller {
             crawledPrintWriter.flush();
         }
 	}
+
+    private void addCrawledURL(WebURL url) {
+        url.getHostController().incNumber();
+        crawled.add(url.getUri().toString());
+        inProcessing.remove(url);
+    }
+
+    public void setCrawledURL(Page page) {
+        addCrawledURL(page.getUrl());
+        if (crawledPrintWriter == null) {
+            return;
+        }
+        synchronized (crawledPrintWriter) {
+            crawledPrintWriter.println(page.getUrl().getUri() + " " + page.getOutLinks().size() + " " +
+                    page.getContent().hashCode() + " " + System.currentTimeMillis());
+            crawledPrintWriter.flush();
+        }
+    }
 
     void makeSnapshot() {
         try {
@@ -226,5 +252,9 @@ public class Controller {
 
     public static boolean isAllowHost(URI uri) {
         return hostMap.size() < 500 || hostMap.containsKey(uri.getHost());
+    }
+
+    public int getIndexSize() {
+        return crawled.size();
     }
 }

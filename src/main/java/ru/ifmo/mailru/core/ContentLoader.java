@@ -14,6 +14,7 @@ import java.nio.charset.Charset;
 public class ContentLoader {
     private BufferedReader reader;
     public static int count = 0;
+    private StringBuilder builder = new StringBuilder();
 
     public ContentLoader(URI uri, int attemptsNumber) throws IOException {
         int n = 0;
@@ -57,7 +58,11 @@ public class ContentLoader {
             firstLine = new String(firstSymbols);
             firstLine = firstLine.toLowerCase().trim();
         } while (firstLine.equals("") && ++k < 5);
-        return firstLine.startsWith("<");
+        if (firstLine.startsWith("<")) {
+            builder.append(firstLine);
+            return true;
+        }
+        return false;
     }
 
     public String loadRobotsTxt() throws IOException {
@@ -65,14 +70,13 @@ public class ContentLoader {
     }
 
     private String loadContent(String separator) throws IOException{
-        StringBuilder sb = new StringBuilder();
         String s;
         while ((s = nextLine()) != null) {
-            sb.append(s);
-            sb.append(separator);
+            builder.append(s);
+            builder.append(separator);
         }
         reader.close();
-        return sb.toString();
+        return builder.toString();
     }
 
     public String loadWebPage() throws IOException {
