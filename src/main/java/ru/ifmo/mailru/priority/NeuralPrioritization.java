@@ -23,7 +23,7 @@ public class NeuralPrioritization implements ModulePrioritization {
     public void setPriorities(Page page) {
         for (WebURL url : page.getOutLinks()) {
             Double computedRank = trainingController.computeRank(url);
-            url.setRank(computedRank);
+            url.setQualityRank(computedRank);
         }
     }
 }

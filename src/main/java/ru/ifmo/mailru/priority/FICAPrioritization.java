@@ -15,12 +15,12 @@ public class FICAPrioritization implements ModulePrioritization {
         size++;
         time = size / K;
         double alpha = Math.exp(-beta * time);
-        double absRank = -page.getUrl().getRank();
+        double absRank = -page.getUrl().getQualityRank();
         double dist = Math.log(page.getOutLinks().size()) + gamma * absRank;
         for (WebURL webURL : page.getOutLinks()) {
             double curRank = -((1 - alpha) * absRank + alpha * dist);
-            webURL.setRank(curRank);
-           // System.out.println(webURL.getUri().toString() + " " + webURL.getRank());
+            webURL.setQualityRank(curRank);
+           // System.out.println(webURL.getUri().toString() + " " + webURL.getQualityRank());
         }
     }
 }

@@ -82,7 +82,7 @@ public class CompTest {
     @Test
     public void bfsSpiderRun() {
         try {
-            spiderRun(new EmptyPrioritization(), createNewController(), "bfs", -1);
+            spiderRun(new EmptyPrioritization(), createNewController(), "bfs", 20000);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -192,7 +192,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "neuralGraph/neuralGraph201305300304.txt");
+        File file = new File(crawledPagesDir + "bfs/bfs201305310902.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {
@@ -209,14 +209,14 @@ public class CompTest {
             while (scanner.hasNext()) {
                 String s = scanner.nextLine();
                 String url = s.split(" ")[0];
-                int res = getter.getExistPageRank(url);
+                int res = getter.getPageRank(url);
                 if (res != 22) {
                     if (res != -3) {
                         pw.println(url + " " + res);
                         pw.flush();
                     }
                     System.out.println(url + " " + res);
-                    //Thread.sleep(1000);
+                    Thread.sleep(1000);
                 } else {
                     System.out.println("exists PR for " + url);
                 }

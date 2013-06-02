@@ -22,12 +22,6 @@ public class Controller {
     private Set<WebURL> inProcessing = Collections.newSetFromMap(new ConcurrentHashMap<WebURL, Boolean>());
     private TreeSet<WebURL> toCrawl = new TreeSet<>(Collections.reverseOrder());
     public final int MAX_PAGE = 1000000000;
-
-    public int getMaxPageCount() {
-        return maxPageCount;
-    }
-
-    private int maxPageCount = MAX_PAGE;
     private PrintWriter failedPagePrintWriter;
     private PrintWriter crawledPrintWriter;
     private String queueLogFile;
@@ -44,10 +38,6 @@ public class Controller {
             }
         }
         addAll(set);
-    }
-
-    public void setMaxPageCount(int maxPageCount) {
-        this.maxPageCount = maxPageCount;
     }
 
     public Controller(File queueFile, File crawledPages) throws FileNotFoundException {
@@ -94,24 +84,6 @@ public class Controller {
     public void setFailedLogging(PrintWriter failed) throws FileNotFoundException {
         this.failedPagePrintWriter = failed;
     }
-
-    public WebURL nextURL() {
-        WebURL next;
-        synchronized (toCrawl) {
-            do {
-                next = toCrawl.pollFirst();
-                if (next == null) {
-                    return null;
-                }
-            } while (crawled.contains(next.getUri().toString()) ||
-                     inProcessing.contains(next) || failed.contains(next.getUri().toString())
-                                                 || next.getHostController().isItTooMuch());
-        }
-        inProcessing.add(next);
-        inQueue.remove(next);
-        return next;
-    }
-
 
 	public void addAll(Set<WebURL> urls) {
 		for (WebURL url: urls) {
@@ -238,7 +210,7 @@ public class Controller {
             PrintWriter printWriter = new PrintWriter(newQueue);
             synchronized (toCrawl) {
                 for (WebURL webURL : toCrawl) {
-                    printWriter.println(webURL.getUri().toString() + " " + webURL.getRank());
+                    printWriter.println(webURL.getUri().toString() + " " + webURL.getQualityRank());
                 }
             }
             printWriter.close();
@@ -254,7 +226,7 @@ public class Controller {
         return hostMap.size() < 500 || hostMap.containsKey(uri.getHost());
     }
 
-    public int getIndexSize() {
-        return crawled.size();
+    public Queue<WebURL> getFrontier() {
+        return null;  //To change body of created methods use File | Settings | File Templates.
     }
 }

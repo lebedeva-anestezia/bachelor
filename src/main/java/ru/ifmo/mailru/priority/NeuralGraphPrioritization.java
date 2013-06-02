@@ -23,7 +23,7 @@ public class NeuralGraphPrioritization implements ModulePrioritization {
 
     @Override
     public void setPriorities(Page page) {
-        double addition = page.getUrl().getRank() / page.getOutLinks().size();
+        double addition = page.getUrl().getQualityRank() / page.getOutLinks().size();
         for (WebURL url : page.getOutLinks()) {
             Double computedRank;
             Double rank = cache.get(url);
@@ -32,7 +32,7 @@ public class NeuralGraphPrioritization implements ModulePrioritization {
             } else {
                 computedRank = rank + addition;
             }
-            url.setRank(computedRank);
+            url.setQualityRank(computedRank);
             cache.put(url, computedRank);
         }
     }

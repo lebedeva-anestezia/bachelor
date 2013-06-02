@@ -1,25 +1,43 @@
 package ru.ifmo.mailru.core;
 
-import ru.ifmo.mailru.priority.ModulePrioritization;
-
 import java.io.IOException;
 
-public class PageProcessor extends CrawlModule {
+public class PageProcessor implements Runnable {
 
-    public PageProcessor(WebURL url, Controller controller, ModulePrioritization prioritization) {
-        super(url, controller, prioritization);
+    private Page page;
+    private Crawler crawler;
+
+    public PageProcessor(Page page, Crawler crawler) {
+        this.page = page;
+        this.crawler = crawler;
+    }
+
+
+    protected void load() throws IOException {
+        page.getUrl().getHostController().lock.lock();
+        String content;
+        try {
+            ContentLoader loader = new ContentLoader(page.getUrl().getUri(), 5);
+            content = loader.loadWebPage();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            page.getUrl().getHostController().lock.unlock();
+        }
+        page.setContent(content);
     }
 
     @Override
     public void run() {
         try {
             processingWebPage();
-            prioritization.setPriorities(page);
-            controller.addAll(page.getOutLinks());
-            controller.setCrawledURL(page);
+            page.setCompleted(true);
         } catch (Exception e) {
             System.err.println(e.getMessage());
-            controller.setFailedPage(page.getUrl(), e.getMessage());
+            page.setCompleted(false);
+        } finally {
+            page.getUrl().setLastVisitTime(System.currentTimeMillis());
+            crawler.submitResult(page);
         }
     }
 

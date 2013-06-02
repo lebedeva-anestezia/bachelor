@@ -102,7 +102,7 @@ public class StatisticSelector {
         File input6 = new File("src/test/resources/pageRanks/neuralGraph201305300304.txtnew.pr");
         File output = new File("src/test/resources/statistic.txt");
         try {
-            StatisticSelector selector = new StatisticSelector(input3, 17700);
+            StatisticSelector selector = new StatisticSelector(input5, Integer.MAX_VALUE);
             selector.averagePageRankFixedInterval(output, 1770);
            // selector.computeRankFraction();
         } catch (FileNotFoundException e) {

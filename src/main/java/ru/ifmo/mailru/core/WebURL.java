@@ -4,34 +4,48 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 
-public class WebURL implements Comparable<WebURL> {
+public class WebURL {
 
     private URI uri;
     private HostController hostController;
-    private String fragment;
-    private double rank;
+    private double qualityRank;
+    private long lastVisitTime;
+
+    public long getModificationTime() {
+        return modificationTime;
+    }
+
+    public void setModificationTime(long modificationTime) {
+        this.modificationTime = modificationTime;
+    }
+
+    private long modificationTime;
 
     public WebURL(){}
 
-    public WebURL(URI uri, double rank) {
+    public WebURL(URI uri, double qualityRank) {
         this.uri = uri;
-        this.rank = rank;
+        this.qualityRank = qualityRank;
     }
 
-    public WebURL(String uri, double rank) throws URISyntaxException {
-        this(new URI(uri), rank);
+    public WebURL(String uri, double qualityRank) throws URISyntaxException {
+        this(new URI(uri), qualityRank);
     }
 
-    public void setFragment(String fragment) {
-        this.fragment = fragment;
+    public void setLastVisitTime(long lastVisitTime) {
+        this.lastVisitTime = lastVisitTime;
     }
 
-    public double getRank() {
-        return rank;
+    public long getLastVisitTime() {
+        return lastVisitTime;
     }
 
-    public void setRank(double rank) {
-        this.rank = rank;
+    public double getQualityRank() {
+        return qualityRank;
+    }
+
+    public void setQualityRank(double qualityRank) {
+        this.qualityRank = qualityRank;
     }
 
 	public URI getUri() {
@@ -57,17 +71,6 @@ public class WebURL implements Comparable<WebURL> {
 	public void setHostController(HostController hostController) {
 		this.hostController = hostController;
 	}
-
-    @Override
-    public int compareTo(WebURL o) {
-        //if (new Double(rank).compareTo(o.rank) == 0)
-          //  return uri.compareTo(o.uri);
-        //return new Double(rank).compareTo(o.rank);
-        if (new Double(rank).compareTo(o.rank) >= 0) {
-            return 1;
-        }
-        return -1;
-    }
 
     @Override
     public int hashCode() {

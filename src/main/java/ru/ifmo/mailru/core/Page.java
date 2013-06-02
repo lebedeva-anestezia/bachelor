@@ -7,6 +7,16 @@ public class Page {
 	private String title;
 	private WebURL url;
 	private Set<WebURL> outLinks;
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
+    private boolean completed;
 	
 	public Page(WebURL url) {
 		this.url = url;
@@ -35,4 +45,5 @@ public class Page {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 }
