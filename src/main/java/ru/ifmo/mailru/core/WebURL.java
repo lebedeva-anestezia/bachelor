@@ -10,6 +10,27 @@ public class WebURL {
     private HostController hostController;
     private double qualityRank;
     private long lastVisitTime;
+    private long updatePeriod = 1000 * 3600 * 24;
+    private long step = updatePeriod;
+    private int contentHashCode;
+    private long modificationTime;
+    public static long MINIMAL_PERIOD = 1000 * 3600;
+
+    public long getUpdatePeriod() {
+        return updatePeriod;
+    }
+
+    public void setUpdatePeriod(long updatePeriod) {
+        this.updatePeriod = updatePeriod;
+    }
+
+    public int getContentHashCode() {
+        return contentHashCode;
+    }
+
+    public void setContentHashCode(int contentHashCode) {
+        this.contentHashCode = contentHashCode;
+    }
 
     public long getModificationTime() {
         return modificationTime;
@@ -18,8 +39,6 @@ public class WebURL {
     public void setModificationTime(long modificationTime) {
         this.modificationTime = modificationTime;
     }
-
-    private long modificationTime;
 
     public WebURL(){}
 
@@ -46,6 +65,10 @@ public class WebURL {
 
     public void setQualityRank(double qualityRank) {
         this.qualityRank = qualityRank;
+    }
+
+    public synchronized void incrementQualityRank(double addition) {
+        this.qualityRank += addition;
     }
 
 	public URI getUri() {
@@ -87,5 +110,13 @@ public class WebURL {
         if (!uri.toString().equals(url.uri.toString())) return false;
 
         return true;
+    }
+
+    public void decreasePeriod() {
+
+    }
+
+    public void increasePeriod() {
+        //To change body of created methods use File | Settings | File Templates.
     }
 }

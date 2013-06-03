@@ -2,18 +2,23 @@ package ru.ifmo.mailru;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import ru.ifmo.mailru.core.Controller;
-import ru.ifmo.mailru.core.Spider;
+import ru.ifmo.mailru.core.LogWriter;
+import ru.ifmo.mailru.core.QueueHandler;
+import ru.ifmo.mailru.core.Scheduler;
+import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.google.pr.PageRankGetter;
 import ru.ifmo.mailru.priority.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  * @author Anastasia Lebedeva
@@ -31,16 +36,9 @@ public class CompTest {
 
     @Ignore
     @Test
-    public void comparedRun() {
-        bfsSpiderRun();
-        FICASpiderRun();
-    }
-
-    @Ignore
-    @Test
     public void neuralGraphSpiderRun() {
         try {
-            spiderRun(new NeuralGraphPrioritization(), createNewController(), "neuralGraph", -1);
+            spiderRun(new NeuralGraphPrioritization(), new LogWriter(), "neuralGraph");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -50,31 +48,10 @@ public class CompTest {
     @Test
     public void neuralSpiderRun() {
         try {
-            spiderRun(new NeuralPrioritization(), createNewController(), "neural", -1);
+            spiderRun(new NeuralPrioritization(), new LogWriter(), "neural");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-    @Ignore
-    @Test
-    public void cycleCompareSpiderRun() {
-       /* try {
-            spiderRun(new NeuralGraphPrioritization(), createNewController(), "neuralGraph", 20000);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }*/
-
-        try {
-            spiderRun(new NeuralPrioritization(), createNewController(), "neural", 20000);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-       /* try {
-            spiderRun(new EmptyPrioritization(), createNewController(), "bfs", 20000);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }*/
     }
 
 
@@ -82,7 +59,7 @@ public class CompTest {
     @Test
     public void bfsSpiderRun() {
         try {
-            spiderRun(new EmptyPrioritization(), createNewController(), "bfs", 20000);
+            spiderRun(new EmptyPrioritization(), new LogWriter(), "bfs");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -92,36 +69,35 @@ public class CompTest {
     @Test
     public void FICASpiderRun() {
         try {
-            spiderRun(new FICAPrioritization(), createNewController(), "FICA", -1);
+            spiderRun(new FICAPrioritization(), new LogWriter(), "FICA");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
 
-    @Ignore
-    @Test
-    public void neuralSpiderRestore() {
-        File queueFile = new File(resourceDir + "queueNeural1368492618101.txt");
-        File crawledPage = new File(crawledPagesDir + "neural/" + "neural201305132350.txt");
+    public Set<WebURL> readStartSet() {
         try {
-            spiderRun(new NeuralGraphPrioritization(), restoreController(queueFile, crawledPage), "neural", -1);
+            File startSetFile = new File(resourceDir + "domens.txt");
+            Scanner scanner = new Scanner(startSetFile);
+            Set<WebURL> set = new HashSet<>();
+            while (scanner.hasNext()) {
+                try {
+                    set.add(new WebURL(scanner.nextLine()));
+                } catch (URISyntaxException e) {
+                    e.printStackTrace();
+                }
+            }
+            return set;
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.exit(1);
         }
-    }
-
-    public Controller createNewController() throws FileNotFoundException {
-        File startSet = new File(resourceDir + "domens.txt");
-        return new Controller(startSet);
-    }
-
-    public Controller restoreController(File queueFile, File crawledPages) throws FileNotFoundException {
-        return new Controller(queueFile, crawledPages);
+        return null;
     }
 
 
-    private void spiderRun(ModulePrioritization prioritization, Controller controller, String teg, int max) throws FileNotFoundException {
+    private void spiderRun(ModulePrioritization prioritization, LogWriter logWriter, String teg) throws FileNotFoundException {
         String date = dateFormat.format(CompTest.date);
         File crawledFile = new File(crawledPagesDir + teg + "/" + teg + date + ".txt");
         File failedFile = new File(failedPagesDir + teg + "/failed" + teg + date + ".txt");
@@ -135,15 +111,14 @@ public class CompTest {
             e.printStackTrace();
             System.exit(1);
         }
-        if (max != -1) {
-            controller.setMaxPageCount(max);
-        }
-        controller.setFailedLogging(pwFailed);
-        controller.setCrawledLogging(pwCrawled);
-        controller.setQueueLogFile(queueFileName);
-        Spider spider = new Spider(controller, prioritization);
+        logWriter.setFailedLogging(pwFailed);
+        logWriter.setCrawledLogging(pwCrawled);
+        logWriter.setQueueLogFile(queueFileName);
+        Set<WebURL> startSet = readStartSet();
+        QueueHandler queueHandler = new QueueHandler(prioritization, startSet, logWriter);
+        Scheduler scheduler = new Scheduler(queueHandler);
         try {
-            spider.start();
+            scheduler.start();
             Thread.sleep(Integer.MAX_VALUE);
         } catch (Exception e) {
             e.printStackTrace();

@@ -19,7 +19,7 @@ public class HostController {
     public static final int maxCount = 500;
     public final Lock lock;
 	
-	public HostController(String host) throws URISyntaxException {
+	public HostController(String host) {
         this.pageNumber = 0;
 		this.host = host;
 		lastRequest = 0;
@@ -28,13 +28,13 @@ public class HostController {
         lock = new ReentrantLock();
     }
 
-    public void addPolitenessModule() throws URISyntaxException {
+    public void addPolitenessModule() {
         if (tryAddedPolitenessModule) {
             return;
         }
         try {
             this.politenessModule = new PolitenessModule(this);
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
         }
         tryAddedPolitenessModule = true;
     }

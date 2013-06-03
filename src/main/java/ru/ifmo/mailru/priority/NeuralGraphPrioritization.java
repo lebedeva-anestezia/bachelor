@@ -5,14 +5,12 @@ import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.features.TrainingController;
 
 import java.io.FileNotFoundException;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Anastasia Lebedeva
  */
-public class NeuralGraphPrioritization implements ModulePrioritization {
+public class NeuralGraphPrioritization extends ModulePrioritization {
     private TrainingController trainingController;
-    private static ConcurrentHashMap<WebURL, Double> cache = new ConcurrentHashMap<>();
 
     public NeuralGraphPrioritization() throws FileNotFoundException {
         trainingController = new TrainingController();
@@ -21,19 +19,17 @@ public class NeuralGraphPrioritization implements ModulePrioritization {
         trainingController.train(positiveSize, negativeSize);
     }
 
+
     @Override
-    public void setPriorities(Page page) {
-        double addition = page.getUrl().getQualityRank() / page.getOutLinks().size();
-        for (WebURL url : page.getOutLinks()) {
-            Double computedRank;
-            Double rank = cache.get(url);
-            if (rank == null) {
-                computedRank = trainingController.computeRank(url) + addition;
-            } else {
-                computedRank = rank + addition;
-            }
-            url.setQualityRank(computedRank);
-            cache.put(url, computedRank);
-        }
+    public void setQualityRanks(WebURL url, Page parentPage) {
+        double addition = parentPage.getUrl().getQualityRank() / parentPage.getOutLinks().size();
+        Double computedRank = trainingController.computeRank(url);
+        url.incrementQualityRank(computedRank + addition);
+    }
+
+    @Override
+    public void resetQualityRanks(WebURL url, Page parentPage) {
+        double addition = parentPage.getUrl().getQualityRank() / parentPage.getOutLinks().size();
+        url.incrementQualityRank(addition);
     }
 }

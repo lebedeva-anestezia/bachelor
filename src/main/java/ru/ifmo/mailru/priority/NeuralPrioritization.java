@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 /**
  * @author Anastasia Lebedeva
  */
-public class NeuralPrioritization implements ModulePrioritization {
+public class NeuralPrioritization extends ModulePrioritization {
     private TrainingController trainingController;
 
     public NeuralPrioritization() throws FileNotFoundException {
@@ -20,10 +20,13 @@ public class NeuralPrioritization implements ModulePrioritization {
     }
 
     @Override
-    public void setPriorities(Page page) {
-        for (WebURL url : page.getOutLinks()) {
-            Double computedRank = trainingController.computeRank(url);
-            url.setQualityRank(computedRank);
-        }
+    public void setQualityRanks(WebURL url, Page parentPage) {
+        Double computedRank = trainingController.computeRank(url);
+        url.setQualityRank(computedRank);
+    }
+
+    @Override
+    public void resetQualityRanks(WebURL url, Page parentPage) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }

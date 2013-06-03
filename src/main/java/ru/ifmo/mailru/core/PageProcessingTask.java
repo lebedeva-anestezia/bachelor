@@ -2,14 +2,14 @@ package ru.ifmo.mailru.core;
 
 import java.io.IOException;
 
-public class PageProcessor implements Runnable {
+public class PageProcessingTask implements Runnable {
 
+    private QueueHandler queueHandler;
     private Page page;
-    private Crawler crawler;
 
-    public PageProcessor(Page page, Crawler crawler) {
+    public PageProcessingTask(Page page, QueueHandler queueHandler) {
         this.page = page;
-        this.crawler = crawler;
+        this.queueHandler = queueHandler;
     }
 
 
@@ -30,20 +30,18 @@ public class PageProcessor implements Runnable {
     @Override
     public void run() {
         try {
-            processingWebPage();
-            page.setCompleted(true);
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-            page.setCompleted(false);
-        } finally {
+            load();
+            if (page.isModified()) {
+                page.getUrl().decreasePeriod();
+            } else {
+                page.getUrl().increasePeriod();
+            }
             page.getUrl().setLastVisitTime(System.currentTimeMillis());
-            crawler.submitResult(page);
+            PageParser.extractLinks(page);
+            queueHandler.addCrawledPage(page);
+        } catch (Exception e) {
+            queueHandler.addFailedPage(page, e.getMessage());
         }
-    }
-
-    void processingWebPage() throws IOException  {
-        load();
-        PageParser.parse(page);
     }
 }
 

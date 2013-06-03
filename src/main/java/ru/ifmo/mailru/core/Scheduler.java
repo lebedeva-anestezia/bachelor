@@ -1,6 +1,5 @@
 package ru.ifmo.mailru.core;
 
-import ru.ifmo.mailru.priority.ModulePrioritization;
 import ru.ifmo.mailru.util.ValueComparator;
 
 import java.util.HashMap;
@@ -8,21 +7,20 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Anastasia Lebedeva
  */
-public class Crawler implements Runnable {
+public class Scheduler implements Runnable {
     private static final int POOL_SIZE = 20;
     public final int maxPageCountFromSite = 50;
     public final int frontierSize = 1000;
-    private Storage storage;
-    private ModulePrioritization prioritization;
+    private QueueHandler queueHandler;
     private Thread curThread;
 
-    public Crawler(Storage storage, ModulePrioritization prioritization) {
-        this.storage = storage;
-        this.prioritization = prioritization;
+    public Scheduler(QueueHandler queueHandler) {
+        this.queueHandler = queueHandler;
     }
 
     public void start() {
@@ -42,32 +40,38 @@ public class Crawler implements Runnable {
             Map<WebURL, Double> rangesMap = new HashMap<>();
             ValueComparator<WebURL, Double> comparator = new ValueComparator<>(rangesMap);
             TreeMap<WebURL, Double> orderedMap = new TreeMap<>(comparator);
-            for (WebURL url : storage.collection) {
-                rangesMap.put(url, prioritization.computeUpdatingProbability(url));
+            for (WebURL url : queueHandler.getCollection()) {
+                rangesMap.put(url, queueHandler.prioritization.computeVisitRank(url));
             }
+            orderedMap.putAll(rangesMap);
             Map<HostController, Integer> counter = new HashMap<>();
             ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
             int count = 0;
             for (WebURL url : orderedMap.keySet()) {
-                Integer curPageFromSite = counter.get(url.getHostController());
+                Integer curPageFromSiteObj = counter.get(url.getHostController());
+                int curPageFromSite;
+                if (curPageFromSiteObj == null) {
+                    curPageFromSite = 0;
+                } else {
+                    curPageFromSite = curPageFromSiteObj;
+                }
                 if (curPageFromSite == maxPageCountFromSite) {
                     continue;
                 }
                 counter.put(url.getHostController(), curPageFromSite + 1);
                 count++;
-                executor.submit(new PageProcessor(new Page(url), this));
+                executor.submit(new PageProcessingTask(new Page(url), queueHandler));
                 if (count == frontierSize) {
                     break;
                 }
             }
-        }
-    }
-
-    public void submitResult(Page page) {
-        if (page.isCompleted()) {
-            storage.addCrawledPage(page);
-        } else {
-            storage.addFailedPage(page);
+            try {
+                executor.shutdown();
+                executor.awaitTermination(20, TimeUnit.MINUTES);
+            } catch (InterruptedException e) {
+                stop();
+                e.printStackTrace();
+            }
         }
     }
 }
