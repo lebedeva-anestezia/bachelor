@@ -32,9 +32,9 @@ public class Scheduler implements Runnable {
     @Override
     public void run() {
         Thread thisThread = Thread.currentThread();
-        ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
         while (curThread == thisThread) {
             List<WebURL> part = collectionHandler.getNextPart(this);
+            ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
             for (WebURL url : part) {
                 executor.submit(new PageProcessingTask(new Page(url), collectionHandler));
             }
