@@ -1,0 +1,3 @@
+http://taxi.yandex.ru?from_geoblock_spb Invalid Http response
+http://soft.yandex.ru?from=prov_all Invalid Http response
+http://direct.yandex.ru?from=maintest_ru_zaryuditebusines Invalid Http response

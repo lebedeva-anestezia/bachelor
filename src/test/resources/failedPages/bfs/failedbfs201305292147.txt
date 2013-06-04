@@ -1,0 +1,19 @@
+http://liveinternet.ru connect timed out
+http://sberbank.ru connect timed out
+http://sape.ru connect timed out
+http://avito.ru connect timed out
+http://wmmail.ru Read timed out
+http://wildberries.ru Is not web page
+http://ria.ru Read timed out
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://directadvert.ru Read timed out
+http://prezentacya.ru Read timed out
+http://lenta.ru Read timed out
+http://mail.ru Read timed out
+http://sbrf.ru Read timed out
+http://drom.ru Read timed out
+http://auto.ru Read timed out
+http://tiu.ru Read timed out
+http://seasonvar.ru Read timed out
+http://gazeta.ru Read timed out
+http://livetvstatic.ru livetvstatic.ru

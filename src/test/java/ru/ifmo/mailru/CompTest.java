@@ -167,7 +167,7 @@ public class CompTest {
     @Test
     public void getPageRanks() {
         constructPRGetter();
-        File file = new File(crawledPagesDir + "bfs/bfs201305310902.txt");
+        File file = new File(crawledPagesDir + "neural/neural201306041116.txt");
         try {
             printRageRanks(file);
         } catch (FileNotFoundException e) {

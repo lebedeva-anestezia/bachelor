@@ -1,0 +1,11 @@
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://sbrf.ru Read timed out
+http://echo.msk.ru Read timed out
+http://slando.ru Invalid Http response
+http://imhonet.ru Unexpected end of file from server
+http://drom.ru Read timed out
+http://avito.ru Read timed out
+http://gazeta.ru Read timed out
+http://wildberries.ru Is not web page
+http://livetvstatic.ru livetvstatic.ru
+http://russianpost.ru connect timed out

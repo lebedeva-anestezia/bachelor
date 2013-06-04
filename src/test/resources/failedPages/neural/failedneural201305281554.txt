@@ -1,0 +1,10 @@
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://livetvstatic.ru livetvstatic.ru
+http://slando.ru Invalid Http response
+http://wildberries.ru Is not web page
+http://mirtesen.ru?rnd=967768776 Invalid Http response
+http://imhonet.ru Unexpected end of file from server
+http://fotostrana.ru/forgot http://fotostrana.ru/forgot/
+http://wmmail.ru?cf=news-viewn Invalid Http response
+http://smartresponder.ru/l_ru/affiliate TimeOut
+http://smartresponder.ru/l_ru/user/reg.html TimeOut

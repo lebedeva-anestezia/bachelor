@@ -1,0 +1,12 @@
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://livetvstatic.ru livetvstatic.ru
+http://slando.ru Invalid Http response
+http://imhonet.ru Unexpected end of file from server
+http://google.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0 http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0
+http://blogspot.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://wmmail.ru?cf=news-viewn Invalid Http response
+http://wmmail.ru?cf=news-viewn&nid=117 Invalid Http response
+http://wmmail.ru?cf=news-viewn&nid=118 Invalid Http response
+http://wmmail.ru?cf=news-viewn&nid=119 Invalid Http response
+http://liveinternet.ru/includes/titlequotes_rss.php Is not web page

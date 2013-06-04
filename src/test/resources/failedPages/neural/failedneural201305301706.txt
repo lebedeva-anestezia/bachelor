@@ -1,0 +1,1237 @@
+http://sberbank.ru connect timed out
+http://ya.ru Read timed out
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://rambler.ru Read timed out
+http://wmmail.ru Read timed out
+http://livetvstatic.ru livetvstatic.ru
+http://slando.ru Invalid Http response
+http://sbrf.ru connect timed out
+http://drom.ru Read timed out
+http://imhonet.ru Unexpected end of file from server
+http://telderi.ru Server returned HTTP response code: 500 for URL: http://telderi.ru
+http://gazeta.ru Read timed out
+http://ulmart.ru Read timed out
+http://beeline.ru connect timed out
+http://google.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://megafon.ru connect timed out
+http://gidonline.ru Read timed out
+http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0 http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=176776&bt=25&pz=0&rnd=795668059 Is not web page
+http://blogspot.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://torg.mail.ru?utm_source=mail.ru&utm_medium=portal&utm_campaign=main-navigation-block Invalid Http response
+http://sportbox.ru Read timed out
+http://avia.mail.ru?utm_source=morda Invalid Http response
+http://freelansim.ru/tasks/25624 Read timed out
+http://hi-tech.mail.ru/news/misc/danish_schoolgirls_wi-fi.html Is not web page
+http://hi-tech.mail.ru/news/misc/skidki_svyaznoi.html Is not web page
+http://money.yandex.ru Is not web page
+http://realty.lenta.ru/news/2013/05/28/rating protocol = http host = null
+http://realty.lenta.ru/news/2013/05/27/sting protocol = http host = null
+http://realty.lenta.ru/news/2013/05/30/land protocol = http host = null
+http://realty.lenta.ru/photo/2013/05/21/office protocol = http host = null
+http://avito.ru/location/chukotskiy_ao http://www.avito.ru/location/chukotskiy_ao
+http://avito.ru/location/stavropolskiy_kray http://www.avito.ru/location/stavropolskiy_kray
+http://avito.ru/location/chechenskaya_respublika http://www.avito.ru/location/chechenskaya_respublika
+http://avito.ru/location/kaliningradskaya_oblast http://www.avito.ru/location/kaliningradskaya_oblast
+http://avito.ru/location/mariy_el http://www.avito.ru/location/mariy_el
+http://avito.ru/location/kamchatskiy_kray http://www.avito.ru/location/kamchatskiy_kray
+http://avito.ru/location/rostovskaya_oblast http://www.avito.ru/location/rostovskaya_oblast
+http://avito.ru/location/respublika_altay http://www.avito.ru/location/respublika_altay
+http://avito.ru/location/penzenskaya_oblast http://www.avito.ru/location/penzenskaya_oblast
+http://avito.ru/location/saha_yakutiya http://www.avito.ru/location/saha_yakutiya
+http://avito.ru/location/dagestan http://www.avito.ru/location/dagestan
+http://avito.ru/location/kirovskaya_oblast http://www.avito.ru/location/kirovskaya_oblast
+http://avito.ru/location/moskovskaya_oblast http://www.avito.ru/location/moskovskaya_oblast
+http://avito.ru/location/permskiy_kray http://www.avito.ru/location/permskiy_kray
+http://avito.ru/location/leningradskaya_oblast http://www.avito.ru/location/leningradskaya_oblast
+http://avito.ru/location/bashkortostan http://www.avito.ru/location/bashkortostan
+http://avito.ru/location/yaroslavskaya_oblast http://www.avito.ru/location/yaroslavskaya_oblast
+http://avito.ru/location/ryazanskaya_oblast http://www.avito.ru/location/ryazanskaya_oblast
+http://avito.ru/location/evreyskaya_ao http://www.avito.ru/location/evreyskaya_ao
+http://avito.ru/location/altayskiy_kray http://www.avito.ru/location/altayskiy_kray
+http://avito.ru/location/amurskaya_oblast http://www.avito.ru/location/amurskaya_oblast
+http://avito.ru/location/magadanskaya_oblast http://www.avito.ru/location/magadanskaya_oblast
+http://avito.ru/location/voronezhskaya_oblast http://www.avito.ru/location/voronezhskaya_oblast
+http://avito.ru/location/novgorodskaya_oblast http://www.avito.ru/location/novgorodskaya_oblast
+http://avito.ru/location/chelyabinskaya_oblast http://www.avito.ru/location/chelyabinskaya_oblast
+http://avito.ru/location/nizhegorodskaya_oblast http://www.avito.ru/location/nizhegorodskaya_oblast
+http://avito.ru/location/kabardino-balkariya http://www.avito.ru/location/kabardino-balkariya
+http://avito.ru/location/primorskiy_kray http://www.avito.ru/location/primorskiy_kray
+http://avito.ru/location/tyva http://www.avito.ru/location/tyva
+http://avito.ru/location/smolenskaya_oblast http://www.avito.ru/location/smolenskaya_oblast
+http://avito.ru/location/tambovskaya_oblast http://www.avito.ru/location/tambovskaya_oblast
+http://avito.ru/location/bryanskaya_oblast http://www.avito.ru/location/bryanskaya_oblast
+http://avito.ru/add http://www.avito.ru/add
+http://avito.ru/location/komi http://www.avito.ru/location/komi
+http://avito.ru/location/tomskaya_oblast http://www.avito.ru/location/tomskaya_oblast
+http://avito.ru/location/tulskaya_oblast http://www.avito.ru/location/tulskaya_oblast
+http://avito.ru/location/pskovskaya_oblast http://www.avito.ru/location/pskovskaya_oblast
+http://avito.ru/location/novosibirskaya_oblast http://www.avito.ru/location/novosibirskaya_oblast
+http://avito.ru/location/vladimirskaya_oblast http://www.avito.ru/location/vladimirskaya_oblast
+http://avito.ru/location/omskaya_oblast http://www.avito.ru/location/omskaya_oblast
+http://avito.ru/location/orenburgskaya_oblast http://www.avito.ru/location/orenburgskaya_oblast
+http://avito.ru/location/kurskaya_oblast http://www.avito.ru/location/kurskaya_oblast
+http://avito.ru/location/tverskaya_oblast http://www.avito.ru/location/tverskaya_oblast
+http://avito.ru/catalog/moskva http://www.avito.ru/catalog/moskva
+http://avito.ru/location/samarskaya_oblast http://www.avito.ru/location/samarskaya_oblast
+http://avito.ru/location/severnaya_osetiya http://www.avito.ru/location/severnaya_osetiya
+http://avito.ru/location/nenetskiy_ao http://www.avito.ru/location/nenetskiy_ao
+http://avito.ru/location/zabaykalskiy_kray http://www.avito.ru/location/zabaykalskiy_kray
+http://avito.ru/location/karachaevo-cherkesiya http://www.avito.ru/location/karachaevo-cherkesiya
+http://avito.ru/location/yamalo-nenetskiy_ao http://www.avito.ru/location/yamalo-nenetskiy_ao
+http://avito.ru/location/murmanskaya_oblast http://www.avito.ru/location/murmanskaya_oblast
+http://avito.ru/location/lipetskaya_oblast http://www.avito.ru/location/lipetskaya_oblast
+http://avito.ru/location/orlovskaya_oblast http://www.avito.ru/location/orlovskaya_oblast
+http://avito.ru/location/krasnodarskiy_kray http://www.avito.ru/location/krasnodarskiy_kray
+http://avito.ru/location/krasnoyarskiy_kray http://www.avito.ru/location/krasnoyarskiy_kray
+http://avito.ru/location/kurganskaya_oblast http://www.avito.ru/location/kurganskaya_oblast
+http://avito.ru/location/sahalinskaya_oblast http://www.avito.ru/location/sahalinskaya_oblast
+http://avito.ru/location/astrahanskaya_oblast http://www.avito.ru/location/astrahanskaya_oblast
+http://avito.ru/location/adygeya http://www.avito.ru/location/adygeya
+http://avito.ru/location/vologodskaya_oblast http://www.avito.ru/location/vologodskaya_oblast
+http://avito.ru/location/kostromskaya_oblast http://www.avito.ru/location/kostromskaya_oblast
+http://avito.ru/location/tyumenskaya_oblast http://www.avito.ru/location/tyumenskaya_oblast
+http://avito.ru/location/saratovskaya_oblast http://www.avito.ru/location/saratovskaya_oblast
+http://avito.ru/location/volgogradskaya_oblast http://www.avito.ru/location/volgogradskaya_oblast
+http://avito.ru/location/ulyanovskaya_oblast http://www.avito.ru/location/ulyanovskaya_oblast
+http://avito.ru/location/hakasiya http://www.avito.ru/location/hakasiya
+http://avito.ru/location/kareliya http://www.avito.ru/location/kareliya
+http://avito.ru/location/sverdlovskaya_oblast http://www.avito.ru/location/sverdlovskaya_oblast
+http://realty.lenta.ru/articles/2013/05/29/flatsmsk protocol = http host = null
+http://avito.ru/location/arhangelskaya_oblast http://www.avito.ru/location/arhangelskaya_oblast
+http://avito.ru/location/belgorodskaya_oblast http://www.avito.ru/location/belgorodskaya_oblast
+http://avito.ru/location/mordoviya http://www.avito.ru/location/mordoviya
+http://avito.ru/location/tatarstan http://www.avito.ru/location/tatarstan
+http://avito.ru/location/kalmykiya http://www.avito.ru/location/kalmykiya
+http://realty.lenta.ru/news/2013/05/27/mirax protocol = http host = null
+http://avito.ru/location/chuvashiya http://www.avito.ru/location/chuvashiya
+http://avito.ru/location/ingushetiya http://www.avito.ru/location/ingushetiya
+http://realty.lenta.ru/news/2013/05/28/veb protocol = http host = null
+http://avito.ru/catalog/sankt-peterburg http://www.avito.ru/catalog/sankt-peterburg
+http://avito.ru/location/habarovskiy_kray http://www.avito.ru/location/habarovskiy_kray
+http://avito.ru/location/irkutskaya_oblast http://www.avito.ru/location/irkutskaya_oblast
+http://avito.ru/location/ivanovskaya_oblast http://www.avito.ru/location/ivanovskaya_oblast
+http://avito.ru/location/buryatiya http://www.avito.ru/location/buryatiya
+http://avito.ru/location/udmurtiya http://www.avito.ru/location/udmurtiya
+http://avito.ru/location/kaluzhskaya_oblast http://www.avito.ru/location/kaluzhskaya_oblast
+http://avito.ru/location/kemerovskaya_oblast http://www.avito.ru/location/kemerovskaya_oblast
+http://avito.ru/location/hanty-mansiyskiy_ao http://www.avito.ru/location/hanty-mansiyskiy_ao
+http://my.webmoney.ru Server returned HTTP response code: 403 for URL: http://my.webmoney.ru
+http://koleso.auto.ru/office/new http://koleso.auto.ru/office/new
+http://koleso.auto.ru/tyrecatalog/kumho http://koleso.auto.ru/tyrecatalog/kumho
+http://hi-tech.mail.ru/news/misc/liquid_metal_htc.html Is not web page
+http://hi-tech.mail.ru/news/misc/samsung_galaxy_s4_mini_official.html Is not web page
+http://passport.sape.ru/account/password/recover http://passport.sape.ru/account/password/recover
+http://advert.subscribe.ru/partner http://advert.subscribe.ru/partner
+http://digest.subscribe.ru/5112.html http://digest.subscribe.ru/5112.html
+http://subscribe.ru/catalog/map http://subscribe.ru/catalog/map
+http://koleso.auto.ru/diskcatalog/borbet http://koleso.auto.ru/diskcatalog/borbet
+http://koleso.auto.ru/tyrecatalog/bridgestone http://koleso.auto.ru/tyrecatalog/bridgestone
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=379441&bt=52&pid=1044130&bid=2275867&bn=2275867&rnd=435013449 Is not web page
+http://koleso.auto.ru/tyrecatalog/nexen http://koleso.auto.ru/tyrecatalog/nexen
+http://top.rbc.ru?utm_source=gismeteo&utm_medium=news&utm_campaign=gism_headline Invalid Http response
+http://worldoftanks.ru/ru/press http://worldoftanks.ru/ru/press
+http://worldoftanks.ru/registration/ru Is not web page
+http://www.rbcdaily.ru?utm_source=gismeteo&utm_medium=news&utm_campaign=gism_headline Invalid Http response
+http://fotostrana.ru/forgot http://fotostrana.ru/forgot/
+http://www.autonews.ru?utm_source=gismeteo&utm_medium=news&utm_campaign=gism_headline Invalid Http response
+http://www.utro.ru?utm_source=gismeteo&utm_medium=news&utm_campaign=gism_headline Invalid Http response
+http://koleso.auto.ru/diskcatalog/kyowa_racing http://koleso.auto.ru/diskcatalog/kyowa_racing
+http://koleso.auto.ru/tyrecatalog/toyo http://koleso.auto.ru/tyrecatalog/toyo
+https://passport.sape.ru/account/signup https://passport.sape.ru/account/signup
+http://maps.mail.ru?z=10&ll=30.31,59.95&j=1 Invalid Http response
+http://hi-tech.mail.ru/contest/misc/perfeo_coloured_tablets_contest.html Is not web page
+https://money.mail.ru?utm_source=mail.ru&utm_medium=portal&utm_campaign=main-navigation-block Invalid Http response
+http://worldoftanks.ru/personal/payment http://worldoftanks.ru/personal/payment
+http://shot.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_grey_shot Invalid Http response
+http://relax.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=pcp&amp;utm_content=click&amp;utm_campaign=main_grey_ziza Invalid Http response
+http://gismeteo.ru/city/daily/4787 connect timed out
+http://hi-tech.mail.ru/review/misc/lenovo_thinkpad_tablet_2.html Is not web page
+http://e.mail.ru/cgi-bin/passremind Is not web page
+http://prezentacya.ru/news/2012-02 Read timed out
+http://games.mail.ru?from=mainall Invalid Http response
+http://hi-tech.mail.ru/review/misc/pocketbook_touch_2-rev.html Is not web page
+http://horo.mail.ru Premature EOF
+http://prezentacya.ru/news/prezentacii_professii/1-0-13 Read timed out
+http://prezentacya.ru/news/prezentacii_transport/1-0-7 Read timed out
+http://m.livetv.ru connect timed out
+http://taxi.yandex.ru?from_geoblock_spb Invalid Http response
+http://maps.qip.ru?utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_maps Invalid Http response
+http://check.webmoney.ru?lang=ru-RU Server returned HTTP response code: 400 for URL: http://check.webmoney.ru?lang=ru-RU
+http://dfiles.ru?mobile=yes Server returned HTTP response code: 503 for URL: http://dfiles.ru?mobile=yes
+http://kards.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=menu&amp;utm_campaign=main_kards Invalid Http response
+http://horo.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_grey_horo Invalid Http response
+http://ria.ru/weekend Server returned HTTP response code: 503 for URL: http://ria.ru/weekend
+http://news.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_search_news Invalid Http response
+http://ria.ru/arab_sy/20130530/940389272.html Read timed out
+http://searchengines.ru?month=06&amp;year=2013 Invalid Http response
+http://sport.rbc.ru?news=football/article/30/05/2013/393213.shtml Invalid Http response
+http://sp.rian.ru?track=riangroup Invalid Http response
+http://wiki.searchengines.ru/index.php/Заглавная_страница http://www.webeffector.ru/wiki/Ð¡Ð»ÑÐ¶ÐµÐ±Ð½Ð°Ñ:AllPages
+http://searchengines.ru/calendar/digital_bez_silikona+_2013.html http://www.searchengines.ru/calendar/digital_bez_silikona+_2013.html
+http://ria.ru/sport/20130530/940390995.html Read timed out
+http://www.autonews.ru/test_drive http://www.autonews.ru/test_drive
+http://www.kupongid.ru?rbc=2?&gt; Invalid Http response
+http://koleso.auto.ru/tyrecatalog/gt_radial http://koleso.auto.ru/tyrecatalog/gt_radial
+http://sport.rbc.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=menu&amp;utm_campaign=mainnews_sport Invalid Http response
+http://news.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=menu&amp;utm_campaign=mainnews_newsqip Invalid Http response
+http://love.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=pcp&amp;utm_content=click&amp;utm_campaign=main_grey_love Invalid Http response
+http://history.qip.ru Is not web page
+http://video.yandex.ru Read timed out
+http://realty.rbc.ru/articles/30/05/2013/562949987140943.shtml?utm_source=rbc_face&amp;utm_medium=main_menu&amp;utm_campaign=glavnoe Read timed out
+http://slovari.yandex.ru Read timed out
+http://1prime.ru/docs/premium http://1prime.ru/docs/premium
+http://www.wildberries.ru/catalog/3/child.aspx Is not web page
+http://wildberries.ru/services/nashi-skidki Is not web page
+http://wildberries.ru/1.2173.Goddess%20London?sle=1 Is not web page
+http://ria.ru/tags/location_CHechnja Read timed out
+http://wildberries.ru/catalog/545/child.aspx Is not web page
+http://wildberries.ru/1.4077.Mango?sle=1 Is not web page
+http://wildberries.ru/1.561.adidas?sle=524 Is not web page
+http://wildberries.ru/wildberries/BrandList.aspx?letter=W Is not web page
+http://wildberries.ru/1.4379.ШАЛУНЫ?sle=3 http://www.wildberries.ru/1.4379.%d0%a0%d0%81%d0%a0%d1%92%d0%a0%e2%80%ba%d0%a0%d0%88%d0%a0%d1%9c%d0%a0%c2%ab?sle=3
+http://wildberries.ru/catalog/850/women.aspx Is not web page
+http://wildberries.ru/Nike/���_������ http://www.wildberries.ru/Nike/%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85_%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85
+http://banner.rbc.ru/banredir.cgi?lid=rbc_autonews&_b=Media2/rbc_autonews http://www.rbc.ru/error
+http://banner.rbc.ru/banredir.cgi?lid=realty_rbcfirst_spec_2&_b=Media2/realty_rbcfirst_spec_2 http://www.rbc.ru/error
+http://banner.rbc.ru/banredir.cgi?lid=fp_teaser_top&_b=Media2/fp_teaser_top http://www.rbc.ru/error
+http://wiki.wildberries.ru?p=7816 Invalid Http response
+http://wildberries.ru/1.695.Puma?sle=524 Read timed out
+http://wildberries.ru/services/partneram Is not web page
+http://horo.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=menu&amp;utm_campaign=main_horo Invalid Http response
+http://wildberries.ru/catalog/181/women.aspx Is not web page
+http://en.rian.ru?track=riangroup Invalid Http response
+http://wildberries.ru/1.4921.Ехидна?sle=3 http://www.wildberries.ru/1.4921.%d0%a0%e2%80%a2%d0%a1%e2%80%a6%d0%a0%d1%91%d0%a0%d2%91%d0%a0%d0%85%d0%a0%c2%b0?sle=3
+http://wildberries.ru/Nike/����������� http://www.wildberries.ru/Nike/%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85
+http://wildberries.ru/1.3603.Василек?sle=492 http://www.wildberries.ru/1.3603.%d0%a0%e2%80%99%d0%a0%c2%b0%d0%a1%d0%83%d0%a0%d1%91%d0%a0%c2%bb%d0%a0%c2%b5%d0%a0%d1%94?sle=492
+http://wildberries.ru/1.461.GUESS?sle=1 Is not web page
+http://seasonvar.ru?mod=pause Invalid Http response
+http://seasonvar.ru?mod=com Invalid Http response
+http://seasonvar.ru?mod=abuse Invalid Http response
+http://seasonvar.ru?mod=login Invalid Http response
+http://koleso.auto.ru/tyrecatalog/goodyear http://koleso.auto.ru/tyrecatalog/goodyear
+http://koleso.auto.ru/diskcatalog/cragar http://koleso.auto.ru/diskcatalog/cragar
+http://koleso.auto.ru/tyrecatalog/nokian http://koleso.auto.ru/tyrecatalog/nokian
+http://de.rian.ru?track=riangroup Invalid Http response
+http://echo.msk.ru/blog/gagman/1084238-echo Read timed out
+http://ria.ru/incidents/20130529/940234772.html Connection reset
+http://echo.msk.ru/blog/soobshestvo/1084842-echo Read timed out
+http://ria.ru/load/937082999 Is not web page
+http://wildberries.ru/1.1995.SAVAGE?sle=1 Is not web page
+http://wildberries.ru/catalog/0/brand.aspx Is not web page
+http://wildberries.ru/1.3604.Василиса?sle=492 http://www.wildberries.ru/1.3604.%d0%a0%e2%80%99%d0%a0%c2%b0%d0%a1%d0%83%d0%a0%d1%91%d0%a0%c2%bb%d0%a0%d1%91%d0%a1%d0%83%d0%a0%c2%b0?sle=492
+http://wildberries.ru/1.362.TOM%20TAILOR?sle=3 Is not web page
+http://echo.msk.ru/blog/loza_y/1084056-echo Read timed out
+http://koleso.auto.ru/diskcatalog/racing_wheels http://koleso.auto.ru/diskcatalog/racing_wheels
+http://koleso.auto.ru/diskcatalog/proline http://koleso.auto.ru/diskcatalog/proline
+http://koleso.auto.ru/tyrecatalog/bfgoodrich http://koleso.auto.ru/tyrecatalog/bfgoodrich
+http://garage.auto.ru/new http://garage.auto.ru/new
+http://koleso.auto.ru/diskcatalog/dotz http://koleso.auto.ru/diskcatalog/dotz
+http://pressria.ru/docs/about/index.html Read timed out
+http://koleso.auto.ru/diskcatalog/4_go http://koleso.auto.ru/diskcatalog/4_go
+http://wiki.wildberries.ru?p=75894 Invalid Http response
+http://wildberries.ru/1.4684.Palazzo%20D'oro?sle=413 Read timed out
+http://www.wildberries.ru/catalog/1684/novelties.aspx Is not web page
+http://wildberries.ru/catalog/152/child.aspx Is not web page
+http://wildberries.ru/catalog/1684/novelties.aspx?sle=850 Is not web page
+http://wildberries.ru/1.669.S.OLIVER?sle=1 Is not web page
+http://ria.ru/history Read timed out
+http://wildberries.ru/services/sposoby-oplaty Is not web page
+http://wildberries.ru/catalog/53/women.aspx Is not web page
+http://wildberries.ru/catalog/529/child.aspx Is not web page
+http://wiki.wildberries.ru?p=75947 Invalid Http response
+http://wildberries.ru/wildberries/BrandList.aspx?letter=E Is not web page
+http://wildberries.ru/wildberries/BrandList.aspx?letter=B Is not web page
+http://wildberries.ru/catalog/367/men.aspx Is not web page
+http://wildberries.ru/services/besplatnaya-dostavka Is not web page
+http://wildberries.ru/catalog/2/men.aspx Is not web page
+http://help.yandex.ru/narod Read timed out
+http://wildberries.ru/Nike/����� http://www.wildberries.ru/Nike/%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85%d0%bf%d1%97%d0%85
+http://wildberries.ru/wildberries/BrandList.aspx?letter=D Is not web page
+http://wildberries.ru/catalog/2467/page.aspx Is not web page
+http://www.wildberries.ru/catalog/2467/page.aspx Is not web page
+http://www.wildberries.ru/catalog/524/women.aspx Is not web page
+http://www.wildberries.ru/catalog/492/women.aspx Is not web page
+http://www.wildberries.ru/catalog/2/men.aspx Is not web page
+http://wildberries.ru/catalog/146/child.aspx Is not web page
+http://wildberries.ru/catalog/492/women.aspx Is not web page
+http://koleso.auto.ru/tyrecatalog/pirelli http://koleso.auto.ru/tyrecatalog/pirelli
+http://koleso.auto.ru/tyrecatalog/michelin http://koleso.auto.ru/tyrecatalog/michelin
+http://wildberries.ru/services/kontakty Is not web page
+http://wildberries.ru/catalog/3/child.aspx Is not web page
+http://wildberries.ru/catalog/70/men.aspx Is not web page
+http://www.wildberries.ru/catalog/181/women.aspx Is not web page
+http://wildberries.ru/catalog/novelties.aspx Is not web page
+http://wildberries.ru/wildberries/BrandList.aspx?letter=N Is not web page
+http://wildberries.ru/wildberries/BrandList.aspx?letter=C Is not web page
+http://wildberries.ru/catalog/571/child.aspx Is not web page
+http://wildberries.ru/1.2085.Кроха?sle=3 http://www.wildberries.ru/1.2085.%d0%a0%d1%99%d0%a1%d0%82%d0%a0%d1%95%d0%a1%e2%80%a6%d0%a0%c2%b0?sle=3
+http://wildberries.ru/1.3969.DAMY-M?sle=3 Is not web page
+http://wildberries.ru/1.4498.МадаМ%20Т?sle=1 http://www.wildberries.ru/1.4498.%d0%a0%d1%9a%d0%a0%c2%b0%d0%a0%d2%91%d0%a0%c2%b0%d0%a0%d1%9a%20%d0%a0%d1%9e?sle=1
+http://wildberries.ru/wildberries/BrandList.aspx?letter=M Is not web page
+http://wildberries.ru/1.2230.Betsy?sle=413 Is not web page
+http://koleso.auto.ru/diskcatalog/bbs http://koleso.auto.ru/diskcatalog/bbs
+http://koleso.auto.ru/diskcatalog/o_z_ http://koleso.auto.ru/diskcatalog/o_z_
+http://koleso.auto.ru/sale/disk http://koleso.auto.ru/sale/disk
+http://koleso.auto.ru/tyrecatalog/dunlop http://koleso.auto.ru/tyrecatalog/dunlop
+http://wildberries.ru/catalog/1/women.aspx Read timed out
+http://kupongid.ru?from=wwwqip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=menu&amp;utm_campaign=main_kupongid Invalid Http response
+http://sotmarket.ru/fotoramki http://www.sotmarket.ru/fotoramki
+http://koleso.auto.ru/tyrecatalog/hankook http://koleso.auto.ru/tyrecatalog/hankook
+http://oboi.kards.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_grey_oboi_kards Invalid Http response
+http://maps.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_search_maps Invalid Http response
+http://fr.rian.ru?track=riangroup Invalid Http response
+http://love.qip.ru/a-folders?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=inbox&amp;utm_campaign=main_love Server returned HTTP response code: 403 for URL: http://love.qip.ru/a-logon/extend-cGF0aD1hLWZvbGRlcnMvZnJvbS1xaXAvYW1wO3V0bV9zb3VyY2UtbWFpbnFpcC9hbXA7dXRtX21lZGl1bS1jcGMvYW1wO3V0bV9jb250ZW50LWluYm94L2FtcDt1dG1fY2FtcGFpZ24tbWFpbl9sb3ZlLw==
+http://sports.ru/center?s=c2a2232e9352c392 http://www.sports.ru/center/?s=c2a2232e9352c392
+http://sports.ru/mobikit?s=c2a2232e9352c392 http://www.sports.ru/mobikit/?s=c2a2232e9352c392
+http://sports.ru/center/football/tournament/40.html?s=c2a2232e9352c392 http://www.sports.ru/center/football/tournament/40.html?s=c2a2232e9352c392
+http://sports.ru/materials?s=c2a2232e9352c392 http://www.sports.ru/materials/?s=c2a2232e9352c392
+http://mobtop.ru/in/12992 Is not web page
+http://sports.ru/tribuna/posts?s=c2a2232e9352c392 http://www.sports.ru/tribuna/posts/?s=c2a2232e9352c392
+http://sports.ru?s=c2a2232e9352c392 Invalid Http response
+http://users.auto.ru Is not web page
+http://5ballov.qip.ru?from=qip Invalid Http response
+http://relax.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=menu&amp;utm_campaign=main_ziza Invalid Http response
+http://search.file.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_search_file Invalid Http response
+http://stars.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=pcp&amp;utm_content=click&amp;utm_campaign=main_grey_stars Invalid Http response
+http://news.qip.ru?utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=data&amp;utm_campaign=main_newsqip Invalid Http response
+http://search.video.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_search_video Invalid Http response
+http://how.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=button&amp;utm_campaign=main_how Invalid Http response
+http://koleso.auto.ru/diskcatalog/techline http://koleso.auto.ru/diskcatalog/techline
+http://koleso.auto.ru/diskcatalog/tgracing http://koleso.auto.ru/diskcatalog/tgracing
+http://koleso.auto.ru/diskcatalog/ifree http://koleso.auto.ru/diskcatalog/ifree
+http://koleso.auto.ru/tyrecatalog/cordiant http://koleso.auto.ru/tyrecatalog/cordiant
+http://ibk.ru/tag/����� Is not web page
+http://koleso.auto.ru/diskcatalog/ssw http://koleso.auto.ru/diskcatalog/ssw
+http://koleso.auto.ru/tyrecatalog/continental http://koleso.auto.ru/tyrecatalog/continental
+http://ria.ru/incidents/20130530/940302138.html Read timed out
+http://www.liveinternet.ru/stat?what=reminder Server redirected too many  times (20)
+http://soft.yandex.ru?from=prov_all Invalid Http response
+http://koleso.auto.ru/diskcatalog/kfz http://koleso.auto.ru/diskcatalog/kfz
+http://koleso.auto.ru/tyrecatalog/cooper http://koleso.auto.ru/tyrecatalog/cooper
+http://garage.auto.ru/office?op=garage&amp;act=new http://garage.auto.ru/office?op=garage&amp;act=new
+http://koleso.auto.ru/tyrecatalog/maxxis http://koleso.auto.ru/tyrecatalog/maxxis
+http://koleso.auto.ru/tyrecatalog/yokohama http://koleso.auto.ru/tyrecatalog/yokohama
+http://koleso.auto.ru/diskcatalog/konig http://koleso.auto.ru/diskcatalog/konig
+http://koleso.auto.ru/diskcatalog/replica http://koleso.auto.ru/diskcatalog/replica
+http://memori.qip.ru?from=qip Invalid Http response
+http://aeterna.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=click&amp;utm_campaign=main_grey_aeterna Invalid Http response
+http://radio.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=pcp&amp;utm_content=click&amp;utm_campaign=main_grey_radio Invalid Http response
+http://qip.ru/slices/news/techlogies.html http://qip.ru/slices/news/techlogies.html
+http://blogs.search.qip.ru?from=qip Invalid Http response
+http://kards.qip.ru?from=qip Invalid Http response
+http://photo.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=menu&amp;utm_campaign=main_photo Invalid Http response
+http://afisha.yandex.ru/spb/events/710086 Read timed out
+http://parts.auto.ru/sale/add Read timed out
+http://news.qip.ru?utm_source=mainqip&amp;utm_medium=pcp&amp;utm_content=click&amp;utm_campaign=main_grey_newsqip Invalid Http response
+http://ria.ru/society/20130530/940347303.html Connection reset
+http://relax.ru/post/72116/s820-zhenskiy-smartfon-ot-lenovo-5-foto-video.html?from=qip&amp;utm_source=mainqip&amp;utm_medium=cpc&amp;utm_content=news_2&amp;utm_campaign=mainnews_techlogies_relax Read timed out
+http://stars.qip.ru?from=qip Invalid Http response
+http://kards.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=pcp&amp;utm_content=click&amp;utm_campaign=main_grey_kards Invalid Http response
+http://5ballov.qip.ru?from=qip&amp;utm_source=mainqip&amp;utm_medium=pcp&amp;utm_content=click&amp;utm_campaign=main_grey_5ballov Invalid Http response
+http://qip.ru/slices/news/politics.html http://qip.ru/slices/news/politics.html
+http://qip.ru/slices/news/showbiz.html http://qip.ru/slices/news/showbiz.html
+http://store.qip.ru?from=qip Invalid Http response
+http://relax.ru?from=qip Invalid Http response
+http://www.kp.ru/swad http://www.kp.ru/swad
+http://kp.ru/gazeta/2012/12/01 Server returned HTTP response code: 502 for URL: http://www.kp.ru/gazeta/2012/12/01
+http://kp.ru/daily/26063/2971916 Server returned HTTP response code: 502 for URL: http://www.kp.ru/daily/26063/2971916
+http://kp.ru/daily/26081/2985228 Server returned HTTP response code: 502 for URL: http://www.kp.ru/daily/26081/2985228
+http://drive2.ru/users/blackyaris http://www.drive2.ru/users/blackyaris
+http://www.liteforex.ru?utm_source=mmgp&amp;utm_medium=banner&amp;utm_term=8ce7ef71-e3df-138e-16c5-505340774138&amp;utm_campaign=mmgp-sponsor Invalid Http response
+http://drive2.ru/cars/smart Read timed out
+http://drive2.ru/cars/toyota/yaris/yaris_p1/blackyaris http://www.drive2.ru/cars/toyota/yaris/yaris_p1/blackyaris
+http://afisha.yandex.ru/spb/events/717424 Read timed out
+http://vesti.ru/theme.html?tid=98194 connect timed out
+http://srclick.ru/l_ru/affiliate Is not web page
+http://srclick.ru/l_ru/user/reg.html Is not web page
+http://biztorg.ru/main_services_new.shtml http://biztorg.ru/main_services_new.shtml
+http://ege.yandex.ru Read timed out
+http://1tv.ru/sprojects_edition/si=5871&amp;fi=23679 http://www.1tv.ru/sprojects_edition/si=5871&amp;fi=23679
+http://rnd.cnews.ru/natur_science/news/line/index_science.shtml?2013/05/30/530460 Is not web page
+http://sport.rbc.ru?news=hockey/article/30/05/2013/393210.shtml Invalid Http response
+http://banner.rbc.ru/banredir.cgi?lid=firstpage_spec&_b=Media2/firstpage_spec http://www.rbc.ru/error
+http://lf.rbc.ru/recommendation/ipoteka/2013/05/30/226764.shtml Read timed out
+http://mail.qip.ru/~Inbox;?from=rbc.ru Is not web page
+http://banner.rbc.ru/banredir.cgi?lid=all_kupon&_b=Media2/all_kupon http://www.rbc.ru/error
+http://rbc.ru/rbcfreenews/20130530151950.shtml Read timed out
+http://1tv.ru/sprojects_edition/si=5833&amp;fi=23666 http://www.1tv.ru/sprojects_edition/si=5833&amp;fi=23666
+http://afisha.yandex.ru/spb/events/712850 Read timed out
+http://pogoda.yandex.ru/saint-petersburg Read timed out
+http://banks.cnews.ru/opinion/sinimeks2 http://banks.cnews.ru/opinion/sinimeks2
+http://www.1tv.ru/olimp2014 Read timed out
+http://1tv.ru/sprojects_edition/si=5885&amp;fi=23678 http://www.1tv.ru/sprojects_edition/si=5885&amp;fi=23678
+http://1tv.ru/sprojects_edition/si=5901&amp;fi=23681 http://www.1tv.ru/sprojects_edition/si=5901&amp;fi=23681
+http://1tv.ru/sprojects_edition/si=5804&amp;fi=23662 http://www.1tv.ru/sprojects_edition/si=5804&amp;fi=23662
+http://1tv.ru/sprojects_edition/si=5716&amp;fi=23688 http://www.1tv.ru/sprojects_edition/si=5716&amp;fi=23688
+http://widgets.yandex.ru?region=2&from=regwidgets.city Invalid Http response
+http://direct.yandex.ru?from=maintest_ru_kontextreklama Invalid Http response
+http://disk.yandex.ru?source=services-main Invalid Http response
+http://tune.yandex.ru?retpath=http://www.yandex.ru/?domredir=1 Invalid Http response
+http://kaliningrad.kp.ru Read timed out
+http://company.yandex.ru Read timed out
+http://afisha.yandex.ru/spb Read timed out
+http://smi2.ru/data/offer/smi2_offer.doc Is not web page
+http://disk.yandex.ru?auth&source=main-nonlogin Invalid Http response
+http://rabota.yandex.ru/search.xml?job_industry=310&text=водитель&from=morda&_openstat=yandex;rabota;old;old57 Read timed out
+http://www.my.kp.ru/community/all.do Read timed out
+http://mail.qip.ru/compose?from=rbc.ru Is not web page
+http://loveplanet.ru/a-myprofile/ifgmaps-1 Server returned HTTP response code: 403 for URL: http://loveplanet.ru/a-logon/extend-cGF0aD1hLW15cHJvZmlsZS9pZmdtYXBzLTEv
+http://loveplanet.ru/a-search/item-1 Server returned HTTP response code: 403 for URL: http://loveplanet.ru/a-logon/extend-cGF0aD1hLXNlYXJjaC9pdGVtLTEv
+http://loveplanet.ru/a-uppayment?ifgall Server returned HTTP response code: 403 for URL: http://loveplanet.ru/a-logon/extend-cGF0aD1hLXVwcGF5bWVudC9pZmdhbGwtLw==
+http://loveplanet.ru/a-elite Server returned HTTP response code: 403 for URL: http://loveplanet.ru/a-logon/extend-cGF0aD1hLWVsaXRlLw==
+http://loveplanet.ru/a-topvo/type-2 Server returned HTTP response code: 403 for URL: http://loveplanet.ru/a-logon/extend-cGF0aD1hLXRvcHZvL3R5cGUtMi8=
+http://loveplanet.ru/a-topvo/type-1 Server returned HTTP response code: 403 for URL: http://loveplanet.ru/a-logon/extend-cGF0aD1hLXRvcHZvL3R5cGUtMS8=
+http://loveplanet.ru/a-uppayment Server returned HTTP response code: 403 for URL: http://loveplanet.ru/a-logon/extend-cGF0aD1hLXVwcGF5bWVudC8=
+http://superjob.ru/catalog-vacancies/И http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/С http://www.superjob.ru/catalog-resumes/Ð¡
+http://superjob.ru/catalog-resumes/Ю http://www.superjob.ru/catalog-resumes/Ð®
+http://superjob.ru/catalog-vacancies/Л http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Ч http://www.superjob.ru/catalog-vacancies/Ð§
+http://superjob.ru/catalog-resumes/Ж http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/Ч http://www.superjob.ru/catalog-resumes/Ð§
+http://superjob.ru/catalog-resumes/Э http://www.superjob.ru/catalog-resumes/Ð­
+http://superjob.ru/catalog-vacancies/С http://www.superjob.ru/catalog-vacancies/Ð¡
+http://superjob.ru/catalog-vacancies/Э http://www.superjob.ru/catalog-vacancies/Ð­
+http://superjob.ru/catalog-vacancies/В http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/А http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/В http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/Л http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/Ш http://www.superjob.ru/catalog-resumes/Ð¨
+http://superjob.ru/catalog-resumes/Т http://www.superjob.ru/catalog-resumes/Ð¢
+http://superjob.ru/catalog-vacancies/М http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Ф http://www.superjob.ru/catalog-vacancies/Ð¤
+http://superjob.ru/catalog-vacancies/Р http://www.superjob.ru/catalog-vacancies/Ð 
+http://superjob.ru/catalog-resumes/Х http://www.superjob.ru/catalog-resumes/Ð¥
+http://superjob.ru/catalog-vacancies/Б http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/М http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/К http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Х http://www.superjob.ru/catalog-vacancies/Ð¥
+http://superjob.ru/catalog-vacancies/Ж http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/Н http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/Г http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/У http://www.superjob.ru/catalog-vacancies/Ð£
+http://superjob.ru/catalog-resumes/П http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Ш http://www.superjob.ru/catalog-vacancies/Ð¨
+http://superjob.ru/catalog-vacancies/Н http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Д http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Т http://www.superjob.ru/catalog-vacancies/Ð¢
+http://superjob.ru/catalog-resumes/Д http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/П http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/Ф http://www.superjob.ru/catalog-resumes/Ð¤
+http://superjob.ru/catalog-vacancies/Г http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/Б http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/О http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/З http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/И http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/О http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Ю http://www.superjob.ru/catalog-vacancies/Ð®
+http://superjob.ru/catalog-resumes/У http://www.superjob.ru/catalog-resumes/Ð£
+http://superjob.ru/catalog-vacancies/А http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/К http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/З http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/Р http://www.superjob.ru/catalog-resumes/Ð 
+http://dns-shop.ru/news/rss http://www.dns-shop.ru/news/rss
+http://dns-shop.ru/catalog/sale http://www.dns-shop.ru/catalog/sale
+http://dns-shop.ru/catalog/discount http://www.dns-shop.ru/catalog/discount
+http://dns-shop.ru/catalog/new http://www.dns-shop.ru/catalog/new
+http://dns-shop.ru/catalog/cart http://www.dns-shop.ru/catalog/cart
+http://mirtesen.ru?rnd=410809196 Invalid Http response
+http://www.rbc.ru/rbcnews.frame Server returned HTTP response code: 401 for URL: http://www.rbc.ru/rbcnews.frame/
+http://www.rbc.ru/fondnews.frame Server returned HTTP response code: 401 for URL: http://www.rbc.ru/fondnews.frame/
+http://kp.ru/daily/26080/2984663 Server returned HTTP response code: 502 for URL: http://www.kp.ru/daily/26080/2984663
+http://kp.ru/daily/26081.5/2985283 Server returned HTTP response code: 502 for URL: http://www.kp.ru/daily/26081.5/2985283
+http://kp.ru/daily/26078/2983651 Server returned HTTP response code: 502 for URL: http://www.kp.ru/daily/26078/2983651
+http://smartresponder.ru/l_ru/affiliate Is not web page
+http://smartresponder.ru/l_ru/user/reg.html Is not web page
+http://echo.msk.ru/blog/ym4/1084890-echo Read timed out
+http://e1.ru/promo/wear/tshirt Server returned HTTP response code: 403 for URL: http://www.e1.ru/promo/wear/tshirt
+http://banner.rbc.ru/banredir.cgi?lid=firstpage_graph3&_b=rbc/empty http://www.rbc.ru/error
+http://kp.ru/swad http://www.kp.ru/swad
+http://e1.ru/stuff/reglament/e1-reglament-03-2013.doc Is not web page
+http://kp.ru/contest/design-2013 Server returned HTTP response code: 502 for URL: http://www.kp.ru/contest/design-2013
+http://kp.ru/daily/column/816070 Server returned HTTP response code: 502 for URL: http://www.kp.ru/daily/column/816070
+http://kp.ru/online/news/1451002 Server returned HTTP response code: 502 for URL: http://www.kp.ru/online/news/1451002
+http://kp.ru/online/news/1450062 Server returned HTTP response code: 502 for URL: http://www.kp.ru/online/news/1450062
+http://kp.ru/daily/26084.4/2986500 http://www.kp.ru/daily/26084.4/2986500
+http://kp.ru/daily/26084.4/2986969 http://www.kp.ru/daily/26084.4/2986969
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=403241&bt=22&pid=1182482&bid=2594105&bn=2594105&rnd=454642639 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=402606&bt=22&pid=1182598&bid=2594629&bn=2594629&rnd=620828613 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=403629&bt=22&pid=1184016&bid=2600899&bn=2600899&rnd=1759662599 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=401803&bt=22&pid=1174809&bid=2576121&bn=2576121&rnd=1653666817 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=401983&bt=22&pid=1173586&bid=2571927&bn=2571927&rnd=1315483554 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=402239&bt=22&pid=1175882&bid=2579304&bn=2579304&rnd=1418083992 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=401803&bt=22&pid=1174773&bid=2576058&bn=2576058&rnd=134613040 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=401196&bt=22&pid=1173454&bid=2571655&bn=2571655&rnd=1645840782 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=402653&bt=22&pid=1178148&bid=2583775&bn=2583775&rnd=1526458866 Is not web page
+http://www.novayagazeta.ru Is not web page
+http://1tv.ru/sprojects_edition/si=5726&amp;fi=23693 http://www.1tv.ru/sprojects_edition/si=5726&amp;fi=23693
+http://www.liveinternet.ru/q?q=Погода+в+городе+Санкт-Петербург Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=382765&bt=2&bid=2466672&bn=2466672&rnd=1522805906 Is not web page
+http://playcast.ru?module=user&amp;userId=432172 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2702442&userId=99604&page=1 Invalid Http response
+http://playcast.ru?module=help&help_id=3 Invalid Http response
+http://playcast.ru?module=user&amp;userId=233433 Invalid Http response
+http://playcast.ru?module=user&userId=150722 Invalid Http response
+http://realty.liveinternet.ru connect timed out
+http://liveinternet.ru/rating/ru/rest Read timed out
+http://playcast.ru?module=user&amp;userId=256613 Invalid Http response
+http://liveinternet.ru/includes/titlequotes_rss.php Is not web page
+http://playcast.ru?module=user&amp;userId=171811 Invalid Http response
+http://playcast.ru?module=user&userId=201080 Invalid Http response
+http://playcast.ru?module=user&amp;userId=189129 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2702339&userId=88077&page=1 Invalid Http response
+http://playcast.ru?module=help&amp;help_id=8 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2703625&userId=201080&page=1 Invalid Http response
+http://playcast.ru?module=user&amp;userId=339872 Invalid Http response
+http://playcast.ru?module=help&help_id=27 Invalid Http response
+http://playcast.ru?module=adv Invalid Http response
+http://playcast.ru?module=user&amp;userId=413122 Invalid Http response
+http://playcast.ru?module=news Invalid Http response
+http://playcast.ru?module=help Invalid Http response
+http://playcast.ru?module=user&amp;userId=340625 Invalid Http response
+http://1tv.ru/news/culture Read timed out
+http://playcast.ru?module=user&amp;userId=227281 Invalid Http response
+http://playcast.ru?module=user&amp;userId=115697 Invalid Http response
+http://playcast.ru?module=auth Invalid Http response
+http://playcast.ru?module=user&userId=372031 Invalid Http response
+http://playcast.ru?module=user&userId=98038 Invalid Http response
+http://playcast.ru?module=user&userId=88077 Invalid Http response
+http://playcast.ru/cards http://playcast.ru/cards
+http://playcast.ru?module=user&userId=99604 Invalid Http response
+http://playcast.ru?module=tops Invalid Http response
+http://playcast.ru?module=shop Invalid Http response
+http://playcast.ru?module=contests Invalid Http response
+http://playcast.ru?module=pravo_form Invalid Http response
+http://playcast.ru?module=user_search Invalid Http response
+http://playcast.ru?module=playcast_search Invalid Http response
+http://playcast.ru?module=create_playcast Invalid Http response
+http://playcast.ru?module=help&help_id=8 Invalid Http response
+http://playcast.ru?module=auth&am_action=register Invalid Http response
+http://playcast.ru?module=help&amp;help_id=9 Invalid Http response
+http://playcast.ru?module=auth&amp;am_action=register Invalid Http response
+http://playcast.ru?module=auth&amp;am_action=passwordRemind Invalid Http response
+http://playcast.ru?module=comments&playcastId=2703189&userId=150722&page=1 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2704428&userId=123380&page=1 Invalid Http response
+http://playcast.ru?module=user&userId=268471 Invalid Http response
+http://playcast.ru?module=user&userId=101176 Invalid Http response
+http://playcast.ru?module=user&userId=170418 Invalid Http response
+http://playcast.ru?module=user&userId=122756 Invalid Http response
+http://playcast.ru?module=user&userId=275244 Invalid Http response
+http://playcast.ru?module=user&userId=201475 Invalid Http response
+http://playcast.ru?module=user&userId=152403 Invalid Http response
+http://playcast.ru?module=user&userId=123380 Invalid Http response
+http://playcast.ru?module=user&userId=125007 Invalid Http response
+http://playcast.ru?module=user&amp;userId=406309 Invalid Http response
+http://playcast.ru?module=user&amp;userId=201960 Invalid Http response
+http://playcast.ru?module=user&amp;userId=432308 Invalid Http response
+http://playcast.ru?module=user&amp;userId=418042 Invalid Http response
+http://playcast.ru?module=user&amp;userId=258333 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2705310&userId=201475&page=1 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2683354&userId=372031&page=1 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2703645&userId=170418&page=1 Invalid Http response
+http://playcast.ru?module=comments&playcastId=2704195&userId=152403&page=1 Invalid Http response
+http://www.artlebedev.ru/portfolio/alfabank/site4 Is not web page
+http://www.gismeteo.ru/map/catalog connect timed out
+http://hantim.ru/jobs/18576-programmist-c-asp-net-junior/reply_to?authenticity_token=lTFxAbeJr6vujwTpJCNUQkk/pniMY3kPnGS/28T7cYM=&amp;time=2013-05-30T17:10:12+04:00 http://hantim.ru/jobs/18576-programmist-c-asp-net-junior/reply_to?authenticity_token=lTFxAbeJr6vujwTpJCNUQkk/pniMY3kPnGS/28T7cYM=&amp;time=2013-05-30T17:10:12+04:00
+http://rating.spylog.ru?cid=2026010 Invalid Http response
+http://hantim.ru/jobs/18580-veduschiy-programmist-c-asp-net/reply_to?authenticity_token=dtfxvSnQfO9v2IY08sbF3okeVKa8u1TGivw+LflpXFM=&amp;time=2013-05-30T17:10:14+04:00 http://hantim.ru/jobs/18580-veduschiy-programmist-c-asp-net/reply_to?authenticity_token=dtfxvSnQfO9v2IY08sbF3okeVKa8u1TGivw+LflpXFM=&amp;time=2013-05-30T17:10:14+04:00
+http://gismeteo.ru/ajax/mycity?city=4628 Is not web page
+http://gismeteo.ru/ajax/print/4628/short Read timed out
+http://echo.msk.ru/blog/bychkova/1071452-echo Read timed out
+http://echo.msk.ru/blog/oreh/1084280-echo Connection reset
+http://echo.msk.ru/blog/leonid_gozman/1072194-echo Read timed out
+http://echo.msk.ru/programs/blogout1/1084202-echo Read timed out
+http://hantim.ru/jobs/18638-web-programmist-php-programmist-web-programmer/reply_to?authenticity_token=7p1govr4mCvnFNjXbzh2X/JKhLQ02xa2jbyUeB7q6mA=&amp;time=2013-05-30T17:10:18+04:00 http://hantim.ru/jobs/18638-web-programmist-php-programmist-web-programmer/reply_to?authenticity_token=7p1govr4mCvnFNjXbzh2X/JKhLQ02xa2jbyUeB7q6mA=&amp;time=2013-05-30T17:10:18+04:00
+http://echo.msk.ru/blog/turova/1071060-echo Read timed out
+http://echo.msk.ru/auth/vkontakte http://echo.msk.ru/auth/vkontakte
+http://echo.msk.ru/tags/129 Read timed out
+http://kp.ru/go/http:/medikforum.ru/news/wellness/psychology/page,1,4489-10-sposobov-sdelat-muzhchine-bolno.html Is not web page
+http://echo.msk.ru/blog/rodionoff/1084924-echo Read timed out
+http://hantim.ru/jobs/18636-razrabotchik-python/reply_to?authenticity_token=TLkaVBbH+Ce+yUy7B+wYvjltnhIByKZCPiiwsS/oTeM=&amp;time=2013-05-30T17:10:23+04:00 http://hantim.ru/jobs/18636-razrabotchik-python/reply_to?authenticity_token=TLkaVBbH+Ce+yUy7B+wYvjltnhIByKZCPiiwsS/oTeM=&amp;time=2013-05-30T17:10:23+04:00
+http://echo.msk.ru/blog/mbaronova/1081126-echo Read timed out
+http://echo.msk.ru/programs/personalno Read timed out
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=398663&bt=21&bid=2536141&bn=2536141&rnd=793043413 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=398663&bt=21&pid=1170584&bid=2562317&bn=2562317&rnd=564129589 Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&ad=398663&bt=21&pid=1170585&bid=2562503&bn=2562503&rnd=1923962480 Is not web page
+http://hantim.ru/jobs/17900-vnimanie-razyskivaetsya-co-founder-php-razrabotchik/reply_to?authenticity_token=+EKTrJx0seesHHfs3Pxmq+7FVF82p8VUmt5/o1fv9gI=&amp;time=2013-05-30T17:10:26+04:00 http://hantim.ru/jobs/17900-vnimanie-razyskivaetsya-co-founder-php-razrabotchik/reply_to?authenticity_token=+EKTrJx0seesHHfs3Pxmq+7FVF82p8VUmt5/o1fv9gI=&amp;time=2013-05-30T17:10:26+04:00
+http://echo.msk.ru/blog/oreh Read timed out
+http://hantim.ru/jobs/18526-tehnicheskiy-pisatel-s-horoshim-opytom/reply_to?authenticity_token=dIgYyTLzlflv57Tl+iE3LU6br1t3RCcYsAxJL/HOJLc=&amp;time=2013-05-30T17:10:28+04:00 http://hantim.ru/jobs/18526-tehnicheskiy-pisatel-s-horoshim-opytom/reply_to?authenticity_token=dIgYyTLzlflv57Tl+iE3LU6br1t3RCcYsAxJL/HOJLc=&amp;time=2013-05-30T17:10:28+04:00
+http://www.ipoteka.irr.ru Server redirected too many  times (20)
+http://ivi.ru/videos/all/movies/189/by_day http://www.ivi.ru/videos/all/movies/189/by_day/
+http://ivi.ru/away?url=https://twitter.com/ivi_ru/&crc=3fb33a2653c8e579df147885503ae90d Is not web page
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=147544&sz=index&bt=2&pz=0&rnd=1591162330 Is not web page
+http://ad.adriver.ru/cgi-%20%20%20%20%20%20%20%20bin/click.cgi?sid=147544&sz=index&bn=1&bt=22&pz=1&rnd=1811810736 Is not web page
+http://habrahabr.ru/users/dzhariy http://habrahabr.ru/users/dzhariy/
+http://ivi.ru/watch/doktor_haus/100991 http://www.ivi.ru/watch/doktor_haus/100991
+http://click.hotlog.ru?83359 Invalid Http response
+http://echo.msk.ru/polls/1084726-echo.html Read timed out
+http://pikabu.ru?f=time Invalid Http response
+http://pikabu.ru?f=act Invalid Http response
+http://sport.rbc.ru?news=hockey/article/30/05/2013/393197.shtml Invalid Http response
+http://echo.msk.ru/tags/1200 Read timed out
+http://echo.msk.ru/blog/fritz_morgen Read timed out
+http://pribaltika.realty.rbc.ru??utm_source=rbc_face&amp;utm_medium=main_menu&amp;utm_campaign=specprojects Invalid Http response
+http://echo.msk.ru/blog/hakamada/1077960-echo Read timed out
+http://biztorg.ru/franchise.shtml http://biztorg.ru/franchise.shtml
+http://www.autonews.ru/catalog http://www.autonews.ru/catalog
+http://www.biztorg.ru/search.shtml?cfg=biztorg&type=S http://www.biztorg.ru/search.shtml?cfg=biztorg&type=S
+http://banner.rbc.ru/banredir.cgi?lid=rbc_corner_left&_b=Media2/rbc_corner_left http://www.rbc.ru/error
+http://www.autonews.ru/sell http://www.autonews.ru/sell
+http://banner.rbc.ru/banredir.cgi?lid=firstpage_spec_p2&_b=rbc/empty http://www.rbc.ru/error
+http://www.autonews.ru/news http://www.autonews.ru/news
+http://www.google.ru/jobs/locations http://www.google.ru/jobs/locations
+http://www.google.ru/intl http://www.google.ru/intl
+http://www.google.ru/jobs/lifeatgoogle http://www.google.ru/jobs/lifeatgoogle
+http://maps.google.ru?hl=ru http://maps.google.ru?hl=ru
+http://echo.msk.ru/programs/personalno/1079600-echo/comments.html Read timed out
+http://echo.msk.ru/blog/lazareva_t/1067532-echo Read timed out
+http://echo.msk.ru/auth/facebook Is not web page
+http://echo.msk.ru/blog/s_kanaev/1083412-echo Read timed out
+http://www.rbkmoney.ru Is not web page
+http://sport.rbc.ru?news=hockey/article/30/05/2013/393235.shtml Invalid Http response
+http://sport.rbc.ru?news=football/article/30/05/2013/393204.shtml Invalid Http response
+http://v2.data.rbc.ru/custom_table/rbc http://v2.data.rbc.ru/custom_table/rbc
+http://echo.msk.ru/tags/94 Read timed out
+http://echo.msk.ru/news/1085020-echo/comments.html Read timed out
+http://echo.msk.ru/auth/twitter Is not web page
+http://blogspot.ru/intl/ru/company/facts/management http://blogspot.ru/intl/ru/company/facts/management
+http://blogspot.ru/intl/contact http://blogspot.ru/webhp?hl=contact
+http://blogspot.ru/intl/ru/products http://blogspot.ru/intl/ru/products
+http://blogspot.ru/intl/ru/company http://blogspot.ru/intl/ru/company
+http://blogspot.ru/jobs/locations http://blogspot.ru/jobs/locations
+http://blogspot.ru/intl/ru/company/tenthings.html http://blogspot.ru/intl/ru/company/tenthings.html
+http://blogspot.ru/jobs/lifeatgoogle http://blogspot.ru/jobs/lifeatgoogle
+http://blogspot.ru/intl/press http://blogspot.ru/webhp?hl=press
+http://blogspot.ru/intl/ru/'%20+%20item_url%20+%20' http://blogspot.ru/intl/ru/'%20+%20item_url%20+%20'
+http://echo.msk.ru/tags/337 Read timed out
+http://rnd.cnews.ru/tech/news/line/index_science.shtml?2013/05/30/530440 Is not web page
+http://banner.rbc.ru/banredir.cgi?lid=fp_region&_b=rbc/empty http://www.rbc.ru/error
+http://echo.msk.ru/tags/41 Read timed out
+http://sport.rbc.ru?news=football/article/30/05/2013/393226.shtml Invalid Http response
+http://banner.rbc.ru/banredir.cgi?lid=spb_fp_teaser_mid&_b=rbc/empty http://www.rbc.ru/error
+http://www.autonews.ru/automarket_news http://www.autonews.ru/automarket_news
+http://mail.qip.ru?rid=RBC Invalid Http response
+http://www.echo.msk.ru/polls Read timed out
+http://blogspot.ru/intl/ads http://blogspot.ru/webhp?hl=ads
+http://www.google.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://habrahabr.ru/post/167451 Premature EOF
+http://faq.ucoz.ru/premium http://faq.ucoz.ru/premium
+http://faq.ucoz.ru/tour http://faq.ucoz.ru/tour
+http://blogspot.ru/intl/policies http://blogspot.ru/webhp?hl=policies
+http://blogspot.ru/intl/ru/technologies http://blogspot.ru/intl/ru/technologies
+http://blogspot.ru/intl/policies/technologies/ads http://blogspot.ru/intl/policies/technologies/ads
+http://blogspot.ru/intl/goodtoknow http://blogspot.ru/webhp?hl=goodtoknow
+http://blogspot.ru/intl/policies/technologies http://blogspot.ru/intl/policies/technologies
+http://blogspot.ru/intl/policies/technologies/cookies http://blogspot.ru/intl/policies/technologies/cookies
+http://blogspot.ru/intl/policies/technologies/types http://blogspot.ru/intl/policies/technologies/types
+http://blogspot.ru/intl/policies/technologies/managing http://blogspot.ru/intl/policies/technologies/managing
+http://blogspot.ru/intl/policies/terms http://blogspot.ru/intl/policies/terms
+http://blogspot.ru/intl/policies/faq http://blogspot.ru/intl/policies/faq
+http://google.ru/intl/policies/faq http://www.google.ru/intl/policies/faq
+http://google.ru/intl/policies/technologies http://www.google.ru/intl/policies/technologies
+http://google.ru/intl/ru/technologies http://www.google.ru/intl/ru/technologies
+http://google.ru/intl/policies/technologies/ads http://www.google.ru/intl/policies/technologies/ads
+http://google.ru/intl/policies/technologies/cookies http://www.google.ru/intl/policies/technologies/cookies
+http://google.ru/intl/policies/technologies/managing http://www.google.ru/intl/policies/technologies/managing
+http://google.ru/intl/policies/technologies/types http://www.google.ru/intl/policies/technologies/types
+http://google.ru/intl/policies/terms http://www.google.ru/intl/policies/terms
+http://google.ru/jobs/lifeatgoogle http://www.google.ru/jobs/lifeatgoogle
+http://google.ru/intl/ru/company http://www.google.ru/intl/ru/company
+http://google.ru/jobs/locations http://www.google.ru/jobs/locations
+http://google.ru/intl/ru/'%20+%20item_url%20+%20' http://www.google.ru/intl/ru/'%20+%20item_url%20+%20'
+http://google.ru/intl/ru/company/tenthings.html http://www.google.ru/intl/ru/company/tenthings.html
+http://google.ru/intl/ru/products http://www.google.ru/intl/ru/products
+http://google.ru/intl/ru/company/facts/management http://www.google.ru/intl/ru/company/facts/management
+http://google.ru?hl=ru http://google.ru?hl=ru
+http://hantim.ru/jobs/18524-teamlead-php-timlid-php/reply_to?authenticity_token=dxzGhZ1HYzQmA4ooLb8wcGvkZ8at0N2utTZgjCM7O+s=&amp;time=2013-05-30T17:11:07+04:00 http://hantim.ru/jobs/18524-teamlead-php-timlid-php/reply_to?authenticity_token=dxzGhZ1HYzQmA4ooLb8wcGvkZ8at0N2utTZgjCM7O+s=&amp;time=2013-05-30T17:11:07+04:00
+http://habrahabr.ru/info/help/widgets http://habrahabr.ru/info/help/widgets/
+http://habrahabr.ru/info/help/known-issues http://habrahabr.ru/info/help/known-issues/
+http://habrahabr.ru/info/help/bots http://habrahabr.ru/info/help/bots/
+http://habrahabr.ru/info/help/links http://habrahabr.ru/info/help/links/
+http://habrahabr.ru/info/help/api http://habrahabr.ru/info/help/api/
+http://habrahabr.ru/info/help/friends http://habrahabr.ru/info/help/friends/
+http://hantim.ru/jobs/11129-starshiy-razrabotchik-dlya-android Read timed out
+http://habrahabr.ru/users/tanoshii http://habrahabr.ru/users/tanoshii/
+https://time.yandex.ru connect timed out
+https://passport.sape.ru/account/password/recover https://passport.sape.ru/account/password/recover
+http://www.rambler.ru/doc/pl http://www.rambler.ru/doc/pl
+http://webmoney.ru/rus/addfunds/wmx.shtml http://www.webmoney.ru/rus/addfunds/wmx.shtml
+http://habrahabr.ru/special/microsoft/win7 Server returned HTTP response code: 500 for URL: http://habrahabr.ru/special/microsoft/win7/
+http://hantim.ru/jobs/17880-c-win-razrabotchik/reply_to?authenticity_token=KD4u2MRNSIZ2oq+3aeJzPxUu/yVjC9irSDd4O+nyASw=&amp;time=2013-05-30T17:11:46+04:00 http://hantim.ru/jobs/17880-c-win-razrabotchik/reply_to?authenticity_token=KD4u2MRNSIZ2oq+3aeJzPxUu/yVjC9irSDd4O+nyASw=&amp;time=2013-05-30T17:11:46+04:00
+http://advego.ru/profile http://advego.ru/profile
+http://hantim.ru/jobs/8462-support-advisor-intersystems/reply_to?authenticity_token=dGzr0a9hqtgFEER1F6vXQ5bE7WaMVVn4IMWgVErKUBQ=&amp;time=2013-05-30T17:11:47+04:00 http://hantim.ru/jobs/8462-support-advisor-intersystems/reply_to?authenticity_token=dGzr0a9hqtgFEER1F6vXQ5bE7WaMVVn4IMWgVErKUBQ=&amp;time=2013-05-30T17:11:47+04:00
+http://hantim.ru/jobs/16482-testirovschik/reply_to?authenticity_token=Y2BQmfRuZGxNa5k5LzJjs8rEl8JmiNDwdTOYC97Rpe8=&amp;time=2013-05-30T17:11:47+04:00 http://hantim.ru/jobs/16482-testirovschik/reply_to?authenticity_token=Y2BQmfRuZGxNa5k5LzJjs8rEl8JmiNDwdTOYC97Rpe8=&amp;time=2013-05-30T17:11:47+04:00
+http://advego.ru/info/ready_rss Read timed out
+http://hantim.ru/jobs/18540-profi-po-android-u/reply_to?authenticity_token=Rp3cQ9kA6rufsO23IClymveHe0+5JpghESmrpJtLhak=&amp;time=2013-05-30T17:11:54+04:00 http://hantim.ru/jobs/18540-profi-po-android-u/reply_to?authenticity_token=Rp3cQ9kA6rufsO23IClymveHe0+5JpghESmrpJtLhak=&amp;time=2013-05-30T17:11:54+04:00
+http://hantim.ru/jobs/13864-frontend-developer/reply_to?authenticity_token=I8feB+TJDoruybs5oBEeBwdvxiRyGWp0mTCLX3becpY=&amp;time=2013-05-30T17:12:03+04:00 http://hantim.ru/jobs/13864-frontend-developer/reply_to?authenticity_token=I8feB+TJDoruybs5oBEeBwdvxiRyGWp0mTCLX3becpY=&amp;time=2013-05-30T17:12:03+04:00
+http://ad.adriver.ru/cgi-bin/click.cgi?sid=187865&bt=25&pz=0&rnd=691963817 Is not web page
+http://hantim.ru/jobs/17838-ruby-razrabotchik/reply_to?authenticity_token=JMmOPqdnhyBWV7iNUUqyLBuN/d0EDh+EtQVbwU1sl98=&amp;time=2013-05-30T17:12:06+04:00 http://hantim.ru/jobs/17838-ruby-razrabotchik/reply_to?authenticity_token=JMmOPqdnhyBWV7iNUUqyLBuN/d0EDh+EtQVbwU1sl98=&amp;time=2013-05-30T17:12:06+04:00
+http://hantim.ru/jobs/13872-research-scientist-of-3d-face-recognition-algorithms/reply_to?authenticity_token=5ohrI6oDRZ7WqAmx6nrWPCPfU2QL6+dEhWxKnpRs9Wo=&amp;time=2013-05-30T17:12:07+04:00 http://hantim.ru/jobs/13872-research-scientist-of-3d-face-recognition-algorithms/reply_to?authenticity_token=5ohrI6oDRZ7WqAmx6nrWPCPfU2QL6+dEhWxKnpRs9Wo=&amp;time=2013-05-30T17:12:07+04:00
+http://freelansim.ru/tasks?page=2 Read timed out
+http://hantim.ru/jobs/14040-php-razrabotchiki-yii/reply_to?authenticity_token=3EXqH+yunB0bK3Itwbnijehc6arMYwlt1WUil5BP5+Q=&amp;time=2013-05-30T17:12:11+04:00 http://hantim.ru/jobs/14040-php-razrabotchiki-yii/reply_to?authenticity_token=3EXqH+yunB0bK3Itwbnijehc6arMYwlt1WUil5BP5+Q=&amp;time=2013-05-30T17:12:11+04:00
+http://hantim.ru/jobs/18578-veduschiy-programmist-c-asp-net/reply_to?authenticity_token=rDnRVzqv6gmhbMOX7KDMvnKRztQyzQ3CzzO1idGQN+I=&amp;time=2013-05-30T17:12:19+04:00 http://hantim.ru/jobs/18578-veduschiy-programmist-c-asp-net/reply_to?authenticity_token=rDnRVzqv6gmhbMOX7KDMvnKRztQyzQ3CzzO1idGQN+I=&amp;time=2013-05-30T17:12:19+04:00
+http://hantim.ru/jobs/14140-ruby-developer/reply_to?authenticity_token=yFULrB9NenSBwkRjI9N6HmT42lodGn5Rs9ruFGEfBCQ=&amp;time=2013-05-30T17:12:29+04:00 http://hantim.ru/jobs/14140-ruby-developer/reply_to?authenticity_token=yFULrB9NenSBwkRjI9N6HmT42lodGn5Rs9ruFGEfBCQ=&amp;time=2013-05-30T17:12:29+04:00
+http://www.1tv.ru/sprojects_edition/si=5885&amp;fi=23678 http://www.1tv.ru/sprojects_edition/si=5885&amp;fi=23678
+http://www.1tv.ru/sprojects_edition/si=5871&amp;fi=23679 http://www.1tv.ru/sprojects_edition/si=5871&amp;fi=23679
+http://www.1tv.ru/sprojects_edition/si=5891&amp;fi=23682 http://www.1tv.ru/sprojects_edition/si=5891&amp;fi=23682
+http://www.1tv.ru/sprojects_edition/si=5901&amp;fi=23681 http://www.1tv.ru/sprojects_edition/si=5901&amp;fi=23681
+http://www.1tv.ru/sprojects_edition/si=5824&amp;fi=23692 http://www.1tv.ru/sprojects_edition/si=5824&amp;fi=23692
+http://hantim.ru/jobs/18686-menedzher-internet-reklamy-arbitrazh/reply_to?authenticity_token=PQeWqrGbqsCrrIm5strMymDP2IavE7yyhCIxOxIenNs=&amp;time=2013-05-30T17:12:35+04:00 http://hantim.ru/jobs/18686-menedzher-internet-reklamy-arbitrazh/reply_to?authenticity_token=PQeWqrGbqsCrrIm5strMymDP2IavE7yyhCIxOxIenNs=&amp;time=2013-05-30T17:12:35+04:00
+http://hantim.ru/jobs/18384-php-razrabotchik-vysokiy-uroven/reply_to?authenticity_token=ReXDcxIVcpLhwD7MY/ryuEnGzu5ztTaPH888hWP2O4A=&amp;time=2013-05-30T17:12:36+04:00 http://hantim.ru/jobs/18384-php-razrabotchik-vysokiy-uroven/reply_to?authenticity_token=ReXDcxIVcpLhwD7MY/ryuEnGzu5ztTaPH888hWP2O4A=&amp;time=2013-05-30T17:12:36+04:00
+http://hantim.ru/jobs/17632-veduschiy-razrabotchik-ios-igra/reply_to?authenticity_token=gvJ7LxwqVTlWJ8/mX0Qn4VjCaXxpwYGCbzHRxnWqq/I=&amp;time=2013-05-30T17:12:37+04:00 http://hantim.ru/jobs/17632-veduschiy-razrabotchik-ios-igra/reply_to?authenticity_token=gvJ7LxwqVTlWJ8/mX0Qn4VjCaXxpwYGCbzHRxnWqq/I=&amp;time=2013-05-30T17:12:37+04:00
+http://habrahabr.ru/special/nokia/developersday http://habrahabr.ru/special/nokia/developersday/
+http://habrahabr.ru/people http://habrahabr.ru/people/
+http://habrahabr.ru/special/restore/generationp Server returned HTTP response code: 500 for URL: http://habrahabr.ru/special/restore/generationp/
+http://habrahabr.ru/special/softkey/pack Is not web page
+http://habrahabr.ru/special/microsoft/comics Server returned HTTP response code: 500 for URL: http://habrahabr.ru/special/microsoft/comics/
+http://motor.ru/news/2013/05/28/http://motor.ru/news/2013/05/28/redlight http://motor.ru/news/2013/05/28/http:/motor.ru/news/2013/05/28/redlight/
+http://motor.ru/theme/Дороги http://motor.ru/theme/ÐÐ¾ÑÐ¾Ð³Ð¸/
+http://www.m24.ru/articles/18561 Read timed out
+http://motor.ru/theme/Москва http://motor.ru/theme/ÐÐ¾ÑÐºÐ²Ð°/
+http://motor.ru/theme/Топливо http://motor.ru/theme/Ð¢Ð¾Ð¿Ð»Ð¸Ð²Ð¾/
+http://motor.ru/theme/Автожизнь http://motor.ru/theme/ÐÐ²ÑÐ¾Ð¶Ð¸Ð·Ð½Ñ/
+http://motor.ru/news/2013/05/28/http://motor.ru/news/2013/05/28/ammonia http://motor.ru/news/2013/05/28/http:/motor.ru/news/2013/05/28/ammonia/
+http://motor.ru/theme/Новинки http://motor.ru/theme/ÐÐ¾Ð²Ð¸Ð½ÐºÐ¸/
+http://motor.ru/theme/Авторынок http://motor.ru/theme/ÐÐ²ÑÐ¾ÑÑÐ½Ð¾Ðº/
+http://motor.ru/news/2013/05/28/http://motor.ru/news/2013/05/28/civicsedan http://motor.ru/news/2013/05/28/http:/motor.ru/news/2013/05/28/civicsedan/
+http://motor.ru/theme/Гран-при_Монако http://motor.ru/theme/ÐÑÐ°Ð½-Ð¿ÑÐ¸_ÐÐ¾Ð½Ð°ÐºÐ¾/
+http://motor.ru/theme/Формула-1 http://motor.ru/theme/Ð¤Ð¾ÑÐ¼ÑÐ»Ð°-1/
+https://check.webmoney.ru sun.security.validator.ValidatorException: PKIX path validation failed: java.security.cert.CertPathValidatorException: Path does not chain with any of the trust anchors
+http://www.plati.ru/asp?id_cg=42 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=42
+http://www.plati.ru/asp?l=O Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=O
+http://www.plati.ru/asp?id_cb=349 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=349
+http://www.plati.ru/asp?id_cb=353 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=353
+http://www.plati.ru/asp?id_cb=350 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=350
+http://www.plati.ru/asp?id_cg=3 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=3
+http://www.plati.ru/asp?l=H Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=H
+http://www.plati.ru/asp?l=L Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=L
+http://www.plati.ru/asp?id_cg=22 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=22
+http://www.plati.ru/asp?id_cb=360 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=360
+http://www.plati.ru/asp?l=C Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=C
+http://www.plati.ru/asp?id_cb=369 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=369
+http://www.plati.ru/asp?l=E Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=E
+http://www.plati.ru/asp?id_cg=37 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=37
+http://www.plati.ru/asp?id_cg=26 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=26
+http://www.plati.ru/asp?l=I Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=I
+http://www.plati.ru/asp?id_cb=362 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=362
+http://www.plati.ru/asp?l=S Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=S
+http://www.plati.ru/asp?id_cb=357 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=357
+http://www.plati.ru/asp?id_cb=370 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=370
+http://www.plati.ru/asp?l=U Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=U
+http://www.plati.ru/asp?l=K Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=K
+http://habrahabr.ru/post/13699 Read timed out
+http://www.plati.ru/asp?l=B Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=B
+http://www.plati.ru/asp?l=P Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=P
+http://www.plati.ru/asp?id_cg=58 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=58
+http://www.plati.ru/asp?id_cg=6 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=6
+http://www.plati.ru/asp?id_cb=352 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=352
+http://www.plati.ru/asp?id_cg=24 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=24
+http://www.plati.ru/asp?id_cb=368 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=368
+http://www.plati.ru/asp?l=Y Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=Y
+http://www.plati.ru/asp?id_cb=355 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=355
+http://www.plati.ru/asp?id_cg=9 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=9
+http://www.plati.ru/asp?id_cb=359 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=359
+http://www.plati.ru/asp?id_cb=358 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=358
+http://www.plati.ru/asp?id_cb=365 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=365
+http://www.plati.ru/asp?l=J Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=J
+http://www.plati.ru/asp?l=Q Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=Q
+http://www.plati.ru/asp?l=Z Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=Z
+http://www.plati.ru/asp?l=G Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=G
+http://www.plati.ru/asp?l=V Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=V
+http://www.plati.ru Server returned HTTP response code: 400 for URL: http://www.plati.ru/../asp/index.asp
+http://www.plati.ru/asp?l=R Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=R
+http://www.plati.ru/asp?id_cg=64 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=64
+http://www.plati.ru/asp?id_cb=344 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=344
+http://www.plati.ru/asp?id_cb=364 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=364
+http://www.plati.ru/asp?id_cb=356 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=356
+http://www.plati.ru/asp?id_cb=354 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=354
+http://www.plati.ru/asp?l=T Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=T
+http://www.plati.ru/asp?id_cg=52 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=52
+http://www.plati.ru/asp?l=M Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=M
+http://www.plati.ru/asp?l=F Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=F
+http://www.plati.ru/asp?l=A Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=A
+http://www.plati.ru/asp?l=X Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=X
+http://www.plati.ru/asp?id_cb=331 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=331
+http://www.plati.ru/asp?l=N Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=N
+http://www.plati.ru/asp?id_cb=363 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=363
+http://www.plati.ru/asp?id_cb=367 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=367
+http://www.plati.ru/asp?l=W Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=W
+http://www.plati.ru/asp?l=D Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?l=D
+http://www.plati.ru/asp?id_cb=361 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cb=361
+http://www.plati.ru/asp?id_cg=47 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=47
+http://www.plati.ru/asp?id_cg=8 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_cg=8
+http://www.plati.ru/asp? Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?
+http://advisor.webmoney.ru/about.aspx Server returned HTTP response code: 500 for URL: http://advisor.webmoney.ru/about.aspx
+http://webalta.ru/news.html http://webalta.ru/news.html
+http://m.lenta.ru/rubrics/mednovosti Read timed out
+http://motor.ru/news/2013/05/28/http://motor.ru/news/2013/05/28/concforvettel http://motor.ru/news/2013/05/28/http:/motor.ru/news/2013/05/28/concforvettel/
+http://motor.ru/theme/Концепт-кары http://motor.ru/theme/ÐÐ¾Ð½ÑÐµÐ¿Ñ-ÐºÐ°ÑÑ/
+http://motor.ru/theme/Феттель http://motor.ru/theme/Ð¤ÐµÑÑÐµÐ»Ñ/
+http://motor.ru/theme/История http://motor.ru/theme/ÐÑÑÐ¾ÑÐ¸Ñ/
+http://motor.ru/theme/Бонневиль http://motor.ru/theme/ÐÐ¾Ð½Ð½ÐµÐ²Ð¸Ð»Ñ/
+http://motor.ru/theme/Рекорды http://motor.ru/theme/Ð ÐµÐºÐ¾ÑÐ´Ñ/
+http://motor.ru/theme/Седаны http://motor.ru/theme/Ð¡ÐµÐ´Ð°Ð½Ñ/
+http://lenta.ru/articles/2012/12/11/leon http://lenta.ru/articles/2012/12/11/leon
+http://lenta.ru/articles/2013/05/21/mbaandcla http://lenta.ru/articles/2013/05/21/mbaandcla
+http://lenta.ru/articles/2012/12/20/audis5two http://lenta.ru/articles/2012/12/20/audis5two
+http://lenta.ru/news/2013/05/28/civicsedan http://lenta.ru/news/2013/05/28/civicsedan
+http://lenta.ru/news/2013/05/29/wildgranta http://lenta.ru/news/2013/05/29/wildgranta
+http://lenta.ru/photo/2013/05/24/twinrun http://lenta.ru/photo/2013/05/24/twinrun
+http://lenta.ru/news/2013/05/30/x5new http://lenta.ru/news/2013/05/30/x5new
+http://lenta.ru/news/2013/05/20/leonprice http://lenta.ru/news/2013/05/20/leonprice
+http://lenta.ru/news/2013/05/30/police http://lenta.ru/news/2013/05/30/police
+http://lenta.ru/news/2013/05/22/seatbelt http://lenta.ru/news/2013/05/22/seatbelt
+http://lenta.ru/news/2013/05/15/megadrift http://lenta.ru/news/2013/05/15/megadrift
+http://lenta.ru/news/2013/05/13/pug308 http://lenta.ru/news/2013/05/13/pug308
+http://lenta.ru/news/2012/11/20/safety http://lenta.ru/news/2012/11/20/safety
+http://lenta.ru/news/2013/05/24/twinrun http://lenta.ru/news/2013/05/24/twinrun
+http://lenta.ru/news/2013/05/08/megagolf http://lenta.ru/news/2013/05/08/megagolf
+http://lenta.ru/news/2013/05/23/lines http://lenta.ru/news/2013/05/23/lines
+http://lenta.ru/articles/2013/02/15/a6hybrid http://lenta.ru/articles/2013/02/15/a6hybrid
+http://lenta.ru/news/2013/05/27/rusrrsport http://lenta.ru/news/2013/05/27/rusrrsport
+http://lenta.ru/news/2013/05/29/nomorelux http://lenta.ru/news/2013/05/29/nomorelux
+http://lenta.ru/articles/2013/05/27/monacogpreport http://lenta.ru/articles/2013/05/27/monacogpreport
+http://lenta.ru/news/2013/02/19/sclass http://lenta.ru/news/2013/02/19/sclass
+http://lenta.ru/news/2012/07/13/leon http://lenta.ru/news/2012/07/13/leon
+http://lenta.ru/news/2013/05/30/potato http://lenta.ru/news/2013/05/30/potato
+http://lenta.ru/news/2013/05/30/vandalizes http://lenta.ru/news/2013/05/30/vandalizes
+http://lenta.ru/news/2013/05/30/vwhandbrake http://lenta.ru/news/2013/05/30/vwhandbrake
+http://lenta.ru/news/2013/01/09/wrongway http://lenta.ru/news/2013/01/09/wrongway
+http://lenta.ru/photo/2013/03/05/veneno http://lenta.ru/photo/2013/03/05/veneno
+http://lenta.ru/photo/2013/03/06/newsgeneva2 http://lenta.ru/photo/2013/03/06/newsgeneva2
+http://lenta.ru/photo/2013/05/27/granlusso http://lenta.ru/photo/2013/05/27/granlusso
+http://lenta.ru/photo/2013/05/20/amcc100 http://lenta.ru/photo/2013/05/20/amcc100
+http://lenta.ru/news/2013/05/29/macan http://lenta.ru/news/2013/05/29/macan
+http://lenta.ru/export/atom http://lenta.ru/export/atom
+http://lenta.ru/news/2013/05/17/number http://lenta.ru/news/2013/05/17/number
+http://lenta.ru/news/2013/05/15/wwwcrash http://lenta.ru/news/2013/05/15/wwwcrash
+http://lenta.ru/theme/Skoda?k=all_testdrives http://lenta.ru/theme/Skoda?k=all_testdrives
+http://lenta.ru/articles http://lenta.ru/articles
+http://lenta.ru/photo/2013/05/20/rrc1 http://lenta.ru/photo/2013/05/20/rrc1
+http://lenta.ru/news/2012/10/26/leon http://lenta.ru/news/2012/10/26/leon
+http://lenta.ru/news/2013/05/28/ammonia http://lenta.ru/news/2013/05/28/ammonia
+http://lenta.ru/photo/2013/05/27/vwfest http://lenta.ru/photo/2013/05/27/vwfest
+http://lenta.ru/news/2013/05/22/goyogo http://lenta.ru/news/2013/05/22/goyogo
+http://lenta.ru/articles/2013/05/16/newclass http://lenta.ru/articles/2013/05/16/newclass
+http://lenta.ru/news/2013/02/12/leonsc http://lenta.ru/news/2013/02/12/leonsc
+http://lenta.ru/theme/Mazda?k=all_testdrives http://lenta.ru/theme/Mazda?k=all_testdrives
+http://lenta.ru/news/2013/05/15/sclass http://lenta.ru/news/2013/05/15/sclass
+http://lenta.ru/photo/2012/07/16/newleon http://lenta.ru/photo/2012/07/16/newleon
+http://lenta.ru/news/2013/05/30/picasso http://lenta.ru/news/2013/05/30/picasso
+http://lenta.ru/video/2013/05/28/loeb http://lenta.ru/video/2013/05/28/loeb
+http://lenta.ru/articles/2013/05/22/venza http://lenta.ru/articles/2013/05/22/venza
+http://lenta.ru/news/2013/05/30/newds http://lenta.ru/news/2013/05/30/newds
+http://lenta.ru/photo/2013/02/13/leonsc http://lenta.ru/photo/2013/02/13/leonsc
+http://lenta.ru/theme/Chevrolet?k=all_testdrives http://lenta.ru/theme/Chevrolet?k=all_testdrives
+http://lenta.ru/video/2013/05/23/russianracing http://lenta.ru/video/2013/05/23/russianracing
+http://lenta.ru/news/2013/05/30/motoring http://lenta.ru/news/2013/05/30/motoring
+http://lenta.ru/news/2013/05/27/granlusso http://lenta.ru/news/2013/05/27/granlusso
+http://lenta.ru/novelties http://lenta.ru/novelties
+http://lenta.ru/photo/2013/03/27/rrsport http://lenta.ru/photo/2013/03/27/rrsport
+http://lenta.ru/articles/2013/05/17/astra2 http://lenta.ru/articles/2013/05/17/astra2
+http://lenta.ru/photo/2013/03/27/newcherokee http://lenta.ru/photo/2013/03/27/newcherokee
+http://lenta.ru/articles/2012/11/20/audis5one http://lenta.ru/articles/2012/11/20/audis5one
+http://lenta.ru/news/2013/05/24/uzdaewoo http://lenta.ru/news/2013/05/24/uzdaewoo
+http://lenta.ru/news/2013/05/14/m5 http://lenta.ru/news/2013/05/14/m5
+http://lenta.ru/photo/2013/03/05/laferrari http://lenta.ru/photo/2013/03/05/laferrari
+http://lenta.ru/news/2012/10/15/disguise http://lenta.ru/news/2012/10/15/disguise
+http://lenta.ru/news/2013/05/29/nomoresecret http://lenta.ru/news/2013/05/29/nomoresecret
+http://lenta.ru/photo/2013/05/13/egoista http://lenta.ru/photo/2013/05/13/egoista
+http://lenta.ru/news/2013/05/30/transformers http://lenta.ru/news/2013/05/30/transformers
+http://lenta.ru/photo/2013/03/27/jagxjr http://lenta.ru/photo/2013/03/27/jagxjr
+http://lenta.ru/theme/Audi?k=all_testdrives http://lenta.ru/theme/Audi?k=all_testdrives
+http://lenta.ru/articles/2013/05/20/random http://lenta.ru/articles/2013/05/20/random
+http://lenta.ru/news/2013/05/28/concforvettel http://lenta.ru/news/2013/05/28/concforvettel
+http://lenta.ru/photo/2013/05/29/amvv12s http://lenta.ru/photo/2013/05/29/amvv12s
+http://lenta.ru/news/2013/05/30/avtovaz http://lenta.ru/news/2013/05/30/avtovaz
+http://lenta.ru/about http://lenta.ru/about
+http://lenta.ru/news/2013/05/28/redlight http://lenta.ru/news/2013/05/28/redlight
+http://lenta.ru/photo/2013/05/13/pug308 http://lenta.ru/photo/2013/05/13/pug308
+http://lenta.ru/news/2013/05/20/bmw5 http://lenta.ru/news/2013/05/20/bmw5
+http://lenta.ru/photo/2013/03/06/newsgeneva1 http://lenta.ru/photo/2013/03/06/newsgeneva1
+http://lenta.ru/photo/2013/05/15/sclass http://lenta.ru/photo/2013/05/15/sclass
+http://lenta.ru/photo/2013/05/20/newm5 http://lenta.ru/photo/2013/05/20/newm5
+http://lenta.ru/photo/2013/04/05/x4 http://lenta.ru/photo/2013/04/05/x4
+http://lenta.ru/news/2013/03/11/restyle http://lenta.ru/news/2013/03/11/restyle
+http://lenta.ru/photo/2013/05/30/thenewx5 http://lenta.ru/photo/2013/05/30/thenewx5
+http://lenta.ru/articles/2013/05/24/pug301 http://lenta.ru/articles/2013/05/24/pug301
+http://lenta.ru/photo/2013/03/07/sportcars http://lenta.ru/photo/2013/03/07/sportcars
+http://lenta.ru/news/2012/07/16/leon http://lenta.ru/news/2012/07/16/leon
+http://lenta.ru/articles/2013/05/26/onlinemonaco http://lenta.ru/articles/2013/05/26/onlinemonaco
+http://lenta.ru/news/2013/05/30/civci4d http://lenta.ru/news/2013/05/30/civci4d
+http://lenta.ru/photo/2013/05/20/new5series http://lenta.ru/photo/2013/05/20/new5series
+http://lenta.ru/articles/2013/05/29/mbeclass http://lenta.ru/articles/2013/05/29/mbeclass
+http://lenta.ru/news/2013/03/18/newsclass http://lenta.ru/news/2013/03/18/newsclass
+http://lenta.ru/news/2013/05/14/tqi http://lenta.ru/news/2013/05/14/tqi
+http://lenta.ru/articles/2013/05/28/speedrecords http://lenta.ru/articles/2013/05/28/speedrecords
+http://lenta.ru/news/2013/04/30/newsclass http://lenta.ru/news/2013/04/30/newsclass
+http://lenta.ru/video/2013/05/21/bentley http://lenta.ru/video/2013/05/21/bentley
+http://lenta.ru/news/2013/05/29/euroncap http://lenta.ru/news/2013/05/29/euroncap
+http://lenta.ru/news/2013/05/30/registr http://lenta.ru/news/2013/05/30/registr
+http://lenta.ru/news/2013/05/29/seven http://lenta.ru/news/2013/05/29/seven
+http://lenta.ru/articles/2013/05/23/vwgolfgti http://lenta.ru/articles/2013/05/23/vwgolfgti
+http://lenta.ru/news/2013/05/24/plates http://lenta.ru/news/2013/05/24/plates
+http://lenta.ru/news/2013/05/29/millions http://lenta.ru/news/2013/05/29/millions
+http://lenta.ru/testdrive http://lenta.ru/testdrive
+http://lenta.ru/photo/2013/04/04/sp01 http://lenta.ru/photo/2013/04/04/sp01
+http://lenta.ru/articles/2013/04/18/alltracklong2 http://lenta.ru/articles/2013/04/18/alltracklong2
+http://lenta.ru/news/2013/05/30/williams http://lenta.ru/news/2013/05/30/williams
+http://lenta.ru/articles/2012/12/07/newfour http://lenta.ru/articles/2012/12/07/newfour
+http://lenta.ru/articles/2013/03/21/a6hybrid2 http://lenta.ru/articles/2013/03/21/a6hybrid2
+http://lenta.ru/news/2013/02/26/newbmw http://lenta.ru/news/2013/02/26/newbmw
+http://lenta.ru/autosport http://lenta.ru/autosport
+http://lenta.ru/news/2013/05/20/bmwm5 http://lenta.ru/news/2013/05/20/bmwm5
+http://lenta.ru/news/2013/05/30/rulimo http://lenta.ru/news/2013/05/30/rulimo
+http://lenta.ru/news/2013/05/16/newkalinaproduct http://lenta.ru/news/2013/05/16/newkalinaproduct
+http://lenta.ru/news/2013/05/16/samovoz http://lenta.ru/news/2013/05/16/samovoz
+http://lenta.ru/rubrics/news/2013/05/29/renaissance http://lenta.ru/rubrics/news/2013/05/29/renaissance
+http://lenta.ru/rubrics/news http://lenta.ru/rubrics/news
+http://lenta.ru/theme/Mercedes-Benz?k=all_testdrives http://lenta.ru/theme/Mercedes-Benz?k=all_testdrives
+http://lenta.ru/rubrics/news/2013/05/28/torgovaya http://lenta.ru/rubrics/news/2013/05/28/torgovaya
+http://lenta.ru/articles/2012/12/27/qashqai http://lenta.ru/articles/2012/12/27/qashqai
+http://lenta.ru/rubrics/articles/2013/05/23/nadsroika http://lenta.ru/rubrics/articles/2013/05/23/nadsroika
+http://lenta.ru/rubrics/articles http://lenta.ru/rubrics/articles
+http://lenta.ru/news/2013/05/21/lux http://lenta.ru/news/2013/05/21/lux
+http://lenta.ru/news/2012/11/08/cupras http://lenta.ru/news/2012/11/08/cupras
+http://lenta.ru/rubrics/articles/2013/03/22/cyprus http://lenta.ru/rubrics/articles/2013/03/22/cyprus
+http://lenta.ru/rubrics/photo/2013/05/21/office http://lenta.ru/rubrics/photo/2013/05/21/office
+http://lenta.ru/rubrics/photo http://lenta.ru/rubrics/photo
+http://lenta.ru/articles/2013/03/22/newsupersedans http://lenta.ru/articles/2013/03/22/newsupersedans
+http://lenta.ru/rubrics/info http://lenta.ru/rubrics/info
+http://lenta.ru/news/2013/03/18/sclass2 http://lenta.ru/news/2013/03/18/sclass2
+http://lenta.ru/rubrics/news/2013/05/30/grinn http://lenta.ru/rubrics/news/2013/05/30/grinn
+http://lenta.ru/rubrics/news/2013/05/28/lotte http://lenta.ru/rubrics/news/2013/05/28/lotte
+http://lenta.ru/rubrics/news/2013/05/28/rating http://lenta.ru/rubrics/news/2013/05/28/rating
+http://lenta.ru/rubrics/articles/2013/04/11/potok http://lenta.ru/rubrics/articles/2013/04/11/potok
+http://lenta.ru/rubrics/news/2013/05/28/kyncevo http://lenta.ru/rubrics/news/2013/05/28/kyncevo
+http://lenta.ru/rubrics/articles/2013/03/15/mipim http://lenta.ru/rubrics/articles/2013/03/15/mipim
+http://lenta.ru/rubrics/news/2013/05/30/monolit http://lenta.ru/rubrics/news/2013/05/30/monolit
+http://lenta.ru/rubrics/news/2013/05/30/novostroiki http://lenta.ru/rubrics/news/2013/05/30/novostroiki
+http://lenta.ru/rubrics/news/2013/05/28/zagorod http://lenta.ru/rubrics/news/2013/05/28/zagorod
+http://lenta.ru/rubrics/articles/2013/05/29/flatsmsk http://lenta.ru/rubrics/articles/2013/05/29/flatsmsk
+http://lenta.ru/rubrics/articles/2013/04/03/promzones http://lenta.ru/rubrics/articles/2013/04/03/promzones
+http://lenta.ru/media http://lenta.ru/media
+http://lenta.ru/rubrics/news/2013/05/28/veb http://lenta.ru/rubrics/news/2013/05/28/veb
+http://lenta.ru/rubrics/articles/2013/04/22/sovet http://lenta.ru/rubrics/articles/2013/04/22/sovet
+http://lenta.ru/video/2013/05/13/ferrari http://lenta.ru/video/2013/05/13/ferrari
+http://lenta.ru/news/2013/05/27/kalinarecall http://lenta.ru/news/2013/05/27/kalinarecall
+http://lenta.ru/news/2013/05/30/erctires http://lenta.ru/news/2013/05/30/erctires
+http://lenta.ru/news/2013/05/29/plates http://lenta.ru/news/2013/05/29/plates
+http://lenta.ru/photo/2013/05/23/golfgti http://lenta.ru/photo/2013/05/23/golfgti
+http://lenta.ru/articles/2012/12/10/qashqai http://lenta.ru/articles/2012/12/10/qashqai
+http://lenta.ru/articles/2013/02/21/alltracklong1 http://lenta.ru/articles/2013/02/21/alltracklong1
+http://lenta.ru/video/2013/05/24/twinrun http://lenta.ru/video/2013/05/24/twinrun
+http://lenta.ru/photo/2013/04/29/4runner http://lenta.ru/photo/2013/04/29/4runner
+http://lenta.ru/photo/2013/04/03/panamera http://lenta.ru/photo/2013/04/03/panamera
+http://lenta.ru/photo/2013/03/05/wraith http://lenta.ru/photo/2013/03/05/wraith
+http://lenta.ru/news/2013/05/29/greatwall http://lenta.ru/news/2013/05/29/greatwall
+http://lenta.ru/rubrics/articles/2013/05/15/dacha http://lenta.ru/rubrics/articles/2013/05/15/dacha
+http://lenta.ru/rubrics/articles/2013/05/20/moscowcity http://lenta.ru/rubrics/articles/2013/05/20/moscowcity
+http://lenta.ru/rubrics/news/2013/05/30/land http://lenta.ru/rubrics/news/2013/05/30/land
+http://lenta.ru/rubrics/news/2013/05/29/fondrjs http://lenta.ru/rubrics/news/2013/05/29/fondrjs
+http://lenta.ru/rubrics/news/2013/05/27/unusual http://lenta.ru/rubrics/news/2013/05/27/unusual
+http://lenta.ru/rubrics/news/2013/05/30/willis http://lenta.ru/rubrics/news/2013/05/30/willis
+http://lenta.ru/rubrics/news/2013/05/29/retailspb http://lenta.ru/rubrics/news/2013/05/29/retailspb
+http://lenta.ru/rubrics/photo/2013/05/04/vdnkh http://lenta.ru/rubrics/photo/2013/05/04/vdnkh
+http://vkontakte.ru/settings?act=change_regional&from=share&to=dXJsPWh0dHAlM0ElMkYlMkZ3d3cudHZveWF1ZGE0YS5ydSUyRg--&hash=d3740c263e2fec4290&lang_id=1 Is not web page
+http://vkontakte.ru/settings?act=change_regional&from=share&to=dXJsPWh0dHAlM0ElMkYlMkZ3d3cudHZveWF1ZGE0YS5ydSUyRg--&hash=d3740c263e2fec4290&lang_id=3 Is not web page
+http://www.liveinternet.ru/includes/titlequotes_rss.php Is not web page
+http://www.tvoyauda4a.ru/uspeh.html http://www.tvoyauda4a.ru/uspeh.html
+http://www.tvoyauda4a.ru/pozitiv.html http://www.tvoyauda4a.ru/pozitiv.html
+http://www.plati.ru/asp/id_cb=34 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=34
+http://www.plati.ru/asp/id_cb=16 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=16
+http://www.plati.ru/asp/id_cb=37 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=37
+http://www.plati.ru/asp/id_cb=1 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=1
+http://www.plati.ru/asp/id_cb=22 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=22
+http://www.plati.ru/asp/id_cb=19 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=19
+http://www.plati.ru/asp/id_cb=11 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=11
+http://www.plati.ru/asp/id_cb=5 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=5
+http://www.plati.ru/asp/id_cb=18 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=18
+http://www.plati.ru/asp/id_cb=32 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=32
+http://www.plati.ru/asp/id_cb=15 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=15
+http://www.plati.ru/asp/id_cb=31 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=31
+http://www.plati.ru/asp/id_cb=2 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=2
+http://www.plati.ru/asp/id_cb=8 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=8
+http://www.plati.ru/asp/id_cb=36 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=36
+http://www.plati.ru/asp/id_cb=12 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=12
+http://www.plati.ru/asp/id_cb=21 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=21
+http://www.plati.ru/asp/id_cb= Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=
+http://www.plati.ru/asp/id_cb=26 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=26
+http://www.plati.ru/asp/id_cb=35 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=35
+http://www.plati.ru/asp/id_cb=10 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=10
+http://www.plati.ru/asp/id_cb=13 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=13
+http://www.plati.ru/asp/id_cb=6 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=6
+http://www.plati.ru/asp/id_cb=7 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=7
+http://www.plati.ru/asp/id_cb=28 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=28
+http://www.plati.ru/asp/id_cb=17 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=17
+http://www.plati.ru/asp/id_cb=9 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=9
+http://www.plati.ru/asp/id_cb=30 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=30
+http://www.plati.ru/asp/id_cb=14 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=14
+http://www.plati.ru/asp/id_cb=29 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=29
+http://www.plati.ru/asp/id_cb=25 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=25
+http://www.plati.ru/asp/id_cb=20 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=20
+http://www.plati.ru/asp/id_cb=33 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=33
+http://www.plati.ru/asp/id_cb=24 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=24
+http://www.plati.ru/asp/id_cb=27 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=27
+http://www.plati.ru/asp/id_cb=4 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=4
+http://www.plati.ru/asp/id_cb=23 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=23
+http://www.plati.ru/asp/id_cb=3 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_cb=3
+http://video.mail.ru/bk/pakin/_myvideo/7.html Is not web page
+http://video.mail.ru/mail/school-int4v/9/12.html Is not web page
+http://video.mail.ru/mail/natali-natalya76/160/670.html Is not web page
+http://video.mail.ru/mail/89037337880/_myvideo/1.html Is not web page
+http://video.mail.ru/mail/pochta-nsk/2/3.html Is not web page
+http://www.plati.ru/asp?id_f=7682 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=7682
+http://www.plati.ru/asp?id_f=9168 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=9168
+http://www.plati.ru/asp?id_r=21804 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21804
+http://www.plati.ru/asp?id_f=18605 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=18605
+http://www.plati.ru/asp?id_r=21506 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21506
+http://www.plati.ru/asp?id_r=21793 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21793
+http://www.plati.ru/asp?id_f=21359 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21359
+http://www.plati.ru/asp?id_r=21514 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21514
+http://www.plati.ru/asp?id_r=21936 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21936
+http://www.plati.ru/asp/ay.asp?id_d=91812 http://www.plati.ru/asp/ay.asp?id_d=91812
+http://www.plati.ru/asp?id_r=18060 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=18060
+http://www.plati.ru/asp/id_r=1758 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_r=1758
+http://www.plati.ru/asp?id_r=21820 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21820
+http://www.plati.ru/asp?id_r=22097 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22097
+http://www.plati.ru/asp?id_r=22102 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22102
+http://www.plati.ru/asp?id_r=21063 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21063
+http://www.plati.ru/asp?id_r=21779 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21779
+http://www.plati.ru/asp/ay.asp?id_d=91993 http://www.plati.ru/asp/ay.asp?id_d=91993
+http://www.plati.ru/asp/ay.asp?id_d=117845 http://www.plati.ru/asp/ay.asp?id_d=117845
+http://www.plati.ru/asp?id_r=20918 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20918
+http://www.plati.ru/asp?id_f=21369 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21369
+http://www.plati.ru/asp?id_r=22090 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22090
+http://www.plati.ru/asp?id_r=18265 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=18265
+http://www.plati.ru/asp/ist.asp?id_r=22302 http://www.plati.ru/asp/ist.asp?id_r=22302
+http://www.plati.ru/asp?id_r=21215 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21215
+http://www.plati.ru/asp?id_r=21095 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21095
+http://www.plati.ru/asp?id_f=18619 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=18619
+http://www.plati.ru/asp/ist_redirect.asp?id_r=1016 http://www.plati.ru/asp/ist_redirect.asp?id_r=1016
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2220 http://www.plati.ru/asp/ist_redirect.asp?id_r=2220
+http://www.plati.ru/asp?id_r=21504 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21504
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2207 http://www.plati.ru/asp/ist_redirect.asp?id_r=2207
+http://www.plati.ru/asp/ay.asp?id_d=79278 http://www.plati.ru/asp/ay.asp?id_d=79278
+http://www.plati.ru/asp?id_r=21785 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21785
+http://www.plati.ru/asp?id_r=22106 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22106
+http://www.plati.ru/asp?id_r=21903 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21903
+http://www.plati.ru/asp/ist.asp?id_r=22275 http://www.plati.ru/asp/ist.asp?id_r=22275
+http://www.plati.ru/asp?id_r=20628 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20628
+http://www.plati.ru/asp?id_f=11 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=11
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2211 http://www.plati.ru/asp/ist_redirect.asp?id_r=2211
+http://www.plati.ru/asp/ist.asp?id_r=22295 http://www.plati.ru/asp/ist.asp?id_r=22295
+http://www.plati.ru/asp?id_r=22099 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22099
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2209 http://www.plati.ru/asp/ist_redirect.asp?id_r=2209
+http://www.plati.ru/asp?id_r=22276 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22276
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2230 http://www.plati.ru/asp/ist_redirect.asp?id_r=2230
+http://www.plati.ru/asp/ay.asp?id_d=113705 http://www.plati.ru/asp/ay.asp?id_d=113705
+http://www.plati.ru/asp?id_r=21434 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21434
+http://www.plati.ru/asp?id_r=21823 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21823
+http://www.plati.ru/asp?id_r=20884 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20884
+http://www.plati.ru/asp?id_r=21503 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21503
+http://www.plati.ru/asp?id_r=21444 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21444
+http://www.plati.ru/asp?id_r=19993 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=19993
+http://www.plati.ru/asp?id_r=21500 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21500
+http://www.plati.ru/asp?id_f=21948 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21948
+http://www.plati.ru/asp?id_r=22082 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22082
+http://www.plati.ru/asp?id_r=22275 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22275
+http://www.plati.ru/asp?id_r=21691 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21691
+http://www.plati.ru/asp?id_f=12549 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=12549
+http://www.plati.ru/asp?id_f=340 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=340
+http://www.plati.ru/asp?id_r=22136 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22136
+http://www.plati.ru/asp?id_r=22206 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22206
+http://www.plati.ru/asp?id_r=22307 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22307
+http://www.plati.ru/asp/ay.asp?id_d=104097 http://www.plati.ru/asp/ay.asp?id_d=104097
+http://www.plati.ru/asp?id_r=21951 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21951
+http://www.plati.ru/asp?id_r=21714 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21714
+http://www.plati.ru/asp?id_f=21957 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21957
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2231 http://www.plati.ru/asp/ist_redirect.asp?id_r=2231
+http://www.plati.ru/asp/ist.asp?id_r=22319 http://www.plati.ru/asp/ist.asp?id_r=22319
+http://www.plati.ru/asp?id_r=21926 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21926
+http://www.plati.ru/asp/ist_redirect.asp?id_r=1758 http://www.plati.ru/asp/ist_redirect.asp?id_r=1758
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2169 http://www.plati.ru/asp/ist_redirect.asp?id_r=2169
+http://www.plati.ru/asp?id_r=21588 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21588
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2062 http://www.plati.ru/asp/ist_redirect.asp?id_r=2062
+http://www.plati.ru/asp?id_f=20288 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=20288
+http://www.plati.ru/asp?id_r=22291 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22291
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2180 http://www.plati.ru/asp/ist_redirect.asp?id_r=2180
+http://www.plati.ru/asp?id_f=20630 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=20630
+http://www.plati.ru/asp?id_r=21688 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21688
+http://www.plati.ru/asp?id_r=21566 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21566
+http://www.plati.ru/asp?id_r=22241 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22241
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2168 http://www.plati.ru/asp/ist_redirect.asp?id_r=2168
+http://www.plati.ru/asp?id_f=11354 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=11354
+http://www.plati.ru/asp/eller.asp?id_s=15739 http://www.plati.ru/asp/eller.asp?id_s=15739
+http://www.plati.ru/asp?id_r=18324 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=18324
+http://www.plati.ru/asp?id_f=21462 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21462
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2032 http://www.plati.ru/asp/ist_redirect.asp?id_r=2032
+http://www.plati.ru/asp?id_r=21952 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21952
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2212 http://www.plati.ru/asp/ist_redirect.asp?id_r=2212
+http://www.plati.ru/asp/ay.asp?id_d=91326 http://www.plati.ru/asp/ay.asp?id_d=91326
+http://www.plati.ru/asp?id_r=21791 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21791
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2210 http://www.plati.ru/asp/ist_redirect.asp?id_r=2210
+http://www.plati.ru/asp?id_r=20916 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20916
+http://www.plati.ru/asp/eller.asp?id_s=18098 http://www.plati.ru/asp/eller.asp?id_s=18098
+http://www.plati.ru/asp?id_r=18162 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=18162
+http://www.plati.ru/asp?id_r=22319 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22319
+http://www.plati.ru/asp?id_r=21680 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21680
+http://www.plati.ru/asp/ay.asp?id_d=118397 http://www.plati.ru/asp/ay.asp?id_d=118397
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2181 http://www.plati.ru/asp/ist_redirect.asp?id_r=2181
+http://www.plati.ru/asp/ay.asp?id_d=120390 http://www.plati.ru/asp/ay.asp?id_d=120390
+http://www.plati.ru/asp?id_r=21670 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21670
+http://www.plati.ru/asp?id_r=21742 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21742
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2144 http://www.plati.ru/asp/ist_redirect.asp?id_r=2144
+http://www.plati.ru/asp?id_r=21745 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21745
+http://www.plati.ru/asp?id_r=20882 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20882
+http://www.plati.ru/asp?id_r=21565 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21565
+http://www.plati.ru/asp?id_r=22109 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22109
+http://www.plati.ru/asp?id_r=21690 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21690
+http://www.plati.ru/asp?id_r=18811 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=18811
+http://www.plati.ru/asp?id_r=22089 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22089
+http://www.plati.ru/asp?id_r=20887 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20887
+http://www.plati.ru/asp/ay.asp?id_d=72088 http://www.plati.ru/asp/ay.asp?id_d=72088
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2229 http://www.plati.ru/asp/ist_redirect.asp?id_r=2229
+http://www.plati.ru/asp/ist.asp?id_r=21680 http://www.plati.ru/asp/ist.asp?id_r=21680
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2158 http://www.plati.ru/asp/ist_redirect.asp?id_r=2158
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2152 http://www.plati.ru/asp/ist_redirect.asp?id_r=2152
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2227 http://www.plati.ru/asp/ist_redirect.asp?id_r=2227
+http://www.plati.ru/asp?id_f=21601 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21601
+http://www.plati.ru/asp/ist_redirect.asp?id_r=1980 http://www.plati.ru/asp/ist_redirect.asp?id_r=1980
+http://www.plati.ru/asp?id_r=22302 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22302
+http://www.plati.ru/asp/ay.asp?id_d=132838 http://www.plati.ru/asp/ay.asp?id_d=132838
+http://www.plati.ru/asp?id_r=21894 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21894
+http://www.plati.ru/asp/oglas.as Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/oglas.as
+http://www.plati.ru/asp?id_r=22110 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22110
+http://www.plati.ru/asp/eller.asp?id_s=5377 http://www.plati.ru/asp/eller.asp?id_s=5377
+http://www.plati.ru/asp?id_f=12 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=12
+http://www.plati.ru/asp?id_r=20861 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20861
+http://www.plati.ru/asp?id_r=21709 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21709
+http://www.plati.ru/asp/ist_redirect.asp?id_r=1860 http://www.plati.ru/asp/ist_redirect.asp?id_r=1860
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2177 http://www.plati.ru/asp/ist_redirect.asp?id_r=2177
+http://www.plati.ru/asp/ist_redirect.asp?id_r=15 http://www.plati.ru/asp/ist_redirect.asp?id_r=15
+http://www.plati.ru/asp?id_r=21748 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21748
+http://www.plati.ru/asp?id_f=22086 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=22086
+http://www.plati.ru/asp?id_r=22205 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22205
+http://www.plati.ru/asp?id_r=18580 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=18580
+http://www.plati.ru/asp?id_r=17050 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=17050
+http://www.plati.ru/asp?id_r=21526 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21526
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2161 http://www.plati.ru/asp/ist_redirect.asp?id_r=2161
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2234 http://www.plati.ru/asp/ist_redirect.asp?id_r=2234
+http://www.plati.ru/asp?id_f=20880 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=20880
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2167 http://www.plati.ru/asp/ist_redirect.asp?id_r=2167
+http://www.plati.ru/asp/ay.asp?id_d=91293 http://www.plati.ru/asp/ay.asp?id_d=91293
+http://www.plati.ru/asp?id_r=21605 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21605
+http://www.plati.ru/asp?id_r=21313 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21313
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2192 http://www.plati.ru/asp/ist_redirect.asp?id_r=2192
+http://www.plati.ru/asp?id_f=22316 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=22316
+http://www.plati.ru/asp?id_r=22304 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22304
+http://www.plati.ru/asp?id_r=20955 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20955
+http://www.plati.ru/asp?id_r=21425 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21425
+http://www.plati.ru/asp?id_r=21794 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21794
+http://www.plati.ru/asp?id_r=21937 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21937
+http://www.plati.ru/asp?id_r=22203 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22203
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2178 http://www.plati.ru/asp/ist_redirect.asp?id_r=2178
+http://www.plati.ru/asp?id_r=22279 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22279
+http://www.plati.ru/asp?id_f=21067 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21067
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2208 http://www.plati.ru/asp/ist_redirect.asp?id_r=2208
+http://www.plati.ru/asp?id_f=21663 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21663
+http://www.plati.ru/asp?id_r=22204 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22204
+http://www.plati.ru/asp/eller.asp?id_s=6029 http://www.plati.ru/asp/eller.asp?id_s=6029
+http://www.plati.ru/asp/ist_redirect.asp?id_r=7 http://www.plati.ru/asp/ist_redirect.asp?id_r=7
+http://www.plati.ru/asp?id_f=20461 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=20461
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2088 http://www.plati.ru/asp/ist_redirect.asp?id_r=2088
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2224 http://www.plati.ru/asp/ist_redirect.asp?id_r=2224
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2091 http://www.plati.ru/asp/ist_redirect.asp?id_r=2091
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2179 http://www.plati.ru/asp/ist_redirect.asp?id_r=2179
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2213 http://www.plati.ru/asp/ist_redirect.asp?id_r=2213
+http://www.plati.ru/asp?id_f=20283 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=20283
+http://www.plati.ru/asp?id_r=21943 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21943
+http://www.plati.ru/asp/ay.asp?id_d=118361 http://www.plati.ru/asp/ay.asp?id_d=118361
+http://www.plati.ru/asp?id_r=17588 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=17588
+http://www.plati.ru/asp?id_f=21695 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21695
+http://www.plati.ru/asp/ay.asp?id_d=152643 http://www.plati.ru/asp/ay.asp?id_d=152643
+http://www.plati.ru/asp?id_f=22207 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=22207
+http://www.plati.ru/asp?id_r=22295 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22295
+http://www.plati.ru/asp?id_f=21699 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21699
+http://www.plati.ru/asp?id_r=21814 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21814
+http://www.plati.ru/asp?id_r=21786 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21786
+http://www.plati.ru/asp/ay.asp?id_d=106807 http://www.plati.ru/asp/ay.asp?id_d=106807
+http://www.plati.ru/asp?id_r=21363 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21363
+http://www.plati.ru/asp?id_r=20883 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20883
+http://www.plati.ru/asp?id_f=21920 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=21920
+http://www.plati.ru/asp?id_r=20885 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=20885
+http://www.plati.ru/asp?id_r=22128 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22128
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2225 http://www.plati.ru/asp/ist_redirect.asp?id_r=2225
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2150 http://www.plati.ru/asp/ist_redirect.asp?id_r=2150
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2195 http://www.plati.ru/asp/ist_redirect.asp?id_r=2195
+http://www.plati.ru/asp?id_r=18548 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=18548
+http://www.plati.ru/asp/ist_redirect.asp?id_r=2194 http://www.plati.ru/asp/ist_redirect.asp?id_r=2194
+http://www.plati.ru/asp?id_r=21449 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21449
+http://www.plati.ru/asp/id_f=768 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp/id_f=768
+http://www.plati.ru/asp?id_r=22101 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22101
+http://www.plati.ru/asp?id_f=13 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_f=13
+http://www.plati.ru/asp?id_r=21956 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21956
+http://www.plati.ru/asp/ay.asp?id_d=90295 http://www.plati.ru/asp/ay.asp?id_d=90295
+http://www.plati.ru/asp/eller.asp?id_s=9385 http://www.plati.ru/asp/eller.asp?id_s=9385
+http://www.plati.ru/asp/ist.asp?id_r=22266 http://www.plati.ru/asp/ist.asp?id_r=22266
+http://www.plati.ru/asp?id_r=9900 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=9900
+http://www.plati.ru/asp/ay.asp?id_d=117864 http://www.plati.ru/asp/ay.asp?id_d=117864
+http://www.plati.ru/asp/ay.asp?id_d=71490 http://www.plati.ru/asp/ay.asp?id_d=71490
+http://www.plati.ru/asp?id_r=22117 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22117
+http://www.plati.ru/asp?id_r=22345 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22345
+http://www.plati.ru/asp?id_r=22292 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22292
+http://www.plati.ru/asp?id_r=22266 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=22266
+http://www.plati.ru/asp?id_r=21505 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21505
+http://www.plati.ru/asp?id_r=9901 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=9901
+http://www.plati.ru/asp?id_r=21525 Server returned HTTP response code: 403 for URL: http://www.plati.ru/asp?id_r=21525
+http://start.webmoney.ru?lang=en Server returned HTTP response code: 400 for URL: http://start.webmoney.ru?lang=en
+http://start.webmoney.ru?lang=pt Server returned HTTP response code: 400 for URL: http://start.webmoney.ru?lang=pt
+http://start.webmoney.ru?lang=tr Server returned HTTP response code: 400 for URL: http://start.webmoney.ru?lang=tr
+http://start.webmoney.ru?lang=es Server returned HTTP response code: 400 for URL: http://start.webmoney.ru?lang=es
+http://start.webmoney.ru?lang=id Server returned HTTP response code: 400 for URL: http://start.webmoney.ru?lang=id
+http://mobile.yandex.ru?tv Invalid Http response
+https://passport.webmoney.ru?ticket= Server returned HTTP response code: 400 for URL: https://passport.webmoney.ru?ticket=
+http://help.yandex.ru/maps/informer.xml http://help.yandex.ru/maps/informer.xml
+http://arbitrage.webmoney.ru?lang=ru Server returned HTTP response code: 400 for URL: http://arbitrage.webmoney.ru?lang=ru
+http://rabota.mail.ru/about/feedback http://rabota.mail.ru/about/feedback
+http://hi-tech.mail.ru/feedback Is not web page
+http://deti.mail.ru/feedback http://deti.mail.ru/feedback/
+http://passport.webmoney.ru?lang=ru Server returned HTTP response code: 400 for URL: http://passport.webmoney.ru?lang=ru
+https://arbitrage.webmoney.ru?ticket= Server returned HTTP response code: 400 for URL: https://arbitrage.webmoney.ru?ticket=
+http://sport.mail.ru/news/hockey-khl/comments?thread=156080 http://sport.mail.ru/news/hockey-khl/comments/?thread=156080
+http://sport.mail.ru/news/hockey-khl/comments?thread=156079 http://sport.mail.ru/news/hockey-khl/comments/?thread=156079
+http://sport.mail.ru/news/hockey-khl/comments http://sport.mail.ru/news/hockey-khl/comments/
+http://sport.mail.ru/news/hockey-khl/comments?thread=156081 http://sport.mail.ru/news/hockey-khl/comments/?thread=156081
+https://e.mail.ru/cgi-bin/signup Is not web page
+http://soft.mail.ru?id=51889&page=2 Invalid Http response
+http://soft.mail.ru?id=51889&page=3 Invalid Http response
+http://miss.auto.ru/office/list Is not web page
+http://miss.auto.ru/office Is not web page
+http://subscribe.ru?page=2 Invalid Http response
+http://moto.auto.ru/atv http://moto.auto.ru/atv
+http://moto.auto.ru/snowmobile http://moto.auto.ru/snowmobile
+http://miss.auto.ru/miss201303/items/7222.html Connection reset
+http://auto.ru/citroen/berlingo Connection reset
+http://forum.auto.ru/citroen/286434.html Connection reset
+http://forum.auto.ru/citroen/286420.html Connection reset
+http://auto.ru/citroen/c-crosser Connection reset
+http://auto.ru/citroen/c8 Connection reset
+http://my.auto.ru/review/4015432.html Connection reset
+http://sport.mail.ru/news/football-rus-premier/comments?thread=161461 http://sport.mail.ru/news/football-rus-premier/comments/?thread=161461
+http://sport.mail.ru/news/football-rus-premier/comments?thread=161460 http://sport.mail.ru/news/football-rus-premier/comments/?thread=161460
+http://auto.ru/citroen/c1 Connection reset
+http://sport.mail.ru/news/football-rus-premier/comments http://sport.mail.ru/news/football-rus-premier/comments/
+http://sport.mail.ru/news/football-rus-premier/comments?thread=161459 http://sport.mail.ru/news/football-rus-premier/comments/?thread=161459
+http://vote.auto.ru/vote/ajax/22864?debug=0 Is not web page
+http://games.mail.ru/play/shareware/download/1871 Is not web page
+http://games.mail.ru/play/shareware/download/1874 Is not web page
+http://games.mail.ru/play/shareware/download/1870 Is not web page
+http://games.mail.ru/play/shareware/download/1869 Is not web page
+http://games.mail.ru/play/shareware/download/1873 Is not web page
+http://games.mail.ru/play/shareware/download/1872 Is not web page
+http://sport.mail.ru/news/football-rus-premier/comments?thread=159692 http://sport.mail.ru/news/football-rus-premier/comments/?thread=159692
+http://sport.mail.ru/news/football-rus-premier/comments?thread=159693 http://sport.mail.ru/news/football-rus-premier/comments/?thread=159693
+http://sport.mail.ru/news/football-rus-premier/comments?thread=159695 http://sport.mail.ru/news/football-rus-premier/comments/?thread=159695
+http://subscribe.ru/archive/woman.magazines.ladymailru/201305/30060042.html http://subscribe.ru/archive/woman.magazines.ladymailru/201305/30060042.html/

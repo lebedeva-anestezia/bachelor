@@ -1,0 +1,55 @@
+http://sbrf.ru connect timed out
+http://ozon.ru connect timed out
+http://slando.ru Invalid Http response
+http://imhonet.ru Unexpected end of file from server
+http://drom.ru Read timed out
+http://gazeta.ru Read timed out
+http://wildberries.ru Is not web page
+http://megafon.ru Read timed out
+http://livetvstatic.ru livetvstatic.ru
+http://sotmarket.ru Read timed out
+http://advego.ru Connection reset
+http://sberbank.ru Read timed out
+http://russianpost.ru Read timed out
+http://sportbox.ru Read timed out
+http://job.ru connect timed out
+http://ferra.ru Read timed out
+http://filmpro.ru Read timed out
+http://tvkultura.ru Read timed out
+http://my.kp.ru Read timed out
+http://automania.ru Read timed out
+http://promosite.ru Read timed out
+http://www.rg.ru Read timed out
+http://hab.kp.ru Read timed out
+http://kem.kp.ru Read timed out
+http://www.li.ru Read timed out
+http://ufa.kp.ru Read timed out
+http://spb.kp.ru Connection reset
+http://betforum.ru Read timed out
+http://yar.kp.ru Connection reset
+http://irk.kp.ru Connection reset
+http://izh.kp.ru Connection reset
+http://radiovesti.ru Premature EOF
+http://m.lenta.ru Read timed out
+http://www.ivd.ru Read timed out
+http://orel.kp.ru Read timed out
+http://krsk.kp.ru Read timed out
+http://vnov.kp.ru Read timed out
+http://www.rbc.ru Read timed out
+http://forexforum.ru Read timed out
+http://www.jjc.ru Read timed out
+http://pda.rbc.ru Read timed out
+http://amur.kp.ru Read timed out
+http://www.nkj.ru Read timed out
+http://www.mts.ru Read timed out
+http://czech.kp.ru Read timed out
+http://chita.kp.ru connect timed out
+http://khodorkovsky.ru Read timed out
+http://stat.nic.ru Read timed out
+http://forum.nic.ru Read timed out
+http://www.cctld.ru Read timed out
+http://startupforum.ru Read timed out
+http://www.salon.ru Read timed out
+http://users.auto.ru Is not web page
+http://ege.yandex.ru Read timed out
+http://parts.auto.ru Connection reset

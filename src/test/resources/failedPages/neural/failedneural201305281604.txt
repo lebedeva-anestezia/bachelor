@@ -1,0 +1,44 @@
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://livetvstatic.ru livetvstatic.ru
+http://slando.ru Invalid Http response
+http://wildberries.ru Is not web page
+http://mirtesen.ru?rnd=106859709 Invalid Http response
+http://imhonet.ru Unexpected end of file from server
+http://fotostrana.ru/forgot http://fotostrana.ru/forgot/
+http://rambler.ru/music Connection reset
+http://wmmail.ru?cf=news-viewn Invalid Http response
+http://smartresponder.ru/l_ru/affiliate TimeOut
+http://smartresponder.ru/l_ru/user/reg.html TimeOut
+http://avito.ru/add http://www.avito.ru/add
+http://dfiles.ru?mobile=yes Server returned HTTP response code: 503 for URL: http://dfiles.ru?mobile=yes
+http://pikabu.ru?f=act Invalid Http response
+http://megafon.ru/video http://megafon.ru/video
+http://megafon.ru/music http://megafon.ru/music
+http://blogspot.ru/teams http://blogspot.ru/teams
+http://pikabu.ru?f=time Invalid Http response
+http://google.ru/teams http://www.google.ru/teams
+http://blogspot.ru/energy http://blogspot.ru/energy
+http://google.ru/energy http://www.google.ru/energy
+http://habrahabr.ru/jobs?page=2 http://habrahabr.ru/jobs/?page=2
+http://playcast.ru/cards http://playcast.ru/cards
+http://subscribe.ru/cases http://subscribe.ru/cases
+http://subscribe.ru/auto http://subscribe.ru/auto
+http://subscribe.ru/home http://subscribe.ru/home
+http://subscribe.ru/kino http://subscribe.ru/kino
+http://subscribe.ru/game http://subscribe.ru/game
+http://megafon.ru/images http://www.megafon.ru/images/
+http://srclick.ru/l_ru/affiliate TimeOut
+http://srclick.ru/l_ru/user/reg.html TimeOut
+http://subscribe.ru/woman http://subscribe.ru/woman
+http://subscribe.ru/sport http://subscribe.ru/sport
+http://subscribe.ru/style http://subscribe.ru/style
+http://ria.ru/weekend Server returned HTTP response code: 503 for URL: http://weekend.ria.ru/weekend
+http://irr.ru/android http://irr.ru/404/?er=2
+http://seasonvar.ru?mod=com Invalid Http response
+http://megafon.ru/library http://www.megafon.ru/library/
+http://megafon.ru/widgets http://megafon.ru/widgets
+http://kp.ru/photo http://www.kp.ru/photo
+http://1tv.ru/lofiversion/index.php Server returned HTTP response code: 403 for URL: http://www.1tv.ru/lofiversion/index.php
+http://1tv.ru/action Read timed out
+http://habrahabr.ru/people http://habrahabr.ru/people/
+http://playcast.ru?module=adv Invalid Http response

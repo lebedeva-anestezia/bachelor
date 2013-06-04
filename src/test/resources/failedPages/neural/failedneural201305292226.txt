@@ -1,0 +1,43 @@
+http://sberbank.ru connect timed out
+http://rambler.ru connect timed out
+http://searchengines.ru Read timed out
+http://wildberries.ru Is not web page
+http://drom.ru Read timed out
+http://sbrf.ru Read timed out
+http://livetvstatic.ru livetvstatic.ru
+http://echo.msk.ru Read timed out
+http://slando.ru Invalid Http response
+http://imhonet.ru Unexpected end of file from server
+http://ozon.ru connect timed out
+http://google.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0 http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0
+http://blogspot.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://passport.sape.ru/account/password/recover http://passport.sape.ru/account/password/recover
+http://sportbox.ru Read timed out
+http://gazeta.ru Read timed out
+http://realty.lenta.ru/news/2013/05/28/rating protocol = http host = null
+http://www.liveinternet.ru/stat?what=reminder Server redirected too many  times (20)
+http://realty.lenta.ru/news/2013/05/27/unusual protocol = http host = null
+http://afisha.yandex.ru Read timed out
+http://realty.lenta.ru/news/2013/05/27/sting protocol = http host = null
+http://realty.lenta.ru/photo/2013/05/21/office protocol = http host = null
+http://realty.lenta.ru/articles/2013/05/29/flatsmsk protocol = http host = null
+http://realty.lenta.ru/news/2013/05/27/mirax protocol = http host = null
+http://realty.lenta.ru/news/2013/05/28/veb protocol = http host = null
+http://torg.mail.ru?utm_source=mail.ru&utm_medium=portal&utm_campaign=main-navigation-block Invalid Http response
+https://passport.sape.ru/account/signup https://passport.sape.ru/account/signup
+http://avia.mail.ru?utm_source=morda Invalid Http response
+http://webmoney.ru/rus/addfunds/wmx.shtml http://www.webmoney.ru/rus/addfunds/wmx.shtml
+http://my.webmoney.ru Server returned HTTP response code: 403 for URL: http://my.webmoney.ru
+http://taxi.yandex.ru?from_geoblock_spb Invalid Http response
+http://check.webmoney.ru?lang=ru-RU Server returned HTTP response code: 400 for URL: http://check.webmoney.ru?lang=ru-RU
+http://webmoney.ru/rus/withdrawfunds/wmx.shtml http://www.webmoney.ru/rus/withdrawfunds/wmx.shtml
+http://koleso.auto.ru/office/new http://koleso.auto.ru/office/new
+http://koleso.auto.ru/tyrecatalog/kumho http://koleso.auto.ru/tyrecatalog/kumho
+http://direct.yandex.ru?from=maintest_ru_generatorprodag Invalid Http response
+http://soft.yandex.ru?from=prov_all Invalid Http response
+http://fotostrana.ru/forgot http://fotostrana.ru/forgot/
+http://advert.subscribe.ru/partner http://advert.subscribe.ru/partner
+http://yaca.yandex.ru/yca/cat/Sports Read timed out
+http://subscribe.ru/catalog/map http://subscribe.ru/catalog/map
+http://digest.subscribe.ru/5109.html http://digest.subscribe.ru/5109.html

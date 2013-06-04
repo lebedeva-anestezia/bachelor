@@ -1,0 +1,38 @@
+http://rbc.ru connect timed out
+http://sberbank.ru connect timed out
+http://narod.ru connect timed out
+http://avito.ru Read timed out
+http://yandex.ru Read timed out
+http://wildberries.ru Is not web page
+http://drom.ru Read timed out
+http://sbrf.ru connect timed out
+http://vesti.ru connect timed out
+http://prezentacya.ru Read timed out
+http://livetv.ru Read timed out
+http://ozon.ru connect timed out
+http://echo.msk.ru Connection reset
+http://searchengines.ru Read timed out
+http://wmmail.ru Read timed out
+http://livetvstatic.ru livetvstatic.ru
+http://dfiles.ru Read timed out
+http://slando.ru Invalid Http response
+http://sprashivai.ru Read timed out
+http://gazeta.ru Read timed out
+http://ulmart.ru Read timed out
+http://fastpic.ru Read timed out
+http://kp.ru Read timed out
+http://my-hit.ru connect timed out
+http://beeline.ru connect timed out
+http://ivi.ru Read timed out
+http://imhonet.ru Unexpected end of file from server
+http://profit-partner.ru Read timed out
+http://woman.ru connect timed out
+http://sport-express.ru Read timed out
+http://sportbox.ru Read timed out
+http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0 http://blogspot.ru/advanced_search?hl=ru&amp;authuser=0
+http://blogspot.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://google.ru/language_tools?hl=ru&amp;authuser=0 Server returned HTTP response code: 403 for URL: http://translate.google.com/
+http://rambler.ru/music connect timed out
+http://rambler.ru/cooking Connection reset
+http://rambler.ru/starlife Connection reset
+http://rambler.ru/kino Connection reset

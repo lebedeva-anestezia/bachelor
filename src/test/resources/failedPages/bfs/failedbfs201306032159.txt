@@ -1,0 +1,80 @@
+http://slando.ru Invalid Http response
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://livetvstatic.ru livetvstatic.ru
+http://ucoz.ru Read timed out
+http://woman.ru Read timed out
+http://gazeta.ru Read timed out
+http://radikal.ru Read timed out
+http://rambler.ru Read timed out
+http://imhonet.ru Unexpected end of file from server
+http://wildberries.ru Is not web page
+http://advego.ru Read timed out
+http://sbrf.ru connect timed out
+http://prezentacya.ru Read timed out
+http://wmmail.ru?cf=news-viewn&nid=119 Invalid Http response
+http://avito.ru/location/orlovskaya_oblast http://www.avito.ru/location/orlovskaya_oblast
+http://wmmail.ru?cf=news-viewn&nid=117 Invalid Http response
+http://wmmail.ru?cf=news-viewn&nid=118 Invalid Http response
+http://avito.ru/location/krasnoyarskiy_kray http://www.avito.ru/location/krasnoyarskiy_kray
+https://passport.webmoney.ru/asp/certview.asp?wmid=911386691431 Server returned HTTP response code: 500 for URL: https://passport.webmoney.ru/asp/certview.asp?wmid=911386691431
+http://superjob.ru/catalog-vacancies/Э http://www.superjob.ru/catalog-vacancies/Ð­
+http://superjob.ru/catalog-resumes/Х http://www.superjob.ru/catalog-resumes/Ð¥
+http://superjob.ru/catalog-resumes/У http://www.superjob.ru/catalog-resumes/Ð£
+http://superjob.ru/catalog-resumes/Ф http://www.superjob.ru/catalog-resumes/Ð¤
+http://superjob.ru/catalog-vacancies/Ю http://www.superjob.ru/catalog-vacancies/Ð®
+http://avito.ru/location/chukotskiy_ao http://www.avito.ru/location/chukotskiy_ao
+http://superjob.ru/catalog-resumes/Т http://www.superjob.ru/catalog-resumes/Ð¢
+http://superjob.ru/catalog-resumes/С http://www.superjob.ru/catalog-resumes/Ð¡
+http://superjob.ru/catalog-resumes/Р http://www.superjob.ru/catalog-resumes/Ð 
+http://superjob.ru/catalog-resumes/П http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/Ю http://www.superjob.ru/catalog-resumes/Ð®
+http://superjob.ru/catalog-resumes/Ш http://www.superjob.ru/catalog-resumes/Ð¨
+http://superjob.ru/catalog-resumes/Э http://www.superjob.ru/catalog-resumes/Ð­
+http://superjob.ru/catalog-resumes/Ч http://www.superjob.ru/catalog-resumes/Ð§
+http://superjob.ru/catalog-vacancies/О http://www.superjob.ru/catalog-vacancies/Ð
+http://avito.ru/location/kurskaya_oblast http://www.avito.ru/location/kurskaya_oblast
+http://superjob.ru/catalog-vacancies/М http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/Г http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Н http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-resumes/Ж http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/П http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/С http://www.superjob.ru/catalog-vacancies/Ð¡
+http://superjob.ru/catalog-resumes/Д http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/В http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Т http://www.superjob.ru/catalog-vacancies/Ð¢
+http://avito.ru/location/bashkortostan http://www.avito.ru/location/bashkortostan
+http://superjob.ru/catalog-vacancies/Р http://www.superjob.ru/catalog-vacancies/Ð 
+http://superjob.ru/catalog-resumes/Б http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Ф http://www.superjob.ru/catalog-vacancies/Ð¤
+http://superjob.ru/catalog-resumes/А http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/У http://www.superjob.ru/catalog-vacancies/Ð£
+http://superjob.ru/catalog-resumes/О http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/Н http://www.superjob.ru/catalog-resumes/Ð
+http://avito.ru/location/ryazanskaya_oblast http://www.avito.ru/location/ryazanskaya_oblast
+http://avito.ru/location/hanty-mansiyskiy_ao http://www.avito.ru/location/hanty-mansiyskiy_ao
+http://avito.ru/location/dagestan http://www.avito.ru/location/dagestan
+http://avito.ru/location/novgorodskaya_oblast http://www.avito.ru/location/novgorodskaya_oblast
+http://avito.ru/location/tyumenskaya_oblast http://www.avito.ru/location/tyumenskaya_oblast
+http://superjob.ru/catalog-vacancies/Х http://www.superjob.ru/catalog-vacancies/Ð¥
+http://avito.ru/location/kaliningradskaya_oblast http://www.avito.ru/location/kaliningradskaya_oblast
+http://avito.ru/location/sverdlovskaya_oblast http://www.avito.ru/location/sverdlovskaya_oblast
+http://avito.ru/location/rostovskaya_oblast http://www.avito.ru/location/rostovskaya_oblast
+http://superjob.ru/catalog-resumes/Л http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Ш http://www.superjob.ru/catalog-vacancies/Ð¨
+http://superjob.ru/catalog-resumes/М http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Ч http://www.superjob.ru/catalog-vacancies/Ð§
+http://superjob.ru/catalog-resumes/К http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-resumes/З http://www.superjob.ru/catalog-resumes/Ð
+http://avito.ru/location/chelyabinskaya_oblast http://www.avito.ru/location/chelyabinskaya_oblast
+http://superjob.ru/catalog-resumes/И http://www.superjob.ru/catalog-resumes/Ð
+http://superjob.ru/catalog-vacancies/Г http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/В http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/А http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Б http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/З http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Ж http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Д http://www.superjob.ru/catalog-vacancies/Ð
+http://superjob.ru/catalog-vacancies/Л http://www.superjob.ru/catalog-vacancies/Ð
+http://wmmail.ru?cf=news-viewn Invalid Http response
+http://www.zarplatomer.ru?id=57 Invalid Http response
+http://www.liteforex.ru?utm_source=mmgp&amp;utm_medium=banner&amp;utm_term=8ce7ef71-e3df-138e-16c5-505340774138&amp;utm_campaign=mmgp-sponsor Invalid Http response

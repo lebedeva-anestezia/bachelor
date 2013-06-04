@@ -1,0 +1,22 @@
+http://avito.ru connect timed out
+http://sberbank.ru connect timed out
+http://auto.ru connect timed out
+http://sbrf.ru connect timed out
+http://wildberries.ru Is not web page
+http://wmmail.ru Read timed out
+http://ozon.ru Server returned HTTP response code: 403 for URL: http://www.ozon.ru/
+http://ria.ru Read timed out
+http://sports.ru connect timed out
+http://searchengines.ru Read timed out
+http://tvoyauda4a.ru Read timed out
+http://russianpost.ru connect timed out
+http://subscribe.ru Read timed out
+http://livetvstatic.ru livetvstatic.ru
+http://mamba.ru Read timed out
+http://mts.ru connect timed out
+http://rutube.ru Read timed out
+http://slando.ru Invalid Http response
+http://echo.msk.ru Read timed out
+http://kp.ru Read timed out
+http://seopult.ru connect timed out
+http://gazeta.ru Read timed out

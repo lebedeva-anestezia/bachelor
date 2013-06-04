@@ -1,0 +1,4 @@
+http://worldoftanks.ru/registration/ru Is not web page
+http://worldoftanks.ru/personal/payment http://worldoftanks.ru/personal/payment
+http://worldoftanks.ru/login http://worldoftanks.ru/login
+http://worldoftanks.ru/policy http://worldoftanks.ru/policy
