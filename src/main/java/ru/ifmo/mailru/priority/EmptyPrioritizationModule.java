@@ -6,7 +6,7 @@ import ru.ifmo.mailru.core.WebURL;
 /**
  * @author Anastasia Lebedeva
  */
-public class EmptyPrioritization extends ModulePrioritization {
+public class EmptyPrioritizationModule extends PrioritizationModule {
 
     @Override
     public void setQualityRanks(WebURL url, Page parentPage) {

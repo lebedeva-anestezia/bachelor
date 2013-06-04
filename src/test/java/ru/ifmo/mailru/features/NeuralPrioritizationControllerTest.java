@@ -12,19 +12,19 @@ import java.util.Scanner;
 /**
  * @author Anastasia Lebedeva
  */
-public class TrainingControllerTest {
+public class NeuralPrioritizationControllerTest {
 
     @Test
     public void mainTest() {
         try {
             List<Double> realValues = new ArrayList<>();
             List<Double> expectedValue = new ArrayList<>();
-            TrainingController controller = new TrainingController();
+            NeuralPrioritizationController controller = new NeuralPrioritizationController();
             int pos = controller.positiveExamples.size();
             int neg = controller.negativeExamples.size();
             System.out.println(pos + " " + neg);
             controller.train(pos, neg);
-            Scanner scanner = new Scanner(new File(TrainingController.RANKS_FILE));
+            Scanner scanner = new Scanner(new File(NeuralPrioritizationController.RANKS_FILE));
             int n = 0;
             double mean = 0;
             while (scanner.hasNext()) {

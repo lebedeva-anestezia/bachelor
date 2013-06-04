@@ -3,7 +3,7 @@ package ru.ifmo.mailru;
 import org.junit.Ignore;
 import org.junit.Test;
 import ru.ifmo.mailru.core.LogWriter;
-import ru.ifmo.mailru.core.QueueHandler;
+import ru.ifmo.mailru.core.CollectionHandler;
 import ru.ifmo.mailru.core.Scheduler;
 import ru.ifmo.mailru.core.WebURL;
 import ru.ifmo.mailru.google.pr.PageRankGetter;
@@ -38,7 +38,7 @@ public class CompTest {
     @Test
     public void neuralGraphSpiderRun() {
         try {
-            spiderRun(new NeuralGraphPrioritization(), new LogWriter(), "neuralGraph");
+            spiderRun(new NeuralGraphPrioritizationModule(), new LogWriter(), "neuralGraph");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -48,7 +48,7 @@ public class CompTest {
     @Test
     public void neuralSpiderRun() {
         try {
-            spiderRun(new NeuralPrioritization(), new LogWriter(), "neural");
+            spiderRun(new NeuralPrioritizationModule(), new LogWriter(), "neural");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -59,7 +59,7 @@ public class CompTest {
     @Test
     public void bfsSpiderRun() {
         try {
-            spiderRun(new EmptyPrioritization(), new LogWriter(), "bfs");
+            spiderRun(new EmptyPrioritizationModule(), new LogWriter(), "bfs");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -69,7 +69,7 @@ public class CompTest {
     @Test
     public void FICASpiderRun() {
         try {
-            spiderRun(new FICAPrioritization(), new LogWriter(), "FICA");
+            spiderRun(new FICAPrioritizationModule(), new LogWriter(), "FICA");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -97,7 +97,7 @@ public class CompTest {
     }
 
 
-    private void spiderRun(ModulePrioritization prioritization, LogWriter logWriter, String teg) throws FileNotFoundException {
+    private void spiderRun(PrioritizationModule prioritizationModule, LogWriter logWriter, String teg) throws FileNotFoundException {
         String date = dateFormat.format(CompTest.date);
         File crawledFile = new File(crawledPagesDir + teg + "/" + teg + date + ".txt");
         File failedFile = new File(failedPagesDir + teg + "/failed" + teg + date + ".txt");
@@ -115,8 +115,8 @@ public class CompTest {
         logWriter.setCrawledLogging(pwCrawled);
         logWriter.setQueueLogFile(queueFileName);
         Set<WebURL> startSet = readStartSet();
-        QueueHandler queueHandler = new QueueHandler(prioritization, startSet, logWriter);
-        Scheduler scheduler = new Scheduler(queueHandler);
+        CollectionHandler collectionHandler = new CollectionHandler(prioritizationModule, startSet, logWriter);
+        Scheduler scheduler = new Scheduler(collectionHandler);
         try {
             scheduler.start();
             Thread.sleep(Integer.MAX_VALUE);

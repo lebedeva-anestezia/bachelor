@@ -1,10 +1,6 @@
 package ru.ifmo.mailru.core;
 
-import ru.ifmo.mailru.util.ValueComparator;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -14,13 +10,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class Scheduler implements Runnable {
     private static final int POOL_SIZE = 20;
-    public final int maxPageCountFromSite = 50;
-    public final int frontierSize = 1000;
-    private QueueHandler queueHandler;
+    public final int MAX_PAGE_COUNT_FROM_SITE = 50;
+    public final int PART_SIZE = 1000;
+    private CollectionHandler collectionHandler;
     private Thread curThread;
 
-    public Scheduler(QueueHandler queueHandler) {
-        this.queueHandler = queueHandler;
+    public Scheduler(CollectionHandler collectionHandler) {
+        this.collectionHandler = collectionHandler;
     }
 
     public void start() {
@@ -36,34 +32,11 @@ public class Scheduler implements Runnable {
     @Override
     public void run() {
         Thread thisThread = Thread.currentThread();
+        ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
         while (curThread == thisThread) {
-            Map<WebURL, Double> rangesMap = new HashMap<>();
-            ValueComparator<WebURL, Double> comparator = new ValueComparator<>(rangesMap);
-            TreeMap<WebURL, Double> orderedMap = new TreeMap<>(comparator);
-            for (WebURL url : queueHandler.getCollection()) {
-                rangesMap.put(url, queueHandler.prioritization.computeVisitRank(url));
-            }
-            orderedMap.putAll(rangesMap);
-            Map<HostController, Integer> counter = new HashMap<>();
-            ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
-            int count = 0;
-            for (WebURL url : orderedMap.keySet()) {
-                Integer curPageFromSiteObj = counter.get(url.getHostController());
-                int curPageFromSite;
-                if (curPageFromSiteObj == null) {
-                    curPageFromSite = 0;
-                } else {
-                    curPageFromSite = curPageFromSiteObj;
-                }
-                if (curPageFromSite == maxPageCountFromSite) {
-                    continue;
-                }
-                counter.put(url.getHostController(), curPageFromSite + 1);
-                count++;
-                executor.submit(new PageProcessingTask(new Page(url), queueHandler));
-                if (count == frontierSize) {
-                    break;
-                }
+            List<WebURL> part = collectionHandler.getNextPart(this);
+            for (WebURL url : part) {
+                executor.submit(new PageProcessingTask(new Page(url), collectionHandler));
             }
             try {
                 executor.shutdown();
@@ -74,4 +47,5 @@ public class Scheduler implements Runnable {
             }
         }
     }
+
 }

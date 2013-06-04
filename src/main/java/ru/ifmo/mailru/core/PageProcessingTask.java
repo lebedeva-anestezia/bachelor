@@ -4,12 +4,12 @@ import java.io.IOException;
 
 public class PageProcessingTask implements Runnable {
 
-    private QueueHandler queueHandler;
+    private CollectionHandler collectionHandler;
     private Page page;
 
-    public PageProcessingTask(Page page, QueueHandler queueHandler) {
+    public PageProcessingTask(Page page, CollectionHandler collectionHandler) {
         this.page = page;
-        this.queueHandler = queueHandler;
+        this.collectionHandler = collectionHandler;
     }
 
 
@@ -38,9 +38,9 @@ public class PageProcessingTask implements Runnable {
             }
             page.getUrl().setLastVisitTime(System.currentTimeMillis());
             PageParser.extractLinks(page);
-            queueHandler.addCrawledPage(page);
+            collectionHandler.addCrawledPage(page);
         } catch (Exception e) {
-            queueHandler.addFailedPage(page, e.getMessage());
+            collectionHandler.addFailedPage(page, e.getMessage());
         }
     }
 }

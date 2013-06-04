@@ -20,13 +20,14 @@ public class FeaturesExtractor {
      * row 1: orthographic features (digits)
      * row 2: orthographic features (capital case)
      * row 3: number of term
+     * row 4: dictionary features
      */
 
     {
         MAXIMUMS = new double[COMPONENT_NUMBER][4];
         for (int j = 0; j < 3; j++) {
             for (int i = 3; i < COMPONENT_NUMBER; i++) {
-                MAXIMUMS[i][j] = 300; // TODO: replace to trust values
+                MAXIMUMS[i][j] = 300;
             }
         }
         for (int i = 0; i < 3; i++) {
@@ -59,7 +60,6 @@ public class FeaturesExtractor {
                 components[i] = "";
             }
         }
-        //components[5] = url.getFragment();
 		features = new ArrayList<>();
 	}
 	

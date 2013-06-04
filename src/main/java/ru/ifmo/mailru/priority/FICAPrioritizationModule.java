@@ -6,7 +6,7 @@ import ru.ifmo.mailru.core.WebURL;
 /**
  * @author Anastasia Lebedeva
  */
-public class FICAPrioritization extends ModulePrioritization {
+public class FICAPrioritizationModule extends PrioritizationModule {
     private static double beta = 0.2, gamma = 0.6;
     private static double time, K = 100, size;
 

@@ -11,18 +11,18 @@ import java.util.*;
 /**
  * @author Anastasia Lebedeva
  */
-public class TrainingController {
+public class NeuralPrioritizationController {
     public final Map<String, Double> positiveExamples;
     public final Map<String, Double> negativeExamples;
     private NeuralNetwork neuralNetwork;
     public static final String RANKS_FILE = "src/test/resources/pageRanks/pageRanks.pr";
     public static final String DICTIONARY_FILE = "src/main/resources/dictionary.txt";
 
-    public TrainingController() throws FileNotFoundException {
+    public NeuralPrioritizationController() throws FileNotFoundException {
         this(new File(RANKS_FILE));
     }
 
-    public TrainingController(File file) throws FileNotFoundException {
+    public NeuralPrioritizationController(File file) throws FileNotFoundException {
         DictionaryModule.createDictionary(new File(DICTIONARY_FILE));
         positiveExamples = new LinkedHashMap<>();
         negativeExamples = new LinkedHashMap<>();
